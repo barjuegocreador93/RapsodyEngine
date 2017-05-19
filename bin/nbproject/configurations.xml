@@ -19,7 +19,7 @@
         <itemPath>include/peon.h</itemPath>
         <itemPath>include/punto.h</itemPath>
         <itemPath>include/rapsody.h</itemPath>
-        <itemPath>include/render.h</itemPath>
+        <itemPath>include/s_image.h</itemPath>
         <itemPath>include/tiempo.h</itemPath>
         <itemPath>include/transformacion.h</itemPath>
       </logicalFolder>
@@ -47,7 +47,7 @@
         <itemPath>src/peon.cpp</itemPath>
         <itemPath>src/punto.cpp</itemPath>
         <itemPath>src/rapsody.cpp</itemPath>
-        <itemPath>src/render.cpp</itemPath>
+        <itemPath>src/s_image.cpp</itemPath>
         <itemPath>src/tiempo.cpp</itemPath>
         <itemPath>src/transformacion.cpp</itemPath>
       </logicalFolder>
@@ -96,7 +96,7 @@
         </ccTool>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibLibItem>alleg</linkerLibLibItem>
+            <linkerOptionItem>-lalleg</linkerOptionItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
@@ -128,7 +128,7 @@
       </item>
       <item path="include/rapsody.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/render.h" ex="false" tool="3" flavor2="0">
+      <item path="include/s_image.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/tiempo.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -166,7 +166,7 @@
       </item>
       <item path="src/rapsody.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/render.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/s_image.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/tiempo.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -221,7 +221,7 @@
       </item>
       <item path="include/rapsody.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/render.h" ex="false" tool="3" flavor2="0">
+      <item path="include/s_image.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/tiempo.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -259,7 +259,7 @@
       </item>
       <item path="src/rapsody.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/render.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/s_image.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/tiempo.cpp" ex="false" tool="1" flavor2="0">
       </item>

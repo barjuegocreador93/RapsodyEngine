@@ -14,9 +14,9 @@ public:
     controlador * jugador;
 
     template<class controlador_type>
-    void peon::AddControlador()
+    void AddControlador()
     {
-        jugador=(controlador_type*)new(controlador_type);
+        jugador=(controlador *)new(controlador_type);
     }
 
     virtual void empezar();

@@ -14,7 +14,7 @@ public:
     void ComienzaEnMapa()
     {
         if(mundo!=NULL)delete mundo;
-        mundo=(mapa_type*)new(mapa_type);
+        mundo=(mapa*)new(mapa_type);
         mundo->game=this;
     }
 

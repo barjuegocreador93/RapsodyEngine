@@ -14,9 +14,9 @@ GREP=grep
 NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
-CC=gcc
-CCC=g++
-CXX=g++
+CC=mingw32-gcc
+CCC=mingw32-g++
+CXX=mingw32-g++
 FC=gfortran
 AS=as
 
@@ -50,7 +50,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/peon.o \
 	${OBJECTDIR}/src/punto.o \
 	${OBJECTDIR}/src/rapsody.o \
-	${OBJECTDIR}/src/render.o \
+	${OBJECTDIR}/src/s_image.o \
 	${OBJECTDIR}/src/tiempo.o \
 	${OBJECTDIR}/src/transformacion.o
 
@@ -154,10 +154,10 @@ ${OBJECTDIR}/src/rapsody.o: src/rapsody.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/rapsody.o src/rapsody.cpp
 
-${OBJECTDIR}/src/render.o: src/render.cpp
+${OBJECTDIR}/src/s_image.o: src/s_image.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/render.o src/render.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/s_image.o src/s_image.cpp
 
 ${OBJECTDIR}/src/tiempo.o: src/tiempo.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

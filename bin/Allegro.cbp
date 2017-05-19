@@ -47,7 +47,7 @@
 		<Unit filename="include/peon.h" />
 		<Unit filename="include/punto.h" />
 		<Unit filename="include/rapsody.h" />
-		<Unit filename="include/render.h" />
+		<Unit filename="include/s_image.h" />
 		<Unit filename="include/tiempo.h" />
 		<Unit filename="include/transformacion.h" />
 		<Unit filename="inicia.cpp" />
@@ -67,7 +67,7 @@
 		<Unit filename="src/peon.cpp" />
 		<Unit filename="src/punto.cpp" />
 		<Unit filename="src/rapsody.cpp" />
-		<Unit filename="src/render.cpp" />
+		<Unit filename="src/s_image.cpp" />
 		<Unit filename="src/tiempo.cpp" />
 		<Unit filename="src/transformacion.cpp" />
 		<Extensions>

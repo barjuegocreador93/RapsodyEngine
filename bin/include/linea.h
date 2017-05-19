@@ -3,7 +3,7 @@
 
 #include "rapsody.h"
 #include "punto.h"
-#include "render.h"
+#include "s_image.h"
 
 
 class linea
@@ -27,7 +27,7 @@ public:
     void print();
     punto A,B;
     string axi;
-    render data;
+    s_image data;
 
 protected:
 

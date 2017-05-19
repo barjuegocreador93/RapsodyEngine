@@ -5,11 +5,11 @@
 #include "objeto.h"
 
 
-class render : public objeto
+class s_image : public objeto
 {
 public:
-    render();
-    virtual ~render();
+    s_image();
+    virtual ~s_image();
 
 
 

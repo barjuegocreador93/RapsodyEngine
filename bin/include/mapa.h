@@ -13,8 +13,8 @@ public:
 
 
 
-    template<class actor>
-    actor * AddActor(string key)
+    template<class actor_type>
+    actor_type * AddActor(string key)
     {
         actor_movements=true;
         Actores::iterator it;
@@ -22,10 +22,14 @@ public:
 
         if(it == actores.end())
         {
-            actor * x=(actor*)new(actor);
-            x->mundo=this;
-            actores.insert(Actor(key,x));
-            return x;
+            actor * x=(actor*)new(actor_type);
+            if(x!=NULL)
+            {
+                x->mundo=this;
+                actores.insert(Actor(key,x));
+                return (actor_type *)x;
+            }
+
         }
         return NULL;
     }
