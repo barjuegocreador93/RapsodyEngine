@@ -2,8 +2,20 @@
 
 
 
-struct objeto
+class objeto
 {
+public:
+
+    objeto()
+    {
+
+    }
+
+    virtual ~objeto()
+    {
+
+    }
+
     transformacion ubicacion;
 
     virtual void empezar()
@@ -25,8 +37,20 @@ struct objeto
 };
 
 
-struct s_imagen : objeto
+class s_imagen : public objeto
 {
+
+public:
+
+    s_imagen()
+    {
+
+    }
+
+    ~s_imagen()
+    {
+
+    }
 
     img data;
     bool auto_;
@@ -56,7 +80,6 @@ struct s_imagen : objeto
         if(!auto_)blit(data,screen,0,0,ubicacion.posicion.x,ubicacion.posicion.y,ubicacion.escala.x,ubicacion.escala.y);
         else
         {
-
             clear_to_color(data, color);
             blit(data,screen,0,0,ubicacion.posicion.x,ubicacion.posicion.y,ubicacion.escala.x,ubicacion.escala.y);
         }

@@ -9,22 +9,15 @@
 using namespace std;
 
 /** Include tus .h **/
-#include "structs/juego.h"
+#include "source/game.h"
 
 //..
 /** Include ends **/
 
 int main()
 {
-
-
     /**Crear imagenes*/
-    juego naves;
-
-    naves.empezar();
-    naves.mientras(0);
-    naves.fin();
-
+    ingame();
     readkey();
 
     return 0;

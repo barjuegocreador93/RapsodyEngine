@@ -17,5 +17,6 @@ int inicia_audio(int izquierda, int derecha){
     }
 
 	set_volume(izquierda, derecha);
+	return 0;
 }
 

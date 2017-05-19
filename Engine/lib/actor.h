@@ -24,6 +24,7 @@ struct actor : fisica
         {
             colisiones[i]->mientras(mils);
         }
+
     }
 
 
@@ -36,12 +37,13 @@ struct actor : fisica
         return nueva;
     }
 
-    void AddImage(string dir)
+    s_imagen * AddImage(string dir)
     {
         s_imagen * wow=(s_imagen *)new(s_imagen);
         wow->mount_imagen(dir);
         wow->ubicacion=ubicacion;
         imagenes.push_back(wow);
+        return wow;
     }
 
      s_imagen * AddBmap(int color)

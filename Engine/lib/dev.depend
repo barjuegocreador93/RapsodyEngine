@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1495165193 source:c:\users\calimpio\documents\github\rapsodyengine\engine\inicia.cpp
+	"inicia.h"
+	<allegro.h>
+
+1441979060 c:\users\calimpio\documents\github\rapsodyengine\engine\inicia.h
+
+1495171744 source:c:\users\calimpio\documents\github\rapsodyengine\engine\main.cpp
+	<allegro.h>
+	"inicia.h"
+	<iostream>
+	<math.h>
+	<vector>
+	<string.h>
+	<map>
+	"source/game.h"
+
+1495174334 c:\users\calimpio\documents\github\rapsodyengine\engine\source\game.h
+	"../lib/includes.h"
+	"includes.h"
+
+1495174116 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\includes.h
+	"basic.h"
+	"objeto.h"
+	"linea.h"
+	"colision.h"
+	"fisicas.h"
+	"actor.h"
+	"controlador.h"
+	"peon.h"
+	"mapa.h"
+	"juego.h"
+
+1495086524 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\basic.h
+
+1495178139 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\objeto.h
+
+1495177760 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\linea.h
+
+1495177558 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\colision.h
+
+1495177650 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\fisicas.h
+
+1495167804 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\actor.h
+
+1495177634 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\controlador.h
+
+1495176113 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\peon.h
+
+1495176720 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\mapa.h
+
+1495178084 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\juego.h
+
+1495173941 c:\users\calimpio\documents\github\rapsodyengine\engine\source\includes.h
+	"MiMundo.h"
+
+1495174755 c:\users\calimpio\documents\github\rapsodyengine\engine\source\mimundo.h
+

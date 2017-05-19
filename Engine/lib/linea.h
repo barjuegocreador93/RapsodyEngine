@@ -1,6 +1,15 @@
 
-struct linea
+class linea
 {
+public:
+    linea()
+    {
+
+    }
+    ~linea()
+    {
+
+    }
     punto A,B;
     string axi;
     s_imagen data;

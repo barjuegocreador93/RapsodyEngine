@@ -2,8 +2,21 @@
 
 
 
-struct mapa : actor
+class mapa : public actor
 {
+
+public:
+
+    mapa()
+    {
+
+    }
+
+    ~mapa()
+    {
+
+    }
+
     Actores actores;
 
     template<class a>

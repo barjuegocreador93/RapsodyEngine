@@ -10,6 +10,11 @@ public:
 
     }
 
+    ~fisica()
+    {
+
+    }
+
     virtual void mientras(int mils)
     {
         if(!estatico)

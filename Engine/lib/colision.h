@@ -1,7 +1,18 @@
 
 
-struct colision : objeto
+class colision : public objeto
 {
+public:
+
+    colision()
+    {
+
+    }
+
+    ~colision()
+    {
+
+    }
     objeto * padre;
     vector<linea> bordes;
 
