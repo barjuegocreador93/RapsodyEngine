@@ -13,8 +13,11 @@ public:
 
     controlador * jugador;
 
-    template<class c>
-    void AddControlador();
+    template<class controlador_type>
+    void peon::AddControlador()
+    {
+        jugador=(controlador_type*)new(controlador_type);
+    }
 
     virtual void empezar();
 

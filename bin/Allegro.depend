@@ -224,7 +224,7 @@
 	"rapsody.h"
 	"objeto.h"
 
-1495191589 c:\users\calimpio\documents\github\rapsodyengine\bin\include\peon.h
+1495184431 c:\users\calimpio\documents\github\rapsodyengine\bin\include\peon.h
 	"rapsody.h"
 	"actor.h"
 	"controlador.h"
@@ -233,7 +233,7 @@
 	"rapsody.h"
 	"actor.h"
 
-1495220124 c:\users\calimpio\documents\github\rapsodyengine\bin\include\juego.h
+1495184602 c:\users\calimpio\documents\github\rapsodyengine\bin\include\juego.h
 	"rapsody.h"
 	"mapa.h"
 
@@ -267,7 +267,7 @@
 1495220942 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\objeto.cpp
 	"objeto.h"
 
-1495190030 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\peon.cpp
+1495184548 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\peon.cpp
 	"peon.h"
 
 1495221125 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\punto.cpp
@@ -276,7 +276,7 @@
 1495193908 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\rapsody.cpp
 	"rapsody.h"
 
-1495180050 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\render.cpp
+1495184363 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\render.cpp
 	"render.h"
 
 1495221342 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\tiempo.cpp

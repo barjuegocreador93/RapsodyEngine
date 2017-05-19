@@ -10,11 +10,11 @@ public:
     juego(int ancho,int largo,int left,int rigth);
     virtual ~juego();
 
-    template <class mapa>
+    template <class mapa_type>
     void ComienzaEnMapa()
     {
         if(mundo!=NULL)delete mundo;
-        mundo=(mapa*)new(mapa);
+        mundo=(mapa_type*)new(mapa_type);
         mundo->game=this;
     }
 

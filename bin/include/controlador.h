@@ -9,7 +9,7 @@ class controlador : public objeto
 {
 public:
     controlador();
-
+    
 
     objeto *peon;
 
