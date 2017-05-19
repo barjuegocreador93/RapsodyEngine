@@ -5,72 +5,35 @@
 
 class punto
 {
+    friend ostream &operator<<(ostream &ou, const punto &otro)
+    {
+        cout<<"point: "<<otro.x<<","<<otro.y<<endl;
+        return ou;
+    }
+
+
 public:
     punto();
     virtual ~punto();
     int x;
     int y;
 
-    punto &operator=(const punto &otro)
-    {
-        x=otro.x;
-        y=otro.y;
-        return *this;
-    }
-    bool operator==(punto &otro)
-    {
-        return x == otro.x && y == otro.y;
-    }
+    punto &operator=(const punto &otro);
+    bool operator==(punto &otro);
 
-    bool operator!=(punto &otro)
-    {
-        return ! (*this == otro);
-    }
+    bool operator!=(punto &otro);
 
-    punto operator+(punto &otro)
-    {
-        punto m;
-        m.x=x + otro.x;
-        m.y=y + otro.y;
-        return m;
-    }
+    punto operator+(punto &otro);
+    bool operator>=(punto &otro);
+    bool operator<=(punto &otro);
 
-    bool operator>=(punto &otro)
-    {
-        return (x>=otro.x && y>=otro.y);
-    }
-    bool operator<=(punto &otro)
-    {
-        return (x<=otro.x && y<=otro.y);
-    }
+    punto operator-(punto &otro);
 
-    punto operator-(punto &otro)
-    {
-        punto m;
-        m.x=x - otro.x;
-        m.y=y - otro.y;
-        return m;
-    }
+    float div();
 
-    float div()
-    {
-        if(x != 0)
-            return y/x;
-        return 0;
-    }
-
-    void operator*=(int c)
-    {
-        x*=c;
-        y*=c;
-    }
+    void operator*=(int c);
 
 
-    friend ostream &operator<<(ostream &ou, const punto &otro)
-    {
-        cout<<"point: "<<otro.x<<","<<otro.y<<endl;
-        return ou;
-    }
 
 protected:
 

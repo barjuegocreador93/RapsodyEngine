@@ -11,20 +11,9 @@ public:
 
 
 
-    virtual void empezar()
-    {
-
-    }
-
-    virtual void mientras(int mils)
-    {
-
-    }
-
-    virtual void fin()
-    {
-
-    }
+    virtual void empezar();
+    virtual void mientras(int mils);
+    virtual void fin();
     transformacion ubicacion;
 protected:
 

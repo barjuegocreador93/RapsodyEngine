@@ -5,7 +5,17 @@ controlador::controlador()
     //ctor
 }
 
-controlador::~controlador()
+
+void controlador::empezar()
 {
-    //dtor
+
+}
+void controlador::mientras(int mils)
+{
+
+}
+
+void controlador::terminar()
+{
+
 }

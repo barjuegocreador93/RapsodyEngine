@@ -11,28 +11,7 @@ public:
     fisica();
     virtual ~fisica();
 
-    virtual void mientras(int mils)
-    {
-        if(!estatico)
-        {
-            if(transncurrido.seg==60)
-            {
-                velocidad.x += aceleracion.x;
-                velocidad.y += aceleracion.y;
-                if(crear_punto(0,0) != velocidad)
-                {
-                    active_movenets_on_map();
-                    ubicacion.posicion.x+= velocidad.x;
-                    ubicacion.posicion.y+= velocidad.y;
-                }
-                transncurrido.seg=0;
-            }
-            if(mils==1000)
-            {
-                transncurrido.seg++;
-            }
-        }
-    }
+    virtual void mientras(int mils);
 
     void active_movenets_on_map();
 

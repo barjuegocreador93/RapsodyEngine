@@ -8,6 +8,7 @@ mapa::mapa()
 mapa::~mapa()
 {
     //dtor
+    delete mundo;
 }
 
 
@@ -85,19 +86,4 @@ void mapa::mientras(int mils)
 }
 
 
-template<class a>
-    a * mapa::AddActor(string key)
-    {
-        actor_movements=true;
-        Actores::iterator it;
-        it = actores.find(key);
 
-        if(it == actores.end())
-        {
-            a * x=(a*)new(a);
-            x->mundo=this;
-            actores.insert(Actor(key,x));
-            return x;
-        }
-        return NULL;
-    }

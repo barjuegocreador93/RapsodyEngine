@@ -9,3 +9,19 @@ objeto::~objeto()
 {
     //dtor
 }
+
+
+void objeto::empezar()
+{
+
+}
+
+void objeto::mientras(int mils)
+{
+
+}
+
+void objeto::fin()
+{
+
+}

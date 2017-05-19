@@ -9,24 +9,28 @@ class transformacion
         transformacion();
         virtual ~transformacion();
 
-        punto Getposicion() { return posicion; }
-        void Setposicion(punto val) { posicion = val; }
-        punto Getescala() { return escala; }
-        void Setescala(punto val) { escala = val; }
+        punto Getposicion();
+        void Setposicion(punto val);
+        punto Getescala();
+        void Setescala(punto val);
 
-        transformacion & operator=(const transformacion &otro)
-        {
-            posicion=otro.posicion;
-            escala=otro.escala;
-            return *this;
-        }
+        transformacion & operator=(const transformacion &otro);
+
+
+        void AcumPosicionX(int x);
+        void AcumPosicionY(int y);
+
+        void AcumEscalaX(int x);
+        void AcumEscalaY(int y);
+
+    protected:
         punto escala;
         punto posicion;
 
 
-    protected:
-
     private:
 };
+
+transformacion crear_transformacion(punto posicion, punto escala);
 
 #endif // TRANSFORMACION_H

@@ -7,14 +7,28 @@
 
 class mapa : public actor
 {
-    public:
-        mapa();
-        virtual ~mapa();
+public:
+    mapa();
+    virtual ~mapa();
 
-    Actores actores;
 
-    template<class a>
-    a * AddActor(string key);
+
+    template<class actor>
+    actor * AddActor(string key)
+    {
+        actor_movements=true;
+        Actores::iterator it;
+        it = actores.find(key);
+
+        if(it == actores.end())
+        {
+            actor * x=(actor*)new(actor);
+            x->mundo=this;
+            actores.insert(Actor(key,x));
+            return x;
+        }
+        return NULL;
+    }
 
     virtual void empezar();
 
@@ -22,16 +36,17 @@ class mapa : public actor
 
     virtual void fin();
 
-    virtual void render();
 
-    void Colisiones();
     bool actor_movements;
     bool pausa;
     objeto * game;
+    Actores actores;
 
-    protected:
+protected:
 
-    private:
+private:
+    virtual void render();
+    void Colisiones();
 };
 
 #endif // MAPA_H

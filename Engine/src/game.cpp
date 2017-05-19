@@ -2,10 +2,13 @@
 
 #include "game.h"
 
+
 game::game():juego(800,600,70,70)
 {
-    ComienzaEnMapa<mapa>();
+   ComienzaEnMapa<mapa>();
 }
+
+
 
 
 

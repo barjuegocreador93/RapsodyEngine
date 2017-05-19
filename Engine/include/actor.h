@@ -15,43 +15,22 @@ public:
     vector<colision *> colisiones;
     vector<render *> imagenes;
 
-    virtual void empezar()
+    virtual void empezar();
+    virtual void mientras(int mils);
+
+    template <class colision>
+    colision * AddColision()
     {
-        visible=true;
-
-        for(int i=0; i<(int)colisiones.size() && visible; i++)
-        {
-            colisiones[i]->empezar();
-        }
-    }
-
-
-    virtual void mientras(int mils)
-    {
-        fisica::mientras(mils);
-        for(int i=0; i<(int)colisiones.size() && visible; i++)
-        {
-            colisiones[i]->mientras(mils);
-        }
-
-    }
-
-
-    template <class c>
-    c * AddColision()
-    {
-        c * nueva=(c*)new(c);
+        colision * nueva=(colision*)new(colision);
         nueva->padre= this;
         colisiones.push_back(nueva);
         return nueva;
     }
 
-
-
-    template <class c>
-    c * AddImage(string dir)
+    template <class render>
+    render * AddImage(string dir)
     {
-        c * nueva=(c*)new(c);
+        render * nueva=(render*)new(render);
         nueva->ubicacion=ubicacion;
         nueva->mount_imagen(dir);
         imagenes.push_back(nueva);
@@ -59,32 +38,8 @@ public:
 
     }
 
-    template <class c>
-    c * Add(string dir)
-    {
-        c * nueva=(c*)new(c);
-        nueva->ubicacion=ubicacion;
-        nueva->mount_imagen(dir);
-        imagenes.push_back(nueva);
-        return nueva;
+    virtual void render();
 
-    }
-
-
-    virtual void render()
-    {
-        for(int i=0; i<(int)imagenes.size() && visible; i++)
-        {
-            imagenes[i]->print();
-        }
-        for(int i=0; i<(int)colisiones.size() && visible; i++)
-        {
-            colisiones[i]->print();
-        }
-
-    }
-
-    void dar_colisiones_al_mapa();
     bool visible;
 
 

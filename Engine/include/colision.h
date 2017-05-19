@@ -17,62 +17,25 @@ public:
 
 
 
-    virtual bool EstaEnSobrePosicion(colision * otro)
-    {
-        return false;
-    }
+    virtual bool EstaEnSobrePosicion(colision * otro);
 
-    virtual bool EstaTocando(colision * m)
-    {
-        for(int i=0; i<(int)bordes.size(); i++)
-        {
-            for(int j=0; j<(int)m->bordes.size(); j++)
-            {
-
-                if(bordes[i].tocando(m->bordes[j]))return true;
-            }
-        }
-        return false;
-    }
+    virtual bool EstaTocando(colision * m);
 
 
-    virtual void SobrePosicion(colision * m)
-    {
-
-    }
+    virtual void SobrePosicion(colision * m);
 
     void fisicas_de_choque_de_solidos(colision *);
 
-    virtual void Tocando(colision *m)
-    {
-        fisicas_de_choque_de_solidos(m);
+    virtual void Tocando(colision *m);
+
+    virtual void attach();
+
+    void ubicacion_realtiva();
+
+    virtual void mientras(int mils);
 
 
-    }
-
-    virtual void attach()
-    {
-
-    }
-
-    void ubicacion_realtiva()
-    {
-
-    }
-
-    virtual void mientras(int mils)
-    {
-
-    }
-
-
-    void print()
-    {
-        for(int i=0; i<(int)bordes.size(); i++)
-        {
-            bordes[i].print();
-        }
-    }
+    void print();
 
 protected:
 

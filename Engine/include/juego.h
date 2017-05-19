@@ -2,7 +2,6 @@
 #define JUEGO_H
 
 #include "rapsody.h"
-#include "objeto.h"
 #include "mapa.h"
 
 class juego : public objeto
@@ -20,31 +19,11 @@ public:
     }
 
 
-    virtual void empezar()
-    {
-        mundo->empezar();
-    }
+    virtual void empezar();
 
-    virtual void mientras(int mils)
-    {
-        while(!gameend)
-        {
-            if(!mundo->pausa)
-            {
-                mundo->mientras(time.mils);
-                time.correTiempo();
-            }
+    virtual void mientras(int mils);
 
-        }
-
-
-
-    }
-
-    virtual void fin()
-    {
-        mundo->fin();
-    }
+    virtual void fin();
 
 
 protected:

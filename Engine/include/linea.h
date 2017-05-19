@@ -8,32 +8,23 @@
 
 class linea
 {
-public:
-    linea();
-    virtual ~linea();
-
-
-    bool tocando(linea &m)
-    {
-        return (A >= m.A && A <= m.B) || (B >= m.A && B <= m.B);
-
-    }
-
-    bool pasada(linea &m)
-    {
-        return false;
-    }
-
     friend ostream &operator<<(ostream &ou,const linea &m)
     {
         cout<<"linea: \n"<<m.A<<m.B<<endl;
         return ou;
     }
 
-    void print()
-    {
-        line(screen,A.x,A.y,B.x,B.y,0xffff);
-    }
+public:
+    linea();
+    virtual ~linea();
+
+    bool tocando(linea &m);
+
+    bool pasada(linea &m);
+
+
+
+    void print();
     punto A,B;
     string axi;
     render data;

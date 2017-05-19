@@ -9,24 +9,13 @@ class controlador : public objeto
 {
 public:
     controlador();
-    virtual ~controlador();
+
 
     objeto *peon;
 
-    virtual void empezar()
-    {
-
-    }
-    virtual void mientras(int mils)
-    {
-
-    }
-
-    virtual void terminar()
-    {
-
-    }
-
+    virtual void empezar();
+    virtual void mientras(int mils);
+    virtual void terminar();
 protected:
 
 private:
