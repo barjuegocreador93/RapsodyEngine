@@ -7,7 +7,7 @@ juego::juego(int ancho,int largo,int left,int rigth)
     inicia_audio(left,rigth);/**Sonido*/
     mundo=NULL;
     gameend=false;
-
+    
 }
 
 juego::~juego()

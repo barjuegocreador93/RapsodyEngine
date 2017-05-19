@@ -2,8 +2,9 @@
 #define MIMAPA_H
 
 
-#include <mapa.h>
-#include <colision.h>
+#include "mapa.h"
+
+
 
 class MiMapa : public mapa
 {

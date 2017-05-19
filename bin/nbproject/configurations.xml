@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="include" displayName="include" projectFiles="true">
+        <itemPath>include/MiMapa.h</itemPath>
+        <itemPath>include/actor.h</itemPath>
+        <itemPath>include/caja.h</itemPath>
+        <itemPath>include/colision.h</itemPath>
+        <itemPath>include/controlador.h</itemPath>
+        <itemPath>include/fisica.h</itemPath>
+        <itemPath>include/game.h</itemPath>
+        <itemPath>include/juego.h</itemPath>
+        <itemPath>include/linea.h</itemPath>
+        <itemPath>include/mapa.h</itemPath>
+        <itemPath>include/objeto.h</itemPath>
+        <itemPath>include/peon.h</itemPath>
+        <itemPath>include/punto.h</itemPath>
+        <itemPath>include/rapsody.h</itemPath>
+        <itemPath>include/render.h</itemPath>
+        <itemPath>include/tiempo.h</itemPath>
+        <itemPath>include/transformacion.h</itemPath>
+      </logicalFolder>
+      <itemPath>inicia.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="src" displayName="src" projectFiles="true">
+        <itemPath>src/MiMapa.cpp</itemPath>
+        <itemPath>src/actor.cpp</itemPath>
+        <itemPath>src/caja.cpp</itemPath>
+        <itemPath>src/colision.cpp</itemPath>
+        <itemPath>src/controlador.cpp</itemPath>
+        <itemPath>src/fisica.cpp</itemPath>
+        <itemPath>src/game.cpp</itemPath>
+        <itemPath>src/juego.cpp</itemPath>
+        <itemPath>src/linea.cpp</itemPath>
+        <itemPath>src/mapa.cpp</itemPath>
+        <itemPath>src/objeto.cpp</itemPath>
+        <itemPath>src/peon.cpp</itemPath>
+        <itemPath>src/punto.cpp</itemPath>
+        <itemPath>src/rapsody.cpp</itemPath>
+        <itemPath>src/render.cpp</itemPath>
+        <itemPath>src/tiempo.cpp</itemPath>
+        <itemPath>src/transformacion.cpp</itemPath>
+      </logicalFolder>
+      <itemPath>inicia.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>src</Elem>
+    <Elem>include</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>include</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>alleg</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="include/MiMapa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/actor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/caja.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/colision.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/controlador.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/fisica.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/game.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/juego.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/linea.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/mapa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/objeto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/peon.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/punto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/rapsody.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/render.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/tiempo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/transformacion.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="inicia.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="inicia.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/MiMapa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/actor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/caja.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/colision.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/controlador.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/fisica.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/juego.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/linea.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/mapa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/objeto.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/peon.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/punto.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/rapsody.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/render.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tiempo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/transformacion.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="include/MiMapa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/actor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/caja.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/colision.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/controlador.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/fisica.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/game.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/juego.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/linea.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/mapa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/objeto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/peon.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/punto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/rapsody.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/render.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/tiempo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/transformacion.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="inicia.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="inicia.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/MiMapa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/actor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/caja.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/colision.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/controlador.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/fisica.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/juego.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/linea.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/mapa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/objeto.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/peon.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/punto.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/rapsody.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/render.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tiempo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/transformacion.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
