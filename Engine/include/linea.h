@@ -1,18 +1,17 @@
+#ifndef LINEA_H
+#define LINEA_H
+
+#include "rapsody.h"
+#include "punto.h"
+#include "render.h"
+
 
 class linea
 {
 public:
-    linea()
-    {
+    linea();
+    virtual ~linea();
 
-    }
-    ~linea()
-    {
-
-    }
-    punto A,B;
-    string axi;
-    s_imagen data;
 
     bool tocando(linea &m)
     {
@@ -35,17 +34,13 @@ public:
     {
         line(screen,A.x,A.y,B.x,B.y,0xffff);
     }
+    punto A,B;
+    string axi;
+    render data;
 
+protected:
+
+private:
 };
 
-
-linea crear_linea(punto a, punto b)
-{
-    linea m;
-    m.A=a;
-    m.B=b;
-
-
-
-    return m;
-}
+#endif // LINEA_H

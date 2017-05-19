@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -31,20 +33,39 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="../include/actor.h" />
+		<Unit filename="../include/caja.h" />
+		<Unit filename="../include/colision.h" />
+		<Unit filename="../include/controlador.h" />
+		<Unit filename="../include/fisica.h" />
+		<Unit filename="../include/juego.h" />
+		<Unit filename="../include/linea.h" />
+		<Unit filename="../include/mapa.h" />
+		<Unit filename="../include/objeto.h" />
+		<Unit filename="../include/peon.h" />
+		<Unit filename="../include/punto.h" />
+		<Unit filename="../include/rapsody.h" />
+		<Unit filename="../include/render.h" />
+		<Unit filename="../include/tiempo.h" />
+		<Unit filename="../include/transformacion.h" />
 		<Unit filename="../inicia.cpp" />
 		<Unit filename="../inicia.h" />
-		<Unit filename="actor.h" />
-		<Unit filename="basic.h" />
-		<Unit filename="colision.h" />
-		<Unit filename="controlador.h" />
-		<Unit filename="fisicas.h" />
-		<Unit filename="includes.h" />
-		<Unit filename="juego.h" />
-		<Unit filename="linea.h" />
-		<Unit filename="mapa.h" />
-		<Unit filename="objeto.h" />
-		<Unit filename="peon.h" />
 		<Unit filename="../main.cpp" />
+		<Unit filename="../src/actor.cpp" />
+		<Unit filename="../src/caja.cpp" />
+		<Unit filename="../src/colision.cpp" />
+		<Unit filename="../src/controlador.cpp" />
+		<Unit filename="../src/fisica.cpp" />
+		<Unit filename="../src/juego.cpp" />
+		<Unit filename="../src/linea.cpp" />
+		<Unit filename="../src/mapa.cpp" />
+		<Unit filename="../src/objeto.cpp" />
+		<Unit filename="../src/peon.cpp" />
+		<Unit filename="../src/punto.cpp" />
+		<Unit filename="../src/rapsody.cpp" />
+		<Unit filename="../src/render.cpp" />
+		<Unit filename="../src/tiempo.cpp" />
+		<Unit filename="../src/transformacion.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

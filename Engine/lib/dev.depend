@@ -5,15 +5,9 @@
 
 1441979060 c:\users\calimpio\documents\github\rapsodyengine\engine\inicia.h
 
-1495171744 source:c:\users\calimpio\documents\github\rapsodyengine\engine\main.cpp
-	<allegro.h>
-	"inicia.h"
-	<iostream>
-	<math.h>
-	<vector>
-	<string.h>
-	<map>
-	"source/game.h"
+1495188190 source:c:\users\calimpio\documents\github\rapsodyengine\engine\main.cpp
+	"include/rapsody.h"
+	"include/game.h"
 
 1495174334 c:\users\calimpio\documents\github\rapsodyengine\engine\source\game.h
 	"../lib/includes.h"
@@ -31,28 +25,88 @@
 	"mapa.h"
 	"juego.h"
 
-1495086524 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\basic.h
+1495181912 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\basic.h
 
-1495178139 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\objeto.h
+1495181333 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\objeto.h
 
-1495177760 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\linea.h
+1495182254 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\linea.h
 
-1495177558 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\colision.h
+1495182636 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\colision.h
 
-1495177650 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\fisicas.h
+1495182985 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\fisicas.h
 
-1495167804 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\actor.h
+1495183270 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\actor.h
 
-1495177634 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\controlador.h
+1495183487 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\controlador.h
 
-1495176113 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\peon.h
+1495183664 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\peon.h
 
-1495176720 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\mapa.h
+1495184148 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\mapa.h
 
-1495178084 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\juego.h
+1495184494 c:\users\calimpio\documents\github\rapsodyengine\engine\lib\juego.h
 
 1495173941 c:\users\calimpio\documents\github\rapsodyengine\engine\source\includes.h
 	"MiMundo.h"
 
-1495174755 c:\users\calimpio\documents\github\rapsodyengine\engine\source\mimundo.h
+1495178283 c:\users\calimpio\documents\github\rapsodyengine\engine\source\mimundo.h
+
+1495188178 c:\users\calimpio\documents\github\rapsodyengine\engine\include\rapsody.h
+	<allegro.h>
+	"../inicia.h"
+	<iostream>
+	<math.h>
+	<vector>
+	<string.h>
+	<map>
+	"punto.h"
+	"tiempo.h"
+	"transformacion.h"
+	"objeto.h"
+	"render.h"
+	"linea.h"
+	"colision.h"
+	"fisica.h"
+	"actor.h"
+	"controlador.h"
+	"peon.h"
+	"mapa.h"
+	"juego.h"
+
+1495187930 c:\users\calimpio\documents\github\rapsodyengine\engine\include\punto.h
+	<iostream>
+	"ostream"
+
+1495185786 c:\users\calimpio\documents\github\rapsodyengine\engine\include\tiempo.h
+
+1495187842 c:\users\calimpio\documents\github\rapsodyengine\engine\include\transformacion.h
+	"punto.h"
+
+1495187829 c:\users\calimpio\documents\github\rapsodyengine\engine\include\objeto.h
+	"transformacion.h"
+
+1495188089 c:\users\calimpio\documents\github\rapsodyengine\engine\include\actor.h
+	"rapsody.h"
+
+1495188041 c:\users\calimpio\documents\github\rapsodyengine\engine\include\fisica.h
+	"rapsody.h"
+
+1495185434 c:\users\calimpio\documents\github\rapsodyengine\engine\include\colision.h
+
+1495182217 c:\users\calimpio\documents\github\rapsodyengine\engine\include\linea.h
+
+1495185529 c:\users\calimpio\documents\github\rapsodyengine\engine\include\render.h
+
+1495186694 c:\users\calimpio\documents\github\rapsodyengine\engine\include\controlador.h
+
+1495186698 c:\users\calimpio\documents\github\rapsodyengine\engine\include\peon.h
+
+1495187964 c:\users\calimpio\documents\github\rapsodyengine\engine\include\mapa.h
+	"actor.h"
+
+1495187949 c:\users\calimpio\documents\github\rapsodyengine\engine\include\juego.h
+	"mapa.h"
+	"objeto.h"
+
+1495187759 c:\users\calimpio\documents\github\rapsodyengine\engine\include\game.h
+	"juego.h"
 

@@ -1,19 +1,15 @@
+#ifndef FISICA_H
+#define FISICA_H
+
+#include "rapsody.h"
+#include "tiempo.h"
+#include "objeto.h"
 
 class fisica : public objeto
 {
 public:
-    fisica()
-    {
-        velocidad=crear_punto(0,0);
-        aceleracion=crear_punto(0,0);
-        colision_solida=true;
-
-    }
-
-    ~fisica()
-    {
-
-    }
+    fisica();
+    virtual ~fisica();
 
     virtual void mientras(int mils)
     {
@@ -52,19 +48,9 @@ public:
     tiempo transncurrido;
 
 
+protected:
 
+private:
 };
 
-
-void colision::fisicas_de_choque_de_solidos(colision * otro)
-{
-    fisica * m = (fisica*)padre, *r=(fisica*)otro->padre;
-     if (m->colision_solida && r->colision_solida)
-     {
-         m->aceleracion *=(-1);
-         m->velocidad *=(-1);
-         r->aceleracion*=(-1);
-         r->velocidad*=(-1);
-
-     }
-}
+#endif // FISICA_H

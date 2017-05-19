@@ -1,24 +1,15 @@
+#ifndef JUEGO_H
+#define JUEGO_H
 
+#include "rapsody.h"
+#include "objeto.h"
+#include "mapa.h"
 
-
-class juego : objeto
+class juego : public objeto
 {
 public:
-    juego(int ancho,int largo,int left,int rigth)
-    {
-        inicia_allegro(ancho,largo);
-        inicia_audio(left,rigth);/**Sonido*/
-        mundo=NULL;
-        gameend=false;
-        time.init();
-        /**code here*/
-
-    }
-
-    ~juego()
-    {
-
-    }
+    juego(int ancho,int largo,int left,int rigth);
+    virtual ~juego();
 
     template <class mapa>
     void ComienzaEnMapa()
@@ -56,11 +47,13 @@ public:
     }
 
 
-
-
 protected:
+
     mapa * mundo;
     tiempo time;
     bool gameend;
 
+private:
 };
+
+#endif // JUEGO_H

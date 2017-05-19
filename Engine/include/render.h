@@ -1,60 +1,17 @@
+#ifndef RENDER_H
+#define RENDER_H
+
+#include "rapsody.h"
+#include "objeto.h"
 
 
-
-
-class objeto
+class render : public objeto
 {
 public:
-
-    objeto()
-    {
-
-    }
-
-    virtual ~objeto()
-    {
-
-    }
-
-    transformacion ubicacion;
-
-    virtual void empezar()
-    {
-
-    }
-
-    virtual void mientras(int mils)
-    {
-
-    }
-
-    virtual void fin()
-    {
-
-    }
+    render();
+    virtual ~render();
 
 
-};
-
-
-class s_imagen : public objeto
-{
-
-public:
-
-    s_imagen()
-    {
-
-    }
-
-    ~s_imagen()
-    {
-
-    }
-
-    img data;
-    bool auto_;
-    int color;
 
     void initi(punto pos,punto escala)
     {
@@ -85,5 +42,12 @@ public:
         }
     }
 
+protected:
+    img data;
+    bool auto_;
+    int color;
+
+private:
 };
 
+#endif // RENDER_H

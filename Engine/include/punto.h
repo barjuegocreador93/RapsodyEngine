@@ -1,17 +1,13 @@
+#ifndef PUNTO_H
+#define PUNTO_H
 
+#include "rapsody.h"
 
-typedef BITMAP *img;
-
-char * strTochar(string a)
+class punto
 {
-    char * x=new char[a.length()+1];
-    strcpy(x,a.c_str());
-    return x;
-}
-
-struct punto
-{
-
+public:
+    punto();
+    virtual ~punto();
     int x;
     int y;
 
@@ -76,68 +72,11 @@ struct punto
         return ou;
     }
 
+protected:
 
+private:
 };
 
-punto crear_punto(int x, int y)
-{
-    punto m;
-    m.x=x;
-    m.y=y;
-    return m;
-}
+punto crear_punto(int,int);
 
-struct transformacion{
-    punto posicion;
-    punto escala;
-
-    transformacion & operator=(const transformacion &otro)
-    {
-        posicion=otro.posicion;
-        escala=otro.escala;
-        return *this;
-    }
-
-};
-
-
-transformacion crear_transformacion(punto pos, punto escala)
-{
-    transformacion u;
-    u.posicion=pos;
-    u.escala=escala;
-    return u;
-}
-
-
-struct tiempo
-{
-    int mils,seg,mins,hrs;
-    void init()
-    {
-        mils=0;
-        seg=0;
-        mins=0;
-        hrs=0;
-    }
-
-    void correTiempo()
-    {
-        if(60==mins)
-        {
-            hrs++;
-            mins=0;
-        }
-        if(60==seg)
-        {
-            mins++;
-          seg=0;
-        }
-        if(1000==mils)
-        {
-            seg++;
-            mils=0;
-        }
-        mils++;
-    }
-};
+#endif // PUNTO_H
