@@ -41,6 +41,8 @@ public:
     virtual void fin();
 
 
+
+
     bool actor_movements;
     bool pausa;
     objeto * game;

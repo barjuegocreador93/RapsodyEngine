@@ -2,14 +2,9 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="include\s_image.h" open="1" top="0" tabpos="27" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\colision.cpp" open="1" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="284" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\objeto.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="175" topLine="0" />
+			<Cursor1 position="1042" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\MiMapa.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -17,164 +12,29 @@
 			<Cursor1 position="303" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\peon.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="196" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\punto.h" open="0" top="0" tabpos="31" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="378" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\mapa.cpp" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1572" topLine="49" />
-		</Cursor>
-	</File>
-	<File name="include\tiempo.h" open="0" top="0" tabpos="35" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="192" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\transformacion.h" open="0" top="0" tabpos="36" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="454" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="inicia.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="440" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="inicia.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="179" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\juego.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="337" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\MiMapa.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="299" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\actor.cpp" open="1" top="1" tabpos="25" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="627" topLine="17" />
-		</Cursor>
-	</File>
-	<File name="src\transformacion.cpp" open="0" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="800" topLine="28" />
-		</Cursor>
-	</File>
-	<File name="src\colision.cpp" open="1" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1042" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\peon.h" open="0" top="0" tabpos="30" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\controlador.cpp" open="1" top="0" tabpos="22" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="196" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\controlador.h" open="0" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="214" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\caja.cpp" open="1" top="0" tabpos="24" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="996" topLine="12" />
-		</Cursor>
-	</File>
 	<File name="include\actor.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="304" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="src\peon.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="196" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="include\mapa.h" open="1" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="585" topLine="10" />
-		</Cursor>
-	</File>
-	<File name="include\fisica.h" open="1" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="447" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\game.h" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="76" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\linea.cpp" open="1" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="255" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\punto.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="328" topLine="24" />
-		</Cursor>
-	</File>
-	<File name="include\juego.h" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="380" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\rapsody.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="106" topLine="0" />
+			<Cursor1 position="740" topLine="18" />
 		</Cursor>
 	</File>
 	<File name="src\s_image.cpp" open="1" top="0" tabpos="26" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="200" topLine="0" />
+			<Cursor1 position="469" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\fisica.cpp" open="1" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\tiempo.h" open="0" top="0" tabpos="35" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="38" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="src\game.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="82" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\caja.h" open="0" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="373" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\linea.h" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="435" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\tiempo.cpp" open="0" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="146" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\objeto.h" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="230" topLine="0" />
+			<Cursor1 position="192" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\colision.h" open="0" top="0" tabpos="22" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -185,6 +45,146 @@
 	<File name="include\rapsody.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="219" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\actor.cpp" open="1" top="1" tabpos="25" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="495" topLine="17" />
+		</Cursor>
+	</File>
+	<File name="src\game.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="82" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\peon.h" open="0" top="0" tabpos="30" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\controlador.cpp" open="1" top="0" tabpos="22" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="196" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\caja.cpp" open="1" top="0" tabpos="24" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="996" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="src\juego.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="337" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\caja.h" open="0" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="373" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\objeto.h" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="230" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\punto.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="328" topLine="24" />
+		</Cursor>
+	</File>
+	<File name="include\controlador.h" open="0" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="214" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\punto.h" open="0" top="0" tabpos="31" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="378" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\rapsody.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="106" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\fisica.h" open="1" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="447" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\s_image.h" open="1" top="0" tabpos="27" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="284" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\linea.cpp" open="1" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="255" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\game.h" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="76" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\transformacion.cpp" open="0" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="800" topLine="28" />
+		</Cursor>
+	</File>
+	<File name="include\transformacion.h" open="0" top="0" tabpos="36" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="454" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="inicia.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="179" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\fisica.cpp" open="1" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="38" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="include\juego.h" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="380" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\tiempo.cpp" open="0" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="146" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\MiMapa.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="299" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="0" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="inicia.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="440" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\linea.h" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="435" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\mapa.cpp" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1572" topLine="49" />
+		</Cursor>
+	</File>
+	<File name="src\objeto.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="175" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

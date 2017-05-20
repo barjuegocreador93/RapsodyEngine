@@ -19,6 +19,8 @@ MiMapa::MiMapa()
     caja * c1=a1->AddColision<caja>();
 
     c1->init(crear_punto(500,500));
+    
+    a1->velocidad=crear_punto(2,0);
 
 
 
