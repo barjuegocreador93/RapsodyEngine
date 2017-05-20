@@ -6,6 +6,7 @@
                    projectFiles="true">
       <logicalFolder name="includes" displayName="game" projectFiles="true">
         <itemPath>game/includes/MiMapa.h</itemPath>
+        <itemPath>include/game.h</itemPath>
       </logicalFolder>
       <logicalFolder name="include" displayName="include" projectFiles="true">
         <itemPath>include/actor.h</itemPath>
@@ -13,7 +14,6 @@
         <itemPath>include/colision.h</itemPath>
         <itemPath>include/controlador.h</itemPath>
         <itemPath>include/fisica.h</itemPath>
-        <itemPath>include/game.h</itemPath>
         <itemPath>include/juego.h</itemPath>
         <itemPath>include/linea.h</itemPath>
         <itemPath>include/mapa.h</itemPath>
@@ -36,6 +36,7 @@
                    projectFiles="true">
       <logicalFolder name="sources" displayName="game" projectFiles="true">
         <itemPath>game/sources/MiMapa.cpp</itemPath>
+        <itemPath>src/game.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="src" displayName="src" projectFiles="true">
         <itemPath>src/actor.cpp</itemPath>
@@ -43,7 +44,6 @@
         <itemPath>src/colision.cpp</itemPath>
         <itemPath>src/controlador.cpp</itemPath>
         <itemPath>src/fisica.cpp</itemPath>
-        <itemPath>src/game.cpp</itemPath>
         <itemPath>src/juego.cpp</itemPath>
         <itemPath>src/linea.cpp</itemPath>
         <itemPath>src/mapa.cpp</itemPath>
