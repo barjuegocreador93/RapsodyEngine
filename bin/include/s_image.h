@@ -20,7 +20,7 @@ public:
     void crear(int color);
 
     void print();
-
+    
 protected:
     img data;
     bool auto_;

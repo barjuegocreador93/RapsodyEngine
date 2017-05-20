@@ -36,7 +36,8 @@ public:
 
 
     void print();
-
+    
+    bool visible;
 protected:
 
 private:

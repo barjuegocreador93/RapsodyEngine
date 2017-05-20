@@ -11,8 +11,8 @@ class transformacion
 
         punto Getposicion();
         void Setposicion(punto val);
-        punto Getescala();
-        void Setescala(punto val);
+        punto GetEscala();
+        void SetEscala(punto val);
 
         transformacion & operator=(const transformacion &otro);
 

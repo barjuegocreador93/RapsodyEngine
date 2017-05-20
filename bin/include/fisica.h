@@ -14,7 +14,19 @@ public:
     virtual void mientras(int mils);
 
     void active_movenets_on_map();
+    
+    bool TieneColisionDeSolidos()
+    {
+        return colision_solida;
+    }
+    
+    void SetVelocidad(punto value)
+    {
+        velocidad=value;
+    }
 
+protected:
+    
     punto velocidad;
     punto aceleracion;
     objeto * mundo;
@@ -25,9 +37,6 @@ public:
     bool movimiento;
     bool colision_solida;
     tiempo transncurrido;
-
-
-protected:
 
 private:
 };

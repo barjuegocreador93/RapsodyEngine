@@ -16,13 +16,9 @@ colision::~colision()
 void colision::fisicas_de_choque_de_solidos(colision * otro)
 {
     fisica * m = (fisica*)padre, *r=(fisica*)otro->padre;
-    if (m->colision_solida && r->colision_solida)
+    if (m->TieneColisionDeSolidos() && r->TieneColisionDeSolidos())
     {
-        m->aceleracion *=(-1);
-        m->velocidad *=(-1);
-        r->aceleracion*=(-1);
-        r->velocidad*=(-1);
-
+        
     }
 }
 
@@ -76,7 +72,7 @@ void colision::mientras(int mils)
 
 void colision::print()
 {
-    for(int i=0; i<(int)bordes.size(); i++)
+    for(int i=0; i<(int)bordes.size() && visible; i++)
     {
         bordes[i].print();
     }

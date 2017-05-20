@@ -35,8 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/game/sources/MiMapa.o \
 	${OBJECTDIR}/inicia.o \
-	${OBJECTDIR}/src/MiMapa.o \
 	${OBJECTDIR}/src/actor.o \
 	${OBJECTDIR}/src/caja.o \
 	${OBJECTDIR}/src/colision.o \
@@ -79,15 +79,15 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bin.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bin ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/game/sources/MiMapa.o: game/sources/MiMapa.cpp
+	${MKDIR} -p ${OBJECTDIR}/game/sources
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/game/sources/MiMapa.o game/sources/MiMapa.cpp
+
 ${OBJECTDIR}/inicia.o: inicia.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/inicia.o inicia.cpp
-
-${OBJECTDIR}/src/MiMapa.o: src/MiMapa.cpp
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MiMapa.o src/MiMapa.cpp
 
 ${OBJECTDIR}/src/actor.o: src/actor.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

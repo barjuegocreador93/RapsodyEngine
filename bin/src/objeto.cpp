@@ -25,3 +25,8 @@ void objeto::fin()
 {
 
 }
+
+void objeto::pertenece(objeto* m)
+{
+    padre=m;
+}

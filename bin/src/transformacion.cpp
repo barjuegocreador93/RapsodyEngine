@@ -14,7 +14,7 @@ transformacion crear_transformacion(punto posicion, punto escala)
 {
     transformacion u;
     u.Setposicion(posicion);
-    u.Setescala(escala);
+    u.SetEscala(escala);
     return u;
 }
 
@@ -56,12 +56,12 @@ void transformacion::Setposicion(punto val)
     posicion = val;
 }
 
-punto transformacion::Getescala()
+punto transformacion::GetEscala()
 {
     return escala;
 }
 
-void transformacion::Setescala(punto val)
+void transformacion::SetEscala(punto val)
 {
     escala = val;
 }

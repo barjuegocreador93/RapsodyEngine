@@ -19,9 +19,9 @@ public:
     virtual void mientras(int mils);
 
     void movimientos(linea &line_a,linea &line_b,linea &line_c,linea &line_d);
-
+    
 protected:
-
+    
 private:
 };
 

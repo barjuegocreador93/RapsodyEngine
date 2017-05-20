@@ -16,25 +16,11 @@ void mapa::Colisiones()
 {
     for(Actores::iterator i=actores.begin() ; i!= actores.end(); ++i)
     {
-        for(Actores::iterator j=i ; j!= actores.end(); ++j)
+        for(Actores::iterator j= i ; j!= actores.end(); ++j)
         {
             if(i!=j)
             {
-                for(int n=0; n<(int)i->second->colisiones.size(); n++)
-                    for(int k=0; k<(int)j->second->colisiones.size(); k++)
-                    {
-                        colision * t1=j->second->colisiones[k], * t2=i->second->colisiones[n];
-                        if(t1->EstaEnSobrePosicion(t2))
-                        {
-                            t1->SobrePosicion(t2);
-                            t2->SobrePosicion(t1);
-                        }
-                        if(t1->EstaTocando(t2))
-                        {
-                            t1->Tocando(t2);
-
-                        }
-                    }
+                i->second->ColisionaConOtro(j->second);
             }
         }
     }

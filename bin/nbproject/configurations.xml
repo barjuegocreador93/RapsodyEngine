@@ -4,8 +4,10 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="includes" displayName="game" projectFiles="true">
+        <itemPath>game/includes/MiMapa.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="include" displayName="include" projectFiles="true">
-        <itemPath>include/MiMapa.h</itemPath>
         <itemPath>include/actor.h</itemPath>
         <itemPath>include/caja.h</itemPath>
         <itemPath>include/colision.h</itemPath>
@@ -32,8 +34,10 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="sources" displayName="game" projectFiles="true">
+        <itemPath>game/sources/MiMapa.cpp</itemPath>
+      </logicalFolder>
       <logicalFolder name="src" displayName="src" projectFiles="true">
-        <itemPath>src/MiMapa.cpp</itemPath>
         <itemPath>src/actor.cpp</itemPath>
         <itemPath>src/caja.cpp</itemPath>
         <itemPath>src/colision.cpp</itemPath>
@@ -79,6 +83,8 @@
   <sourceRootList>
     <Elem>src</Elem>
     <Elem>include</Elem>
+    <Elem>game/includes</Elem>
+    <Elem>game/sources</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -92,6 +98,7 @@
         <ccTool>
           <incDir>
             <pElem>include</pElem>
+            <pElem>game/includes</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
@@ -100,7 +107,9 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="include/MiMapa.h" ex="false" tool="3" flavor2="0">
+      <item path="game/includes/MiMapa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="game/sources/MiMapa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="include/actor.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -137,8 +146,6 @@
       <item path="inicia.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="inicia.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="src/MiMapa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/actor.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -193,7 +200,9 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="include/MiMapa.h" ex="false" tool="3" flavor2="0">
+      <item path="game/includes/MiMapa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="game/sources/MiMapa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="include/actor.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -230,8 +239,6 @@
       <item path="inicia.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="inicia.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="src/MiMapa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/actor.cpp" ex="false" tool="1" flavor2="0">
       </item>

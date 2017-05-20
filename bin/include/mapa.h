@@ -25,7 +25,7 @@ public:
             actor * x=(actor*)new(actor_type);
             if(x!=NULL)
             {
-                x->mundo=this;
+                x->pertenece(this);
                 actores.insert(Actor(key,x));
                 return (actor_type *)x;
             }
@@ -39,17 +39,28 @@ public:
     virtual void mientras(int mils);
 
     virtual void fin();
+    
 
+    void SeDetectaMoviemiento()
+    {
+        actor_movements=true;
+    }
 
-
-
-    bool actor_movements;
-    bool pausa;
-    objeto * game;
-    Actores actores;
+    void SetPausa(bool value)
+    {
+        pausa=value;
+    }
+    
+    bool HayPausa()
+    {
+        return pausa;
+    }
+    
 
 protected:
-
+    bool actor_movements;
+    bool pausa;    
+    Actores actores;
 private:
     virtual void render();
     void Colisiones();

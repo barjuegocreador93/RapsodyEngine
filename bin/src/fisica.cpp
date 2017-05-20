@@ -16,7 +16,7 @@ fisica::~fisica()
 void fisica::active_movenets_on_map()
 {
     mapa * m=(mapa*)mundo;
-    m->actor_movements=true;
+    m->SeDetectaMoviemiento();
 }
 
 void fisica::mientras(int mils)

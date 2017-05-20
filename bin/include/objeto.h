@@ -14,9 +14,44 @@ public:
     virtual void empezar();
     virtual void mientras(int mils);
     virtual void fin();
-    transformacion ubicacion;
+    
+    void pertenece(objeto *);
+    
+    void SetUbicacion(transformacion value)
+    {
+        ubicacion=value;
+    }
+    
+    transformacion GetUbicacion()
+    {
+        return ubicacion;
+    }
+    
+    void SetPosicion(punto value)
+    {
+        ubicacion.Setposicion(value);
+    }
+    
+    punto GetPosicion()
+    {
+        return ubicacion.Getposicion();
+    }
+    
+    void SetEscala(punto value)
+    {
+        ubicacion.SetEscala(value);
+    }
+    
+    punto GetEscala()
+    {
+        return ubicacion.GetEscala();
+    }
+    
+    
 protected:
-
+    
+    transformacion ubicacion;    
+    objeto * padre;
 
 
 private:
