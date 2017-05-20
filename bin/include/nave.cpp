@@ -27,3 +27,6 @@ void nave::empezar()
     AddColision(c1);    
     peon::empezar();
 }
+
+
+

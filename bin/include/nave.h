@@ -14,19 +14,22 @@
 #ifndef NAVE_H
 #define NAVE_H
 
-#include "rapsody.h"
-#include "objeto.h"
+#include"game.h"
 #include "peon.h"
 #include "caja.h"
 
-class nave : peon {
+
+class nave : peon{
 public:
     nave();
     nave(const nave& orig);
     virtual ~nave();
     
-
-    virtual void empezar();
+    
+    virtual void empezar();   
+    
+    
+    
 
 private:
     caja * c1;

@@ -27,7 +27,9 @@ void mi_mapa::empezar()
     
     n1=AddActor<nave>("actor1");
     
-    ((objeto *)n1)->SetUbicacion(crear_transformacion(crear_punto(5,5),crear_punto(5,5)));
+    ((peon *)n1)->SetUbicacion(crear_transformacion(crear_punto(5,5),crear_punto(20,20)));
+    
+    ((peon *)n1)->AddControlador<controlador>();
     
     
     mapa::empezar();

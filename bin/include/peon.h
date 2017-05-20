@@ -17,7 +17,8 @@ public:
     void AddControlador()
     {
         jugador=(controlador *)new(controlador_type);
-        jugador->pertenece(this);
+        if(jugador != NULL)
+            jugador->pertenece(this);
     }
 
     virtual void empezar();

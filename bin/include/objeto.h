@@ -15,37 +15,13 @@ public:
     virtual void mientras(int mils);
     virtual void fin();
     
-    void pertenece(objeto *);
-    
-    void SetUbicacion(transformacion value)
-    {
-        ubicacion=value;
-    }
-    
-    transformacion GetUbicacion()
-    {
-        return ubicacion;
-    }
-    
-    void SetPosicion(punto value)
-    {
-        ubicacion.Setposicion(value);
-    }
-    
-    punto GetPosicion()
-    {
-        return ubicacion.Getposicion();
-    }
-    
-    void SetEscala(punto value)
-    {
-        ubicacion.SetEscala(value);
-    }
-    
-    punto GetEscala()
-    {
-        return ubicacion.GetEscala();
-    }
+    void pertenece(objeto *);    
+    virtual void SetUbicacion(transformacion value);    
+    virtual transformacion GetUbicacion();    
+    virtual void SetPosicion(punto value);    
+    virtual punto GetPosicion();    
+    virtual void SetEscala(punto value);    
+    virtual punto GetEscala();
     
     template<class objeto_type,class objeto_type_esperada>
     void AddObjetoComoHijoEnUnVector(vector<objeto_type_esperada *> * value,objeto_type * result,objeto_type_esperada * newitem = NULL)
@@ -71,5 +47,6 @@ protected:
 
 private:
 };
+
 
 #endif // OBJETO_H
