@@ -189,10 +189,10 @@
 
 1495221375 c:\users\calimpio\documents\github\rapsodyengine\bin\include\tiempo.h
 
-1495222872 c:\users\calimpio\documents\github\rapsodyengine\bin\include\transformacion.h
+1495265707 c:\users\calimpio\documents\github\rapsodyengine\bin\include\transformacion.h
 	"punto.h"
 
-1495180050 c:\users\calimpio\documents\github\rapsodyengine\bin\include\objeto.h
+1495265707 c:\users\calimpio\documents\github\rapsodyengine\bin\include\objeto.h
 	"transformacion.h"
 
 1495259441 c:\users\calimpio\documents\github\rapsodyengine\bin\include\render.h
@@ -202,17 +202,17 @@
 	"punto.h"
 	"s_image.h"
 
-1495219511 c:\users\calimpio\documents\github\rapsodyengine\bin\include\colision.h
+1495261922 c:\users\calimpio\documents\github\rapsodyengine\bin\include\colision.h
 	"rapsody.h"
 	"linea.h"
 	"objeto.h"
 
-1495187420 c:\users\calimpio\documents\github\rapsodyengine\bin\include\fisica.h
+1495266168 c:\users\calimpio\documents\github\rapsodyengine\bin\include\fisica.h
 	"rapsody.h"
 	"tiempo.h"
 	"objeto.h"
 
-1495259374 c:\users\calimpio\documents\github\rapsodyengine\bin\include\actor.h
+1495266840 c:\users\calimpio\documents\github\rapsodyengine\bin\include\actor.h
 	"rapsody.h"
 	"s_image.h"
 	"colision.h"
@@ -227,11 +227,11 @@
 	"actor.h"
 	"controlador.h"
 
-1495259700 c:\users\calimpio\documents\github\rapsodyengine\bin\include\mapa.h
+1495268469 c:\users\calimpio\documents\github\rapsodyengine\bin\include\mapa.h
 	"rapsody.h"
 	"actor.h"
 
-1495197846 c:\users\calimpio\documents\github\rapsodyengine\bin\include\juego.h
+1495268264 c:\users\calimpio\documents\github\rapsodyengine\bin\include\juego.h
 	"rapsody.h"
 	"mapa.h"
 
@@ -294,7 +294,7 @@
 1495196687 c:\users\calimpio\documents\github\rapsodyengine\bin\include\mimapa.h
 	"mapa.h"
 
-1495198753 c:\users\calimpio\documents\github\rapsodyengine\bin\include\s_image.h
+1495263412 c:\users\calimpio\documents\github\rapsodyengine\bin\include\s_image.h
 	"rapsody.h"
 	"objeto.h"
 

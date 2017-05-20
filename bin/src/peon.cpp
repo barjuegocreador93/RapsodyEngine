@@ -18,7 +18,7 @@ peon::~peon()
 
 void peon::empezar()
 {
-    actor::empezar();
+   actor::empezar();
    if(jugador!=NULL) jugador->empezar();
 }
 

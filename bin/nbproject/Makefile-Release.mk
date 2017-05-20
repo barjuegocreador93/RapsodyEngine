@@ -35,7 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/game/sources/MiMapa.o \
+	${OBJECTDIR}/include/nave.o \
 	${OBJECTDIR}/inicia.o \
 	${OBJECTDIR}/src/actor.o \
 	${OBJECTDIR}/src/caja.o \
@@ -46,6 +46,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/juego.o \
 	${OBJECTDIR}/src/linea.o \
 	${OBJECTDIR}/src/mapa.o \
+	${OBJECTDIR}/src/mi_mapa.o \
 	${OBJECTDIR}/src/objeto.o \
 	${OBJECTDIR}/src/peon.o \
 	${OBJECTDIR}/src/punto.o \
@@ -79,10 +80,10 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bin.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bin ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/game/sources/MiMapa.o: game/sources/MiMapa.cpp
-	${MKDIR} -p ${OBJECTDIR}/game/sources
+${OBJECTDIR}/include/nave.o: include/nave.cpp
+	${MKDIR} -p ${OBJECTDIR}/include
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/game/sources/MiMapa.o game/sources/MiMapa.cpp
+	$(COMPILE.cc) -O2 -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/include/nave.o include/nave.cpp
 
 ${OBJECTDIR}/inicia.o: inicia.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -117,7 +118,7 @@ ${OBJECTDIR}/src/fisica.o: src/fisica.cpp
 ${OBJECTDIR}/src/game.o: src/game.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/game.o src/game.cpp
+	$(COMPILE.cc) -O2 -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/game.o src/game.cpp
 
 ${OBJECTDIR}/src/juego.o: src/juego.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
@@ -133,6 +134,11 @@ ${OBJECTDIR}/src/mapa.o: src/mapa.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mapa.o src/mapa.cpp
+
+${OBJECTDIR}/src/mi_mapa.o: src/mi_mapa.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mi_mapa.o src/mi_mapa.cpp
 
 ${OBJECTDIR}/src/objeto.o: src/objeto.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

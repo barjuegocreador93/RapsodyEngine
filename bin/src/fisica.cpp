@@ -25,8 +25,7 @@ void fisica::mientras(int mils)
     {
         if(transncurrido.seg==60)
         {
-            velocidad.x += aceleracion.x;
-            velocidad.y += aceleracion.y;
+            velocidad += aceleracion;
             if(crear_punto(0,0) != velocidad)
             {
                 active_movenets_on_map();

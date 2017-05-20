@@ -5,8 +5,12 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="includes" displayName="game" projectFiles="true">
-        <itemPath>game/includes/MiMapa.h</itemPath>
+        <itemPath>src/game.cpp</itemPath>
         <itemPath>include/game.h</itemPath>
+        <itemPath>src/mi_mapa.cpp</itemPath>
+        <itemPath>include/mi_mapa.h</itemPath>
+        <itemPath>include/nave.cpp</itemPath>
+        <itemPath>include/nave.h</itemPath>
       </logicalFolder>
       <logicalFolder name="include" displayName="include" projectFiles="true">
         <itemPath>include/actor.h</itemPath>
@@ -35,8 +39,6 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="sources" displayName="game" projectFiles="true">
-        <itemPath>game/sources/MiMapa.cpp</itemPath>
-        <itemPath>src/game.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="src" displayName="src" projectFiles="true">
         <itemPath>src/actor.cpp</itemPath>
@@ -83,8 +85,6 @@
   <sourceRootList>
     <Elem>src</Elem>
     <Elem>include</Elem>
-    <Elem>game/includes</Elem>
-    <Elem>game/sources</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -98,7 +98,6 @@
         <ccTool>
           <incDir>
             <pElem>include</pElem>
-            <pElem>game/includes</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
@@ -107,10 +106,13 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="game/includes/MiMapa.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="game/sources/MiMapa.cpp" ex="false" tool="1" flavor2="0">
-      </item>
+      <folder path="HeaderFiles/includes">
+        <ccTool>
+          <incDir>
+            <pElem>include</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
       <item path="include/actor.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/caja.h" ex="false" tool="3" flavor2="0">
@@ -128,6 +130,12 @@
       <item path="include/linea.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/mapa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/mi_mapa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/nave.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="include/nave.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/objeto.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -164,6 +172,8 @@
       <item path="src/linea.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/mapa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/mi_mapa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/objeto.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -200,10 +210,13 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="game/includes/MiMapa.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="game/sources/MiMapa.cpp" ex="false" tool="1" flavor2="0">
-      </item>
+      <folder path="HeaderFiles/includes">
+        <ccTool>
+          <incDir>
+            <pElem>include</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
       <item path="include/actor.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/caja.h" ex="false" tool="3" flavor2="0">
@@ -221,6 +234,12 @@
       <item path="include/linea.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/mapa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/mi_mapa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/nave.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="include/nave.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/objeto.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -257,6 +276,8 @@
       <item path="src/linea.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/mapa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/mi_mapa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/objeto.cpp" ex="false" tool="1" flavor2="0">
       </item>

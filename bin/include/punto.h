@@ -32,7 +32,7 @@ public:
     float div();
 
     void operator*=(int c);
-
+    void operator+=(punto);
 
 
 protected:

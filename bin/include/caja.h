@@ -1,7 +1,7 @@
 #ifndef CAJA_H
 #define CAJA_H
 
-#include "rapsody.h"
+
 #include "colision.h"
 
 class caja : public colision

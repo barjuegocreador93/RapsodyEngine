@@ -27,6 +27,12 @@ void actor::mientras(int mils) {
 
 }
 
+
+void actor::fin() {
+
+}
+
+
 void actor::render() {
     if (visible) {
         for (int i = 0; i < (int) imagenes.size() && visible; i++) {

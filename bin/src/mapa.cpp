@@ -3,6 +3,7 @@
 mapa::mapa()
 {
     //ctor
+    
 }
 
 mapa::~mapa()
@@ -65,6 +66,7 @@ void mapa::mientras(int mils)
  void mapa::empezar()
 {
     pausa=false;
+    actor_movements=true;
     for(Actores::iterator i=actores.begin() ; i!= actores.end(); ++i)
     {
         i->second->empezar();

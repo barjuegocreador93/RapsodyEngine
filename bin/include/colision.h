@@ -2,9 +2,9 @@
 #define COLISION_H
 
 
-#include "rapsody.h"
+
 #include "linea.h"
-#include "objeto.h"
+
 
 
 class colision : public objeto
@@ -12,7 +12,8 @@ class colision : public objeto
 public:
     colision();
     virtual ~colision();
-    objeto * padre;
+
+    
     vector<linea> bordes;
 
 

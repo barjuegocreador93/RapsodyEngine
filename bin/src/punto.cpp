@@ -19,6 +19,12 @@ punto crear_punto(int x,int y)
     return m;
 }
 
+void punto::operator +=(punto value)
+{
+    x+=value.x;
+    y+=value.y;
+}
+
 
 punto &punto::operator=(const punto &otro)
 {

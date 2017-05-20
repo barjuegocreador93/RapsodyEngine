@@ -1,9 +1,10 @@
 #ifndef FISICA_H
 #define FISICA_H
 
-#include "rapsody.h"
-#include "tiempo.h"
+
+
 #include "objeto.h"
+#include "tiempo.h"
 
 class fisica : public objeto
 {

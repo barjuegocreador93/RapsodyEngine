@@ -12,8 +12,6 @@
             <sourceRootList>
                 <sourceRootElem>src</sourceRootElem>
                 <sourceRootElem>include</sourceRootElem>
-                <sourceRootElem>game/includes</sourceRootElem>
-                <sourceRootElem>game/sources</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

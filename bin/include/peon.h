@@ -1,7 +1,7 @@
 #ifndef PEON_H
 #define PEON_H
 
-#include "rapsody.h"
+
 #include "actor.h"
 #include "controlador.h"
 
@@ -17,6 +17,7 @@ public:
     void AddControlador()
     {
         jugador=(controlador *)new(controlador_type);
+        jugador->pertenece(this);
     }
 
     virtual void empezar();

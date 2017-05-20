@@ -13,7 +13,6 @@
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/tiempo.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/inicia.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/transformacion.cpp</file>
-            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/MiMapa.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/controlador.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/peon.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/objeto.cpp</file>
@@ -21,6 +20,7 @@
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/s_image.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/transformacion.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/actor.h</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/caja.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/actor.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/inicia.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/game.cpp</file>
@@ -32,13 +32,14 @@
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/fisica.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/tiempo.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/game.h</file>
-            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/MiMapa.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/punto.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/s_image.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/juego.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/peon.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/controlador.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/colision.cpp</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/game/includes/MiMapa.h</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/game/sources/MiMapa.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/mapa.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody.h</file>
         </group>

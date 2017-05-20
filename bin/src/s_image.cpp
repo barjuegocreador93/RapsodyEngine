@@ -6,7 +6,7 @@ s_image::s_image()
 }
 
 s_image::~s_image() {
-
+    destroy_bitmap(data);
 }
 
 void s_image::initi(punto pos, punto escala) {

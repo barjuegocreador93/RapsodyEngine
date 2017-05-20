@@ -1,7 +1,7 @@
 #ifndef JUEGO_H
 #define JUEGO_H
 
-#include "rapsody.h"
+
 #include "mapa.h"
 
 class juego : public objeto
