@@ -29,8 +29,7 @@ public:
 protected:
     
     punto velocidad;
-    punto aceleracion;
-    objeto * mundo;
+    punto aceleracion;    
 
     float masa;
 

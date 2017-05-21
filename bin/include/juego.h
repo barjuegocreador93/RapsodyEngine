@@ -15,7 +15,10 @@ public:
     {
         if(mundo!=NULL)delete mundo;
         mundo=(mapa*)new(mapa_type);        
-        if(mundo!=NULL)mundo->pertenece(this);
+        if(mundo!=NULL)
+        {
+            mundo->pertenece(this);            
+        }
     }
 
 

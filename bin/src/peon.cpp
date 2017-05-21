@@ -3,8 +3,7 @@
 peon::peon()
 {
     //ctor
-    jugador=NULL;
-    
+       
 }
 
 peon::~peon()

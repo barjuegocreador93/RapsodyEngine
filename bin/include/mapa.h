@@ -25,7 +25,7 @@ public:
             actor * x=(actor*)new(actor_type);
             if(x!=NULL)
             {
-                x->pertenece(this);
+                x->pertenece(this);               
                 actores.insert(Actor(key,x));
                 return (actor_type *)x;
             }

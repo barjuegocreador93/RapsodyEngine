@@ -14,6 +14,7 @@
 #include "nave.h"
 
 nave::nave() {
+    
 }
 
 nave::nave(const nave& orig) {
@@ -22,9 +23,9 @@ nave::nave(const nave& orig) {
 nave::~nave() {
 }
 
-void nave::empezar()
+ void nave::empezar()
 {
-    AddColision(c1);    
+    AddColision(c1);
     peon::empezar();
 }
 

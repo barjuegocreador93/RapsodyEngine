@@ -9,6 +9,7 @@
 #include <vector>
 #include <string.h>
 #include <map>
+
 using namespace std;
 
 typedef BITMAP *img;

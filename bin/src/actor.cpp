@@ -2,6 +2,7 @@
 
 actor::actor() {
     //ctor
+    visible=true;
 }
 
 actor::~actor() {
@@ -34,12 +35,19 @@ void actor::fin() {
 
 
 void actor::render() {
+    if(debug_mode)cout<<" actor render corriendo\n";
     if (visible) {
+        if(debug_mode)cout<<" iniciando cilo de imagenes \n";
         for (int i = 0; i < (int) imagenes.size() && visible; i++) {
+            if(debug_mode)cout<<" corriendo print "<<i<<"\n";
             imagenes[i]->print();
+            if(debug_mode)cout<<" fin print "<<i<<"\n";
         }
+        if(debug_mode)cout<<" iniciando cilo de colisiones \n";
         for (int i = 0; i < (int) colisiones.size() && visible; i++) {
+            if(debug_mode)cout<<" corriendo print "<<i<<"\n";
             colisiones[i]->print();
+            if(debug_mode)cout<<" fin print "<<i<<"\n";
         }
     }
 }

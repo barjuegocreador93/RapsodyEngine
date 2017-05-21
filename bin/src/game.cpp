@@ -5,6 +5,7 @@
 
 game::game():juego(800,600,70,70)
 {
+   setPriority_debuger(false);
    ComienzaEnMapa<mi_mapa>();
 }
 

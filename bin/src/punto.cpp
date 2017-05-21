@@ -3,6 +3,8 @@
 punto::punto()
 {
     //ctor
+    x=0;
+    y=0;
 }
 
 punto::~punto()

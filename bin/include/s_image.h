@@ -23,7 +23,7 @@ public:
     
 protected:
     img data;
-    bool auto_;
+    int data_render_mode;
     int color;
 
 private:

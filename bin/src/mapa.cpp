@@ -1,5 +1,5 @@
 #include "mapa.h"
-
+#include "juego.h"
 mapa::mapa()
 {
     //ctor
@@ -9,12 +9,25 @@ mapa::mapa()
 mapa::~mapa()
 {
     //dtor
-    delete mundo;
+   
+}
+
+void mapa::empezar()
+{
+    estatico=true;
+    pausa=false;
+    actor_movements=true;
+    if(debug_mode)cout<<"mapa empezar corriendo actores"<<endl;
+    for(Actores::iterator i=actores.begin() ; i!= actores.end(); ++i)
+    {
+        i->second->empezar();
+    }
 }
 
 
 void mapa::Colisiones()
 {
+    if(debug_mode)cout<<"mapa colisiones corriendo actores\n";
     for(Actores::iterator i=actores.begin() ; i!= actores.end(); ++i)
     {
         for(Actores::iterator j= i ; j!= actores.end(); ++j)
@@ -25,14 +38,21 @@ void mapa::Colisiones()
             }
         }
     }
+    if(debug_mode)cout<<"fin mapa colisiones\n";
 }
 
 void mapa::render()
 {
+    if(debug_mode)cout<<"mapa render corriendo actor mapa\n";
+    if(debug_mode)cout<<"mapa posicion en: "<<ubicacion.Getposicion()<<"con escala: "<<ubicacion.GetEscala();
     actor::render();
+    if(debug_mode)cout<<" fin mapa render corriendo actor mapa\n";
+    int j=1;
     for(Actores::iterator i=actores.begin() ; i!= actores.end(); ++i)
     {
+        if(debug_mode)cout<<" render :"<<j;
         i->second->render();
+        j++;
     }
 }
 
@@ -63,15 +83,7 @@ void mapa::mientras(int mils)
     }
 }
 
- void mapa::empezar()
-{
-    pausa=false;
-    actor_movements=true;
-    for(Actores::iterator i=actores.begin() ; i!= actores.end(); ++i)
-    {
-        i->second->empezar();
-    }
-}
+ 
 
 
 

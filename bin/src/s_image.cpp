@@ -2,7 +2,9 @@
 
 s_image::s_image()
 {
-
+    data=NULL;
+    data_render_mode=0;
+    color=0xffff;
 }
 
 s_image::~s_image() {
@@ -16,18 +18,25 @@ void s_image::initi(punto pos, punto escala) {
 
 void s_image::mount_imagen(string dir) {
     data = load_bitmap(strTochar(dir), NULL);
-    auto_ = false;
+    data_render_mode = 0;
 }
 
 void s_image::crear(int color) {
+    if(debug_mode)cout<<" s_image crear correindo "<<"\n";
     data = create_bitmap(ubicacion.GetEscala().x, ubicacion.GetEscala().y);
-    auto_ = true;
+    if(!data)cout<<" error s_image crear data."<<"\n";
+    data_render_mode = 1;
     color = color;
 }
 
 void s_image::print() {
-    if (!auto_)blit(data, screen, 0, 0, ubicacion.Getposicion().x, ubicacion.Getposicion().y, ubicacion.GetEscala().x, ubicacion.GetEscala().y);
+    if(debug_mode)cout<<" s_image print correindo "<<"\n";
+    if(debug_mode)cout<<" s_image print en ubicacion \n "<<ubicacion.Getposicion()<<" "<<ubicacion.GetEscala();
+    if(debug_mode && !data)cout<<" error s_image en data.\n";
+    
+    if (!data_render_mode)blit(data, screen, 0, 0, ubicacion.Getposicion().x, ubicacion.Getposicion().y, ubicacion.GetEscala().x, ubicacion.GetEscala().y);
     else {
+        if(debug_mode)cout<<"   s_image en data color anñadido.\n";
         clear_to_color(data, color);
         blit(data, screen, 0, 0, ubicacion.Getposicion().x, ubicacion.Getposicion().y, ubicacion.GetEscala().x, ubicacion.GetEscala().y);
     }

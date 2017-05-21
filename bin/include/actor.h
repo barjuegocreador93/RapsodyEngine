@@ -32,25 +32,30 @@ public:
     template <class s_image_type>
     s_image_type * AddImage(string dir, s_image_type * nueva = NULL)
     {
-        s_image * n;
-        AddObjetoComoHijoEnUnVector(&imagenes,nueva,n);       
-        if(n!=NULL)
-        {           
+        s_image *n=(s_image *)new(s_image_type);
+        nueva=NULL;
+        if(n)
+        {
+            n->pertenece(this);
             n->mount_imagen(dir);
-        }        
+            imagenes.push_back(n);
+            nueva=(s_image_type *)n;
+        }
         return nueva;
     }
 
     template <class s_image_type>
-    s_image_type * AddDefaultImage(int color, s_image_type * nueva)
+    s_image_type * AddDefaultImage(int color, s_image_type * nueva=NULL)
     {
-
-        s_image * n;
-        AddObjetoComoHijoEnUnVector(&imagenes,nueva,n);        
-        if((n)!=NULL)
-        {            
-            n->crear(color);         
-        }        
+        s_image *n=(s_image *)new(s_image_type);
+        nueva=NULL;
+        if(n)
+        {
+            n->pertenece(this);
+            n->crear(color);
+            imagenes.push_back(n);
+            nueva=(s_image_type *)n;
+        }
         return nueva;
 
         
@@ -60,13 +65,14 @@ public:
     
     void ColisionaConOtro(actor *);
     
-    bool visible;
+    
 
 
 protected:
     
     vector<colision *> colisiones;
     vector<s_image *> imagenes;
+    bool visible;
 
 private:
 };

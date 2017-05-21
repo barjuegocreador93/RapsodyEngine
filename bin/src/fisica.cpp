@@ -4,6 +4,14 @@
 fisica::fisica()
 {
     //ctor
+    estatico=false;
+    colision_solida=false;
+    movimiento=false;
+    masa=0.0;    
+    velocidad=aceleracion=crear_punto(0,0);
+    
+    
+    
 }
 
 fisica::~fisica()
@@ -15,8 +23,8 @@ fisica::~fisica()
 
 void fisica::active_movenets_on_map()
 {
-    mapa * m=(mapa*)mundo;
-    m->SeDetectaMoviemiento();
+    mapa * m=(mapa*)padre;
+    if(m != NULL)m->SeDetectaMoviemiento();
 }
 
 void fisica::mientras(int mils)
