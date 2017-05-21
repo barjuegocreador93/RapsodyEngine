@@ -4,23 +4,14 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <logicalFolder name="includes" displayName="game" projectFiles="true">
-        <itemPath>src/game.cpp</itemPath>
-        <itemPath>include/game.h</itemPath>
-        <itemPath>src/mi_mapa.cpp</itemPath>
-        <itemPath>include/mi_mapa.h</itemPath>
-        <itemPath>include/nave.cpp</itemPath>
-        <itemPath>include/nave.h</itemPath>
-      </logicalFolder>
       <logicalFolder name="include" displayName="include" projectFiles="true">
         <itemPath>include/actor.h</itemPath>
+        <itemPath>include/actor_component.h</itemPath>
         <itemPath>include/caja.h</itemPath>
         <itemPath>include/colision.h</itemPath>
         <itemPath>include/controlador.h</itemPath>
         <itemPath>include/fisica.h</itemPath>
-        <itemPath>include/juego.h</itemPath>
         <itemPath>include/linea.h</itemPath>
-        <itemPath>include/mapa.h</itemPath>
         <itemPath>include/objeto.h</itemPath>
         <itemPath>include/peon.h</itemPath>
         <itemPath>include/punto.h</itemPath>
@@ -38,17 +29,13 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="sources" displayName="game" projectFiles="true">
-      </logicalFolder>
       <logicalFolder name="src" displayName="src" projectFiles="true">
         <itemPath>src/actor.cpp</itemPath>
         <itemPath>src/caja.cpp</itemPath>
         <itemPath>src/colision.cpp</itemPath>
         <itemPath>src/controlador.cpp</itemPath>
         <itemPath>src/fisica.cpp</itemPath>
-        <itemPath>src/juego.cpp</itemPath>
         <itemPath>src/linea.cpp</itemPath>
-        <itemPath>src/mapa.cpp</itemPath>
         <itemPath>src/objeto.cpp</itemPath>
         <itemPath>src/peon.cpp</itemPath>
         <itemPath>src/punto.cpp</itemPath>
@@ -57,6 +44,7 @@
         <itemPath>src/tiempo.cpp</itemPath>
         <itemPath>src/transformacion.cpp</itemPath>
       </logicalFolder>
+      <itemPath>src/actor_component.cpp</itemPath>
       <itemPath>inicia.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -106,14 +94,9 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <folder path="HeaderFiles/includes">
-        <ccTool>
-          <incDir>
-            <pElem>include</pElem>
-          </incDir>
-        </ccTool>
-      </folder>
       <item path="include/actor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/actor_component.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/caja.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -123,19 +106,7 @@
       </item>
       <item path="include/fisica.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/game.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/juego.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="include/linea.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/mapa.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/mi_mapa.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/nave.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="include/nave.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/objeto.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -157,6 +128,8 @@
       </item>
       <item path="src/actor.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="src/actor_component.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="src/caja.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/colision.cpp" ex="false" tool="1" flavor2="0">
@@ -165,15 +138,7 @@
       </item>
       <item path="src/fisica.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/game.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/juego.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="src/linea.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/mapa.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/mi_mapa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/objeto.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -210,14 +175,9 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <folder path="HeaderFiles/includes">
-        <ccTool>
-          <incDir>
-            <pElem>include</pElem>
-          </incDir>
-        </ccTool>
-      </folder>
       <item path="include/actor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/actor_component.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/caja.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -227,19 +187,7 @@
       </item>
       <item path="include/fisica.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/game.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/juego.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="include/linea.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/mapa.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/mi_mapa.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/nave.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="include/nave.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/objeto.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -261,6 +209,8 @@
       </item>
       <item path="src/actor.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="src/actor_component.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="src/caja.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/colision.cpp" ex="false" tool="1" flavor2="0">
@@ -269,15 +219,7 @@
       </item>
       <item path="src/fisica.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/game.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/juego.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="src/linea.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/mapa.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/mi_mapa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/objeto.cpp" ex="false" tool="1" flavor2="0">
       </item>

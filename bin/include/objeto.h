@@ -46,7 +46,8 @@ public:
     void setDebug_mode(bool debug_mode);
     bool isDebug_mode() const;
     void setPriority_debuger(bool priority_debuger);
-    bool isPriority_debuger() const;;
+    bool isPriority_debuger() const;
+    objeto* getPadre() const;;
     
     
 protected:

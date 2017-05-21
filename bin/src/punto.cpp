@@ -45,7 +45,7 @@ bool punto::operator!=(punto &otro)
     return ! (*this == otro);
 }
 
-punto punto::operator+(punto &otro)
+punto punto::operator+(const punto &otro)
 {
     punto m;
     m.x=x + otro.x;
@@ -82,4 +82,11 @@ void punto::operator*=(int c)
 {
     x*=c;
     y*=c;
+}
+
+punto punto::operator*(const punto& otro) {
+    punto m;
+    m.x=x*otro.x;
+    m.y=y=otro.y;
+    return m;
 }

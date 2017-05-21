@@ -33,7 +33,6 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="include/MiMapa.h" />
 		<Unit filename="include/actor.h" />
 		<Unit filename="include/caja.h" />
 		<Unit filename="include/colision.h" />
@@ -43,6 +42,8 @@
 		<Unit filename="include/juego.h" />
 		<Unit filename="include/linea.h" />
 		<Unit filename="include/mapa.h" />
+		<Unit filename="include/mi_mapa.h" />
+		<Unit filename="include/nave.h" />
 		<Unit filename="include/objeto.h" />
 		<Unit filename="include/peon.h" />
 		<Unit filename="include/punto.h" />
@@ -53,7 +54,6 @@
 		<Unit filename="inicia.cpp" />
 		<Unit filename="inicia.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/MiMapa.cpp" />
 		<Unit filename="src/actor.cpp" />
 		<Unit filename="src/caja.cpp" />
 		<Unit filename="src/colision.cpp" />
@@ -63,6 +63,8 @@
 		<Unit filename="src/juego.cpp" />
 		<Unit filename="src/linea.cpp" />
 		<Unit filename="src/mapa.cpp" />
+		<Unit filename="src/mi_mapa.cpp" />
+		<Unit filename="src/nave.cpp" />
 		<Unit filename="src/objeto.cpp" />
 		<Unit filename="src/peon.cpp" />
 		<Unit filename="src/punto.cpp" />

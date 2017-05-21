@@ -35,18 +35,14 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/include/nave.o \
 	${OBJECTDIR}/inicia.o \
 	${OBJECTDIR}/src/actor.o \
+	${OBJECTDIR}/src/actor_component.o \
 	${OBJECTDIR}/src/caja.o \
 	${OBJECTDIR}/src/colision.o \
 	${OBJECTDIR}/src/controlador.o \
 	${OBJECTDIR}/src/fisica.o \
-	${OBJECTDIR}/src/game.o \
-	${OBJECTDIR}/src/juego.o \
 	${OBJECTDIR}/src/linea.o \
-	${OBJECTDIR}/src/mapa.o \
-	${OBJECTDIR}/src/mi_mapa.o \
 	${OBJECTDIR}/src/objeto.o \
 	${OBJECTDIR}/src/peon.o \
 	${OBJECTDIR}/src/punto.o \
@@ -80,11 +76,6 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bin.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bin ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/include/nave.o: include/nave.cpp
-	${MKDIR} -p ${OBJECTDIR}/include
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/include/nave.o include/nave.cpp
-
 ${OBJECTDIR}/inicia.o: inicia.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -94,6 +85,11 @@ ${OBJECTDIR}/src/actor.o: src/actor.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/actor.o src/actor.cpp
+
+${OBJECTDIR}/src/actor_component.o: src/actor_component.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/actor_component.o src/actor_component.cpp
 
 ${OBJECTDIR}/src/caja.o: src/caja.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
@@ -115,30 +111,10 @@ ${OBJECTDIR}/src/fisica.o: src/fisica.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/fisica.o src/fisica.cpp
 
-${OBJECTDIR}/src/game.o: src/game.cpp
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/game.o src/game.cpp
-
-${OBJECTDIR}/src/juego.o: src/juego.cpp
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/juego.o src/juego.cpp
-
 ${OBJECTDIR}/src/linea.o: src/linea.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/linea.o src/linea.cpp
-
-${OBJECTDIR}/src/mapa.o: src/mapa.cpp
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mapa.o src/mapa.cpp
-
-${OBJECTDIR}/src/mi_mapa.o: src/mi_mapa.cpp
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mi_mapa.o src/mi_mapa.cpp
 
 ${OBJECTDIR}/src/objeto.o: src/objeto.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

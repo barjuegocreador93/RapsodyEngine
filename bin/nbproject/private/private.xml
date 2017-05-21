@@ -7,8 +7,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/linea.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/colision.h</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/linea.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/mapa.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/tiempo.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/inicia.cpp</file>
@@ -16,16 +16,21 @@
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/controlador.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/peon.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/objeto.cpp</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/nave.cpp</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/mi_mapa.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/rapsody.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/s_image.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/transformacion.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/actor.h</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/linea.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/caja.h</file>
-            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/actor.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/inicia.h</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/actor.cpp</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/objeto.h</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/mi_mapa.h</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/nave.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/game.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/fisica.cpp</file>
-            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/objeto.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/caja.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/juego.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/punto.cpp</file>
@@ -38,10 +43,8 @@
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/peon.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/controlador.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/colision.cpp</file>
-            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/game/includes/MiMapa.h</file>
-            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/game/sources/MiMapa.cpp</file>
-            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/mapa.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody.h</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/mapa.cpp</file>
         </group>
     </open-files>
 </project-private>

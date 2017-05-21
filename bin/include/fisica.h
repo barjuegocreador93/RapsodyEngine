@@ -25,11 +25,15 @@ public:
     {
         velocidad=value;
     }
+    void setMundo(objeto* mundo);
+    objeto* getMundo() const;
 
 protected:
     
     punto velocidad;
-    punto aceleracion;    
+    punto aceleracion;
+
+    objeto * mundo;
 
     float masa;
 

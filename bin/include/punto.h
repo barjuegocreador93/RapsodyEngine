@@ -23,12 +23,12 @@ public:
 
     bool operator!=(punto &otro);
 
-    punto operator+(punto &otro);
+    punto operator+(const punto &otro);
     bool operator>=(punto &otro);
     bool operator<=(punto &otro);
 
     punto operator-(punto &otro);
-
+    punto operator*(const punto &otro);
     float div();
 
     void operator*=(int c);

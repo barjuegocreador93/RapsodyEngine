@@ -1,5 +1,6 @@
 #include "fisica.h"
-#include "mapa.h"
+
+
 
 fisica::fisica()
 {
@@ -14,6 +15,14 @@ fisica::fisica()
     
 }
 
+void fisica::setMundo(objeto* mundo) {
+    this->mundo = mundo;
+}
+
+objeto* fisica::getMundo() const {
+    return mundo;
+}
+
 fisica::~fisica()
 {
     //dtor
@@ -23,16 +32,20 @@ fisica::~fisica()
 
 void fisica::active_movenets_on_map()
 {
-    mapa * m=(mapa*)padre;
-    if(m != NULL)m->SeDetectaMoviemiento();
+    
 }
 
 void fisica::mientras(int mils)
 {
+    
+    
     if(!estatico)
     {
-        if(transncurrido.seg==60)
+        
+        
+        if(transncurrido.seg == 60)
         {
+            
             velocidad += aceleracion;
             if(crear_punto(0,0) != velocidad)
             {
@@ -42,9 +55,10 @@ void fisica::mientras(int mils)
             }
             transncurrido.seg=0;
         }
-        if(mils==1000)
+        if(mils)
         {
-            transncurrido.seg++;
+           transncurrido.seg++; 
         }
+        
     }
 }

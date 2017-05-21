@@ -29,4 +29,7 @@ protected:
 private:
 };
 
+typedef vector<s_image *> Sprite;
+typedef s_image * Image;
+
 #endif // RENDER_H

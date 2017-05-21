@@ -12,6 +12,9 @@ public:
 
     void init(punto escala);
 
+    virtual void constructor_();
+    
+
     virtual void empezar();
 
     virtual void attach();

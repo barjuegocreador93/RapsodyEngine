@@ -11,6 +11,10 @@ caja::~caja()
     //dtor
 }
 
+void caja::constructor_() {
+
+}
+
 
 void caja::init(punto escala)
 {
@@ -32,7 +36,7 @@ void caja::empezar()
 
 void caja::attach()
 {
-    SetPosicion(padre->GetPosicion());
+    ubicacion.Setposicion(padre->GetPosicion());
     movimientos(bordes[0],bordes[1],bordes[2],bordes[3]);
 }
 

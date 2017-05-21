@@ -4,10 +4,10 @@
 
 
 #include "linea.h"
+#include "actor_component.h"
 
 
-
-class colision : public objeto
+class colision : public actor_component
 {
 public:
     colision();

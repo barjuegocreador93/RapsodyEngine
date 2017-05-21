@@ -23,6 +23,10 @@ bool objeto::isPriority_debuger() const {
     return priority_debuger;
 }
 
+objeto* objeto::getPadre() const {
+    return padre;
+}
+
 objeto::~objeto() {
     //dtor
 }
