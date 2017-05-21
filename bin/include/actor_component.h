@@ -17,7 +17,11 @@
 
 #include "objeto.h"
 
+
+
+
 class actor_component : objeto {
+    
 public:
     actor_component();
     actor_component(const actor_component& orig);
@@ -28,19 +32,22 @@ public:
     virtual void empezar();
     virtual void mientras(int mils);
     virtual void fin();
+    
+    template<class actor_component_type>
+    actor_component_type * AddComponent();
 
 
 protected:
     transformacion ubicacion, ubicacion_interna;
-    
+    vector<actor_component *> components;
     objeto * padre;
 
 private:
 
 };
 
-typedef vector<actor_component *> AComponents;
-typedef actor_component* AComponent;
+    typedef vector<actor_component *> AComponents;
+    typedef actor_component* AComponent;
 
 #endif /* ACTOR_COMPONENT_H */
 

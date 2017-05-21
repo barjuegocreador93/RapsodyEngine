@@ -36,6 +36,10 @@ void actor_component::empezar() {
             ubicacion.GetEscala()*ubicacion_interna.GetEscala()
         )
     );
+    for(int i=0;i<(int)components.size();i++)
+    {
+        components[i]->empezar();
+    }
 }
 
 void actor_component::mientras(int mils) {
@@ -45,8 +49,29 @@ void actor_component::mientras(int mils) {
             ubicacion.GetEscala()*ubicacion_interna.GetEscala()
         )
     );
+    for(int i=0;i<(int)components.size();i++)
+    {
+        components[i]->mientras(mils);
+    }
 }
 
 void actor_component::fin() {
+    
+    for(int i=0;i<(int)components.size();i++)
+    {
+        components[i]->fin();
+    }
+}
 
+template<class actor_component_type>
+actor_component_type* actor_component::AddComponent() {
+    AComponent m=(AComponent)new(actor_component_type);
+    if(m)
+    {
+        m->pertenece(padre);
+        m->constructor_();            
+        components.push_back(m);
+
+    }
+    return (actor_component_type *)m;
 }
