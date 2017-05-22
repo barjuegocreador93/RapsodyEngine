@@ -13,7 +13,7 @@ namespace rapsody {
         virtual ~actor();
 
 
-
+        
         virtual void empezar();
         virtual void mientras(int mils);
         virtual void fin();

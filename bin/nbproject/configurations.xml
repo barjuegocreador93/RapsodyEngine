@@ -5,16 +5,30 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="include" displayName="include" projectFiles="true">
-        <itemPath>include/actor.h</itemPath>
-        <itemPath>include/actor_component.h</itemPath>
-        <itemPath>include/caja.h</itemPath>
-        <itemPath>include/colision_linea.h</itemPath>
-        <itemPath>include/controlador.h</itemPath>
+        <logicalFolder name="actores" displayName="actores" projectFiles="true">
+          <logicalFolder name="componentes" displayName="componentes" projectFiles="true">
+            <itemPath>include/actores/componentes/actor_component.h</itemPath>
+            <itemPath>include/actores/componentes/caja.h</itemPath>
+            <itemPath>include/actores/componentes/colision_linea.h</itemPath>
+          </logicalFolder>
+          <itemPath>include/actores/actor.h</itemPath>
+          <itemPath>include/actores/peon.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="controladores"
+                       displayName="controladores"
+                       projectFiles="true">
+          <itemPath>include/controladores/controlador.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="mapas" displayName="mapas" projectFiles="true">
+          <logicalFolder name="aplicativos" displayName="aplicativos" projectFiles="true">
+            <logicalFolder name="componentes" displayName="componentes" projectFiles="true">
+            </logicalFolder>
+          </logicalFolder>
+          <itemPath>include/mapas/mapa.h</itemPath>
+        </logicalFolder>
         <itemPath>include/fisica.h</itemPath>
         <itemPath>include/linea.h</itemPath>
-        <itemPath>include/mapa_componente.h</itemPath>
         <itemPath>include/objeto.h</itemPath>
-        <itemPath>include/peon.h</itemPath>
         <itemPath>include/punto.h</itemPath>
         <itemPath>include/rapsody.h</itemPath>
         <itemPath>include/s_image.h</itemPath>
@@ -38,7 +52,7 @@
         <itemPath>src/controlador.cpp</itemPath>
         <itemPath>src/fisica.cpp</itemPath>
         <itemPath>src/linea.cpp</itemPath>
-        <itemPath>src/mapa_componente.cpp</itemPath>
+        <itemPath>src/mapa.cpp</itemPath>
         <itemPath>src/objeto.cpp</itemPath>
         <itemPath>src/peon.cpp</itemPath>
         <itemPath>src/punto.cpp</itemPath>
@@ -88,6 +102,11 @@
         <ccTool>
           <incDir>
             <pElem>include</pElem>
+            <pElem>include/actores</pElem>
+            <pElem>include/actores/componentes</pElem>
+            <pElem>include/controladores</pElem>
+            <pElem>include/mapas</pElem>
+            <pElem>include/mapas/aplicativos</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
@@ -96,25 +115,34 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="include/actor.h" ex="false" tool="3" flavor2="0">
+      <item path="include/actores/actor.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/actor_component.h" ex="false" tool="3" flavor2="0">
+      <item path="include/actores/componentes/actor_component.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/caja.h" ex="false" tool="3" flavor2="0">
+      <item path="include/actores/componentes/caja.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/colision_linea.h" ex="false" tool="3" flavor2="0">
+      <item path="include/actores/componentes/colision_linea.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/controlador.h" ex="false" tool="3" flavor2="0">
+      <item path="include/actores/peon.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/controladores/controlador.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="include/fisica.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/linea.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/mapa_componente.h" ex="false" tool="3" flavor2="0">
+      <item path="include/mapas/mapa.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/objeto.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/peon.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/punto.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -144,7 +172,7 @@
       </item>
       <item path="src/linea.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/mapa_componente.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/mapa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/objeto.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -181,25 +209,34 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="include/actor.h" ex="false" tool="3" flavor2="0">
+      <item path="include/actores/actor.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/actor_component.h" ex="false" tool="3" flavor2="0">
+      <item path="include/actores/componentes/actor_component.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/caja.h" ex="false" tool="3" flavor2="0">
+      <item path="include/actores/componentes/caja.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/colision_linea.h" ex="false" tool="3" flavor2="0">
+      <item path="include/actores/componentes/colision_linea.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/controlador.h" ex="false" tool="3" flavor2="0">
+      <item path="include/actores/peon.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/controladores/controlador.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="include/fisica.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/linea.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/mapa_componente.h" ex="false" tool="3" flavor2="0">
+      <item path="include/mapas/mapa.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/objeto.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/peon.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/punto.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -229,7 +266,7 @@
       </item>
       <item path="src/linea.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/mapa_componente.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/mapa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/objeto.cpp" ex="false" tool="1" flavor2="0">
       </item>

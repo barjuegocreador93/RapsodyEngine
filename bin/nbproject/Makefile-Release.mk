@@ -43,7 +43,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/controlador.o \
 	${OBJECTDIR}/src/fisica.o \
 	${OBJECTDIR}/src/linea.o \
-	${OBJECTDIR}/src/mapa_componente.o \
+	${OBJECTDIR}/src/mapa.o \
 	${OBJECTDIR}/src/objeto.o \
 	${OBJECTDIR}/src/peon.o \
 	${OBJECTDIR}/src/punto.o \
@@ -117,10 +117,10 @@ ${OBJECTDIR}/src/linea.o: src/linea.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/linea.o src/linea.cpp
 
-${OBJECTDIR}/src/mapa_componente.o: src/mapa_componente.cpp
+${OBJECTDIR}/src/mapa.o: src/mapa.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mapa_componente.o src/mapa_componente.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mapa.o src/mapa.cpp
 
 ${OBJECTDIR}/src/objeto.o: src/objeto.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

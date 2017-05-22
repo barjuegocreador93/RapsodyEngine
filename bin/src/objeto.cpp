@@ -32,6 +32,11 @@ objeto::~objeto() {
     //dtor
 }
 
+void objeto::constructor_() {
+
+}
+
+
 void objeto::empezar() {
     
 }
