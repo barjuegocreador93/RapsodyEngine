@@ -5,22 +5,20 @@
  */
 
 /* 
- * File:   aplicativo.cpp
+ * File:   game.cpp
  * Author: Calimpio
  * 
- * Created on 22 de mayo de 2017, 06:21 AM
+ * Created on 22 de mayo de 2017, 08:32 AM
  */
 
-#include "aplicativo.h"
+#include "game.h"
 using namespace rapsody;
-
-
-aplicativo::aplicativo() {
+game::game() {
 }
 
-aplicativo::aplicativo(const aplicativo& orig) {
+game::game(const game& orig) {
 }
 
-aplicativo::~aplicativo() {
+game::~game() {
 }
 

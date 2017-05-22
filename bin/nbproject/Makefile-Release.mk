@@ -40,10 +40,13 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/actor_component.o \
 	${OBJECTDIR}/src/aplicativo.o \
 	${OBJECTDIR}/src/aplicativo_componente.o \
+	${OBJECTDIR}/src/aplicativo_fondo.o \
+	${OBJECTDIR}/src/aplicativo_fondo_componente.o \
 	${OBJECTDIR}/src/colision_caja.o \
 	${OBJECTDIR}/src/colision_linea.o \
 	${OBJECTDIR}/src/controlador.o \
 	${OBJECTDIR}/src/fisica.o \
+	${OBJECTDIR}/src/game.o \
 	${OBJECTDIR}/src/linea.o \
 	${OBJECTDIR}/src/mapa.o \
 	${OBJECTDIR}/src/objeto.o \
@@ -104,6 +107,16 @@ ${OBJECTDIR}/src/aplicativo_componente.o: src/aplicativo_componente.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/aplicativo_componente.o src/aplicativo_componente.cpp
 
+${OBJECTDIR}/src/aplicativo_fondo.o: src/aplicativo_fondo.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/aplicativo_fondo.o src/aplicativo_fondo.cpp
+
+${OBJECTDIR}/src/aplicativo_fondo_componente.o: src/aplicativo_fondo_componente.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/aplicativo_fondo_componente.o src/aplicativo_fondo_componente.cpp
+
 ${OBJECTDIR}/src/colision_caja.o: src/colision_caja.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
@@ -123,6 +136,11 @@ ${OBJECTDIR}/src/fisica.o: src/fisica.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/fisica.o src/fisica.cpp
+
+${OBJECTDIR}/src/game.o: src/game.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/game.o src/game.cpp
 
 ${OBJECTDIR}/src/linea.o: src/linea.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

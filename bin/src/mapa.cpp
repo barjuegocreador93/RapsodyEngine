@@ -16,6 +16,7 @@
 using namespace rapsody;
 
 mapa::mapa() {
+    fondo = AddActor<aplicativo_fondo>();
 }
 
 mapa::mapa(const mapa& orig) {
@@ -26,10 +27,12 @@ mapa::~mapa() {
 }
 
 void mapa::constructor_() {
-
+    SetUbicacion(padre->GetUbicacion());
 }
 
 void mapa::empezar() {
+    
+    
     
     for(int i=0;i<(int)actores.size();i++)
     {
@@ -64,5 +67,10 @@ void mapa::SystemaDeColision() {
     }
 }
 
+void mapa::Imagen_de_fondo(string dir) {
+    fondo->Imagen_de_fondo(dir);
+}
 
-
+void mapa::BitmappFondo(int color) {
+    fondo->DefaultBitmap(color);
+}

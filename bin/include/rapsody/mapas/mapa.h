@@ -16,6 +16,7 @@
 
 #include "objeto.h"
 #include "actor.h"
+#include "aplicativos/aplicativo_fondo.h"
 namespace rapsody {
 
     class mapa : public objeto {
@@ -51,13 +52,16 @@ namespace rapsody {
         void SystemaDeColision();
         
 
-
+        void Imagen_de_fondo(string dir);        
+        
+        void BitmappFondo(int color);
+        
 
 
     protected:
         vector<actor *> actores;
         bool movimientos;
-        
+        aplicativo_fondo* fondo;
         
     private:
 
