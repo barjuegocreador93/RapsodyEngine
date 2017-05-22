@@ -51,9 +51,12 @@ namespace rapsody{
                 nuevo->pertenece(this);
                 nuevo->constructor_();
                 mapas.push_back(nuevo);
+                nuevo->setItem(mapas.begin() + ((int)mapas.size()-1));
             }
             return (mapa_type*)nuevo;
         }
+        
+        void EraseMapaItem(D_Worlds::iterator item);
 
         
     protected:

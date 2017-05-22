@@ -36,6 +36,10 @@ void objeto::constructor_() {
 
 }
 
+void objeto::destructor_() {
+
+}
+
 
 void objeto::empezar() {
     
@@ -77,3 +81,4 @@ void objeto::SetEscala(punto2D value) {
 punto2D objeto::GetEscala() {
     return ubicacion.GetEscala();
 }
+

@@ -30,6 +30,10 @@ namespace rapsody {
         virtual void empezar();
         virtual void mientras(int mils);
         virtual void fin();
+
+        virtual void destructor_();
+        
+
         
         template<class actor_type>
         actor_type* AddActor() {
@@ -38,11 +42,13 @@ namespace rapsody {
                 m->pertenece(this);
                 m->constructor_();
                 actores.push_back(m);
+                m->setItem(actores.begin()+((int)actores.size()-1));
 
             }
             return (actor_type *) m;
         }
         
+        void EraseActor(D_ActorsItem item);
         
 
         void setMovimientos(bool movimientos) {
@@ -56,17 +62,27 @@ namespace rapsody {
         
         void BitmappFondo(int color);
         
+        
+        
+        void setItem(vector<mapa*>::iterator item) {
+            this->item = item;
+        }
 
 
     protected:
-        vector<actor *> actores;
+        D_Actors actores;
         bool movimientos;
         aplicativo_fondo* fondo;
+        vector<mapa* >::iterator item;
         
     private:
 
     };
 }
+
+typedef vector<rapsody::mapa*> D_Worlds;
+typedef rapsody::mapa* D_World;
+typedef rapsody::mapa C_World;
 
 #endif /* MAPA_H */
 

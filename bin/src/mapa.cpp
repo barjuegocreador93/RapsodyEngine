@@ -12,6 +12,7 @@
  */
 
 #include "mapa.h"
+#include "game.h"
 
 using namespace rapsody;
 
@@ -73,4 +74,15 @@ void mapa::Imagen_de_fondo(string dir) {
 
 void mapa::BitmappFondo(int color) {
     fondo->DefaultBitmap(color);
+}
+
+void mapa::EraseActor(D_ActorsItem item) {
+    actores.erase(item);
+}
+
+void mapa::destructor_() {
+    if(padre)
+    {
+        ((game*)padre)->EraseMapaItem(item);
+    }
 }

@@ -18,8 +18,10 @@
 #include <typeinfo>
 
 #include "objeto.h"
+
 namespace rapsody {
 
+    
     class actor_componente : public objeto {
     public:
         actor_componente();
@@ -27,6 +29,9 @@ namespace rapsody {
         virtual ~actor_componente();
 
         virtual void constructor_();
+        
+        virtual void destructor_();
+
 
         virtual void empezar();
         virtual void mientras(int mils);
@@ -47,8 +52,10 @@ namespace rapsody {
             if (m) {
                 m->pertenece(padre);
                 m->contenedor=this;
+                
                 m->constructor_();                
                 components.push_back(m);
+                m->item = components.begin() + ((int)components.size()-1);
 
             }
             return (actor_component_type *) m;
@@ -60,16 +67,21 @@ namespace rapsody {
         void setUbicacion_interna(C_Transform ubicacion_interna) {
             this->ubicacion_interna = ubicacion_interna;
         }
+        void setItem(vector<actor_componente*>::iterator item);
+        
+        
 
 
     protected:
         C_Transform ubicacion, ubicacion_interna;
-        vector<actor_componente *> components;
+        vector<actor_componente*> components;        
         objeto * padre;
         actor_componente * contenedor;
-
-
+        
+       
     private:
+        vector<actor_componente*>::iterator item;
+        
 
 
     };

@@ -16,7 +16,9 @@ namespace rapsody {
         
         virtual void empezar();
         virtual void mientras(int mils);
-        virtual void fin();
+        virtual void fin();      
+        virtual void destructor_();
+
 
         void render();
 
@@ -38,10 +40,14 @@ namespace rapsody {
 
 
         void SystemaDeColision(actor * ext);
+        
+        void EraseComponent(D_AComponents::iterator item);
+        void setItem(vector<actor*>::iterator item);
 
     protected:
 
         D_AComponents components;
+        vector<actor *>::iterator item;
         bool visible;
 
     private:
@@ -50,6 +56,8 @@ namespace rapsody {
 }
 typedef map<string, rapsody::actor *> D_MActores;
 typedef pair<string, rapsody::actor *> D_MActor;
+typedef vector< rapsody::actor *>::iterator D_ActorsItem;
+typedef vector< rapsody::actor *> D_Actors;
 typedef rapsody::actor* D_Actor;
 typedef rapsody::actor C_Actor;
 

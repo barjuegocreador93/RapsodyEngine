@@ -17,6 +17,12 @@ using namespace rapsody;
 
 actor_componente::actor_componente() {
     ubicacion_interna = crear_transformacion(crear_punto(0, 0), crear_punto(1, 1));
+    contenedor = NULL;
+    
+}
+
+void actor_componente::setItem(vector<actor_componente*>::iterator item) {
+    this->item = item;
 }
 
 actor_componente::actor_componente(const actor_componente& orig) {
@@ -35,7 +41,9 @@ void actor_componente::Sobre(D_AComponent un_componente) {
 }
 
 actor_componente::~actor_componente() {
+    components.clear();
 }
+
 
 void actor_componente::empezar() {
     MoviemientosInternos();
@@ -115,4 +123,15 @@ void actor_componente::MoviemientosInternos() {
     }
 }
 
-
+void actor_componente::destructor_() {
+    if(contenedor)
+    {
+        contenedor->components.erase(item);
+        
+        
+    } else
+    {
+        if(padre)((actor *)padre)->EraseComponent(item);
+    }
+    delete this;    
+}

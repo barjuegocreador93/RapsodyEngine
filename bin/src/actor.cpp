@@ -1,4 +1,5 @@
 #include "actor.h"
+#include "mapa.h"
 using namespace rapsody;
 actor::actor() {
     //ctor
@@ -61,5 +62,21 @@ void actor::SystemaDeColision(actor* ext) {
                 ext->components[j]->SystemaDeColision(components[i]);
             }
         }
+    }
+}
+
+void actor::EraseComponent(D_AComponents::iterator item) {
+    components.erase(item);
+}
+
+void actor::setItem(vector<actor*>::iterator item) {
+    this->item = item;
+}
+
+void actor::destructor_() {
+    if(padre)
+    {
+        ((mapa* )padre)->EraseActor(item);
+        delete this;
     }
 }

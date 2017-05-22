@@ -67,3 +67,7 @@ void game::fin() {
     if(mapaReady>=0 && mapaReady < mapas.size())
         mapas[mapaReady]->fin();
 }
+
+void game::EraseMapaItem(D_Worlds::iterator item) {
+    mapas.erase(item);
+}

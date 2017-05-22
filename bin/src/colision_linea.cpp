@@ -46,3 +46,5 @@ void colision_linea::MoviemientosInternos() {
     global_linea.A=ubicacion.Getposicion() + internal_linea.A;
     global_linea.B=ubicacion.Getposicion() + internal_linea.B;
 }
+
+
