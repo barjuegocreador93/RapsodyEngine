@@ -12,6 +12,7 @@
         <itemPath>include/controlador.h</itemPath>
         <itemPath>include/fisica.h</itemPath>
         <itemPath>include/linea.h</itemPath>
+        <itemPath>include/mapa_componente.h</itemPath>
         <itemPath>include/objeto.h</itemPath>
         <itemPath>include/peon.h</itemPath>
         <itemPath>include/punto.h</itemPath>
@@ -31,10 +32,13 @@
                    projectFiles="true">
       <logicalFolder name="src" displayName="src" projectFiles="true">
         <itemPath>src/actor.cpp</itemPath>
+        <itemPath>src/actor_component.cpp</itemPath>
+        <itemPath>src/caja.cpp</itemPath>
         <itemPath>src/colision_linea.cpp</itemPath>
         <itemPath>src/controlador.cpp</itemPath>
         <itemPath>src/fisica.cpp</itemPath>
         <itemPath>src/linea.cpp</itemPath>
+        <itemPath>src/mapa_componente.cpp</itemPath>
         <itemPath>src/objeto.cpp</itemPath>
         <itemPath>src/peon.cpp</itemPath>
         <itemPath>src/punto.cpp</itemPath>
@@ -43,8 +47,6 @@
         <itemPath>src/tiempo.cpp</itemPath>
         <itemPath>src/transformacion.cpp</itemPath>
       </logicalFolder>
-      <itemPath>src/actor_component.cpp</itemPath>
-      <itemPath>src/caja.cpp</itemPath>
       <itemPath>inicia.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -108,6 +110,8 @@
       </item>
       <item path="include/linea.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/mapa_componente.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/objeto.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/peon.h" ex="false" tool="3" flavor2="0">
@@ -139,6 +143,8 @@
       <item path="src/fisica.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/linea.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/mapa_componente.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/objeto.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -189,6 +195,8 @@
       </item>
       <item path="include/linea.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/mapa_componente.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/objeto.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/peon.h" ex="false" tool="3" flavor2="0">
@@ -220,6 +228,8 @@
       <item path="src/fisica.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/linea.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/mapa_componente.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/objeto.cpp" ex="false" tool="1" flavor2="0">
       </item>

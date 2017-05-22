@@ -118,7 +118,8 @@ void actor_componente::MoviemientosInternos() {
         SetUbicacion(
                 crear_transformacion(
                 padre->GetPosicion() + ubicacion_interna.Getposicion(),
-                ubicacion.GetEscala() * ubicacion_interna.GetEscala()
+                ubicacion.GetEscala() * ubicacion_interna.GetEscala() 
+                * contenedor->ubicacion_interna.GetEscala()
                 )
                 );
     }

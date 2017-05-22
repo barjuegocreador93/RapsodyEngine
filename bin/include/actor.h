@@ -20,15 +20,24 @@ namespace rapsody {
 
         void render();
 
-        template <class actor_component_type>
-        actor_component_type * AddComponents();
+        template<class actor_component_type>
+        actor_component_type* AddComponents() {
+            actor_componente* m = (actor_componente*)new(actor_component_type);
+            if (m) {
+                m->pertenece(this);
+                m->constructor_();
+                components.push_back(m);
+
+            }
+            return (actor_component_type *) m;
+        }
 
 
         virtual void Tocando(actor *, actor_componente *);
         virtual void Sobre(actor *, actor_componente *);
 
 
-
+        void SystemaDeColision(actor * ext);
 
     protected:
 

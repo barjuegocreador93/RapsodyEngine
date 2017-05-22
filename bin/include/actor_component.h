@@ -46,7 +46,8 @@ namespace rapsody {
             actor_componente* m = (actor_componente*)new(actor_component_type);
             if (m) {
                 m->pertenece(padre);
-                m->constructor_();
+                m->contenedor=this;
+                m->constructor_();                
                 components.push_back(m);
 
             }
@@ -65,6 +66,7 @@ namespace rapsody {
         C_Transform ubicacion, ubicacion_interna;
         vector<actor_componente *> components;
         objeto * padre;
+        actor_componente * contenedor;
 
 
     private:

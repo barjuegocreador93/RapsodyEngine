@@ -33,17 +33,7 @@ void actor::fin() {
     }
 }
 
-template<class actor_component_type>
-actor_component_type* actor::AddComponents() {
-    D_AComponent m = (D_AComponent)new(actor_component_type);
-    if (m) {
-        ((objeto *) m)->pertenece(this);
-        m->constructor_();
-        components.push_back(m);
 
-    }
-    return (actor_component_type *) m;
-}
 
 void actor::Tocando(D_Actor un_actor, D_AComponent un_componente) {
     
@@ -57,5 +47,19 @@ void actor::render() {
     
     for (int i = 0; i < (int) components.size() && visible; i++) {
         components[i]->render();
+    }
+}
+
+void actor::SystemaDeColision(actor* ext) {
+    if(this != ext)
+    {
+        for (int i = 0; i < (int) components.size(); i++)
+        {
+            for (int j = 0; j < (int) ext->components.size(); j++)
+            {
+                components[i]->SystemaDeColision(ext->components[j]);
+                ext->components[j]->SystemaDeColision(components[i]);
+            }
+        }
     }
 }
