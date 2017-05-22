@@ -41,6 +41,19 @@ namespace rapsody{
         virtual void fin();
         
         void SetMapaReady(int mapaReady);
+        
+        template <class mapa_type>
+        mapa_type* AddMapa()
+        {
+            mapa* nuevo = (mapa*)new(mapa_type);
+            if(nuevo)
+            {
+                nuevo->pertenece(this);
+                nuevo->constructor_();
+                mapas.push_back(nuevo);
+            }
+            return (mapa_type*)nuevo;
+        }
 
         
     protected:
