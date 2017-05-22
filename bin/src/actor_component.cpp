@@ -76,23 +76,13 @@ void actor_componente::SystemaDeColision(actor_componente* otro) {
             if (c1->EstaTocando(c2)) {
                 c1->Tocando(c2);
                 p1->Tocando(p2, c2);
-            }
-
-            if (c2->EstaTocando(c1)) {
-                c2->Tocando(c1);
-                p2->Tocando(p1, c1);
-            }
+            }            
 
             if (c1->EstaSobre(c2)) {
                 c1->Sobre(c2);
                 p1->Sobre(p2, c2);
             }
-
-            if (c2->EstaSobre(c1)) {
-                c2->Sobre(c1);
-                p2->Sobre(p1, c1);
-
-            }
+            
             c1->SystemaDeColision(c2);
         }
 
