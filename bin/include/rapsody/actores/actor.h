@@ -17,7 +17,7 @@ namespace rapsody {
         virtual void empezar();
         virtual void mientras(int mils);
         virtual void fin();      
-        virtual void destructor_();
+        void destructor_();
 
 
         void render();
@@ -46,11 +46,11 @@ namespace rapsody {
 
     protected:
 
-        D_AComponents components;
-        vector<actor *>::iterator item;
+        D_AComponents components;        
         bool visible;
 
     private:
+        vector<actor *>::iterator item;
 
     };
 }

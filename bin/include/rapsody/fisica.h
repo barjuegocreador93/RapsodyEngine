@@ -21,7 +21,19 @@ namespace rapsody {
 
         void SetVelocidad(punto2D value);
         void setMundo(objeto* mundo);
-        objeto* getMundo() const;
+        objeto* getMundo() const;        
+        void setColision_solida(bool colision_solida);
+        bool isColision_solida() const;
+        void setMovimiento(bool movimiento);
+        bool isMovimiento() const;
+        void setEstatico(bool estatico);
+        bool isEstatico() const;
+        void setMasa(float masa);
+        float getMasa() const;
+        void setAceleracion(punto2D aceleracion);
+        punto2D getAceleracion() const;
+        void setVelocidad(punto2D velocidad);
+        punto2D getVelocidad() const;
 
     protected:
 

@@ -84,5 +84,6 @@ void mapa::destructor_() {
     if(padre)
     {
         ((game*)padre)->EraseMapaItem(item);
+        delete this;
     }
 }

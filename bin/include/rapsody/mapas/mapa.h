@@ -31,7 +31,7 @@ namespace rapsody {
         virtual void mientras(int mils);
         virtual void fin();
 
-        virtual void destructor_();
+        void destructor_();
         
 
         
@@ -73,10 +73,10 @@ namespace rapsody {
         D_Actors actores;
         bool movimientos;
         aplicativo_fondo* fondo;
-        vector<mapa* >::iterator item;
+        
         
     private:
-
+        vector<mapa* >::iterator item;
     };
 }
 

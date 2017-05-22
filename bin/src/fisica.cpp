@@ -23,6 +23,55 @@ objeto* fisica::getMundo() const {
     return mundo;
 }
 
+
+void fisica::setColision_solida(bool colision_solida) {
+    this->colision_solida = colision_solida;
+}
+
+bool fisica::isColision_solida() const {
+    return colision_solida;
+}
+
+void fisica::setMovimiento(bool movimiento) {
+    this->movimiento = movimiento;
+}
+
+bool fisica::isMovimiento() const {
+    return movimiento;
+}
+
+void fisica::setEstatico(bool estatico) {
+    this->estatico = estatico;
+}
+
+bool fisica::isEstatico() const {
+    return estatico;
+}
+
+void fisica::setMasa(float masa) {
+    this->masa = masa;
+}
+
+float fisica::getMasa() const {
+    return masa;
+}
+
+void fisica::setAceleracion(punto2D aceleracion) {
+    this->aceleracion = aceleracion;
+}
+
+punto2D fisica::getAceleracion() const {
+    return aceleracion;
+}
+
+void fisica::setVelocidad(punto2D velocidad) {
+    this->velocidad = velocidad;
+}
+
+punto2D fisica::getVelocidad() const {
+    return velocidad;
+}
+
 fisica::~fisica()
 {
     //dtor

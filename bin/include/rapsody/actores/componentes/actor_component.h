@@ -30,7 +30,7 @@ namespace rapsody {
 
         virtual void constructor_();
         
-        virtual void destructor_();
+        void destructor_();
 
 
         virtual void empezar();
