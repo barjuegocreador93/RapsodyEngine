@@ -40,7 +40,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/actor_component.o \
 	${OBJECTDIR}/src/aplicativo.o \
 	${OBJECTDIR}/src/aplicativo_componente.o \
-	${OBJECTDIR}/src/caja.o \
+	${OBJECTDIR}/src/colision_caja.o \
 	${OBJECTDIR}/src/colision_linea.o \
 	${OBJECTDIR}/src/controlador.o \
 	${OBJECTDIR}/src/fisica.o \
@@ -104,10 +104,10 @@ ${OBJECTDIR}/src/aplicativo_componente.o: src/aplicativo_componente.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/aplicativo_componente.o src/aplicativo_componente.cpp
 
-${OBJECTDIR}/src/caja.o: src/caja.cpp
+${OBJECTDIR}/src/colision_caja.o: src/colision_caja.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/caja.o src/caja.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/colision_caja.o src/colision_caja.cpp
 
 ${OBJECTDIR}/src/colision_linea.o: src/colision_linea.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

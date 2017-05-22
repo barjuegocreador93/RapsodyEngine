@@ -11,20 +11,20 @@
  * Created on 21 de mayo de 2017, 10:59 PM
  */
 
-#include "caja.h"
-#include "colision_linea.h"
+
+#include "colision_caja.h"
 using namespace rapsody;
 
-caja::caja() {
+colision_caja::colision_caja() {
 }
 
-caja::caja(const caja& orig) {
+colision_caja::colision_caja(const colision_caja& orig) {
 }
 
-caja::~caja() {
+colision_caja::~colision_caja() {
 }
 
-void caja::constructor_() {
+void colision_caja::constructor_() {
    l1 = AddComponent<C_CoLine>();
    l2 = AddComponent<C_CoLine>();
    l3 = AddComponent<C_CoLine>();

@@ -19,11 +19,11 @@
 
 namespace rapsody {
 
-    class caja : public actor_componente {
+    class colision_caja : public actor_componente {
     public:
-        caja();
-        caja(const caja& orig);
-        virtual ~caja();
+        colision_caja();
+        colision_caja(const colision_caja& orig);
+        virtual ~colision_caja();
         
 
         virtual void constructor_();
@@ -38,8 +38,8 @@ namespace rapsody {
     
 }
 
-typedef rapsody::caja* D_ColBox;
-typedef rapsody::caja C_ColBox;
+typedef rapsody::colision_caja* D_ColBox;
+typedef rapsody::colision_caja C_ColBox;
 
 
 #endif /* CAJA_H */
