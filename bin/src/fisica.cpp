@@ -62,3 +62,13 @@ void fisica::mientras(int mils)
         
     }
 }
+
+bool fisica::TieneColisionDeSolidos() {
+    return colision_solida;
+}
+
+void fisica::SetVelocidad(punto2D value) {
+    velocidad = value;
+}
+
+

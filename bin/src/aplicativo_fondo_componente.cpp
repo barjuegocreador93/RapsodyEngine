@@ -24,16 +24,16 @@ aplicativo_fondo_componente::~aplicativo_fondo_componente() {
 }
 
 void aplicativo_fondo_componente::print() {
-    fondo->print();
+    fondo.print();
 }
 
 void aplicativo_fondo_componente::Imagen_de_fondo(string dir) {
-    fondo->SetUbicacion(padre->GetUbicacion());
+    fondo.SetUbicacion(padre->GetUbicacion());
     fondo.mount_imagen(dir);
 }
 
 void aplicativo_fondo_componente::DefaultBitmap(int color) {
-    fondo->SetUbicacion(padre->GetUbicacion());
+    fondo.SetUbicacion(padre->GetUbicacion());
     fondo.crear(color);
 }
 

@@ -17,13 +17,9 @@ namespace rapsody {
 
         void active_movenets_on_map();
 
-        bool TieneColisionDeSolidos() {
-            return colision_solida;
-        }
+        bool TieneColisionDeSolidos();
 
-        void SetVelocidad(punto2D value) {
-            velocidad = value;
-        }
+        void SetVelocidad(punto2D value);
         void setMundo(objeto* mundo);
         objeto* getMundo() const;
 
