@@ -1,5 +1,5 @@
 #include "s_image.h"
-
+using namespace rapsody;
 s_image::s_image()
 {
     data=NULL;
@@ -11,7 +11,7 @@ s_image::~s_image() {
     destroy_bitmap(data);
 }
 
-void s_image::initi(punto pos, punto escala) {
+void s_image::initi(punto2D pos, punto2D escala) {
     ubicacion.Setposicion(pos);
     ubicacion.SetEscala(escala);
 }

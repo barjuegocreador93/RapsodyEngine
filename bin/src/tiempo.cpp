@@ -1,5 +1,5 @@
 #include "tiempo.h"
-
+using namespace rapsody;
 tiempo::tiempo()
 {
     //ctor

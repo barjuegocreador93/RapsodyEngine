@@ -1,5 +1,5 @@
 #include "linea.h"
-
+using namespace rapsody;
 linea::linea()
 {
     //ctor

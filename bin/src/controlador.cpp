@@ -1,4 +1,5 @@
 #include "controlador.h"
+using namespace rapsody;
 
 controlador::controlador()
 {

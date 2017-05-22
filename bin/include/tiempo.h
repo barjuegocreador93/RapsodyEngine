@@ -1,7 +1,8 @@
 #ifndef TIEMPO_H
 #define TIEMPO_H
 
-
+namespace rapsody
+{
 class tiempo
 {
 public:
@@ -20,5 +21,8 @@ protected:
 private:
 
 };
+}
+
+typedef rapsody::tiempo C_Time;
 
 #endif // TIEMPO_H

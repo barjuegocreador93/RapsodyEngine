@@ -1,5 +1,5 @@
 #include "fisica.h"
-
+using namespace rapsody;
 
 
 fisica::fisica()

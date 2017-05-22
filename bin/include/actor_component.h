@@ -15,39 +15,53 @@
 #define ACTOR_COMPONENT_H
 
 
+#include <typeinfo>
+
 #include "objeto.h"
+namespace rapsody {
+
+    class actor_componente : public objeto {
+    public:
+        actor_componente();
+        actor_componente(const actor_componente& orig);
+        virtual ~actor_componente();
+
+        virtual void constructor_();
+
+        virtual void empezar();
+        virtual void mientras(int mils);
+        virtual void fin();
+
+        virtual bool EstaTocando(actor_componente *otro);
+        virtual bool EstaSobre(actor_componente * otro);
+
+        virtual void Tocando(actor_componente* un_componente);
+        virtual void Sobre(actor_componente* un_componente);
+
+        void render();
+        virtual void print();
+
+        template<class actor_component_type>
+        actor_component_type * AddComponent();
+
+        void SystemaDeColision(actor_componente * otro);
+        void MoviemientosInternos();
+
+    protected:
+        transformacion ubicacion, ubicacion_interna;
+        vector<actor_componente *> components;
+        objeto * padre;
 
 
+    private:
 
 
-class actor_component : objeto {
-    
-public:
-    actor_component();
-    actor_component(const actor_component& orig);
-    virtual ~actor_component();
+    };
+}
 
-    virtual void constructor_();
-
-    virtual void empezar();
-    virtual void mientras(int mils);
-    virtual void fin();
-    
-    template<class actor_component_type>
-    actor_component_type * AddComponent();
-
-
-protected:
-    transformacion ubicacion, ubicacion_interna;
-    vector<actor_component *> components;
-    objeto * padre;
-
-private:
-
-};
-
-    typedef vector<actor_component *> AComponents;
-    typedef actor_component* AComponent;
+typedef vector<rapsody::actor_componente *> D_AComponents;
+typedef rapsody::actor_componente* D_AComponent;
+typedef rapsody::actor_componente C_AComponent;
 
 #endif /* ACTOR_COMPONENT_H */
 

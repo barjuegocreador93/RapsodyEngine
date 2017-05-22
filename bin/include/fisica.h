@@ -6,43 +6,45 @@
 #include "objeto.h"
 #include "tiempo.h"
 
-class fisica : public objeto
-{
-public:
-    fisica();
-    virtual ~fisica();
+namespace rapsody {
 
-    virtual void mientras(int mils);
+    class fisica : public objeto {
+    public:
+        fisica();
+        virtual ~fisica();
 
-    void active_movenets_on_map();
-    
-    bool TieneColisionDeSolidos()
-    {
-        return colision_solida;
-    }
-    
-    void SetVelocidad(punto value)
-    {
-        velocidad=value;
-    }
-    void setMundo(objeto* mundo);
-    objeto* getMundo() const;
+        virtual void mientras(int mils);
 
-protected:
-    
-    punto velocidad;
-    punto aceleracion;
+        void active_movenets_on_map();
 
-    objeto * mundo;
+        bool TieneColisionDeSolidos() {
+            return colision_solida;
+        }
 
-    float masa;
+        void SetVelocidad(punto2D value) {
+            velocidad = value;
+        }
+        void setMundo(objeto* mundo);
+        objeto* getMundo() const;
 
-    bool estatico;
-    bool movimiento;
-    bool colision_solida;
-    tiempo transncurrido;
+    protected:
 
-private:
-};
+        punto2D velocidad;
+        punto2D aceleracion;
+
+        objeto * mundo;
+
+        float masa;
+
+        bool estatico;
+        bool movimiento;
+        bool colision_solida;
+        tiempo transncurrido;
+
+    private:
+    };
+}
+
+typedef rapsody::fisica * D_Physic;
 
 #endif // FISICA_H

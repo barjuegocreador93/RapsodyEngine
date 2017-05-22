@@ -38,8 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/inicia.o \
 	${OBJECTDIR}/src/actor.o \
 	${OBJECTDIR}/src/actor_component.o \
-	${OBJECTDIR}/src/caja.o \
-	${OBJECTDIR}/src/colision.o \
+	${OBJECTDIR}/src/colision_linea.o \
 	${OBJECTDIR}/src/controlador.o \
 	${OBJECTDIR}/src/fisica.o \
 	${OBJECTDIR}/src/linea.o \
@@ -91,15 +90,10 @@ ${OBJECTDIR}/src/actor_component.o: src/actor_component.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/actor_component.o src/actor_component.cpp
 
-${OBJECTDIR}/src/caja.o: src/caja.cpp
+${OBJECTDIR}/src/colision_linea.o: src/colision_linea.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/caja.o src/caja.cpp
-
-${OBJECTDIR}/src/colision.o: src/colision.cpp
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/colision.o src/colision.cpp
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/colision_linea.o src/colision_linea.cpp
 
 ${OBJECTDIR}/src/controlador.o: src/controlador.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

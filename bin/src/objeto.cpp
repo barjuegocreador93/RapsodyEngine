@@ -1,4 +1,5 @@
 #include "objeto.h"
+using namespace rapsody;
 
 objeto::objeto(bool priority_debuger) {
     //ctor
@@ -56,18 +57,18 @@ transformacion objeto::GetUbicacion() {
     return ubicacion;
 }
 
-void objeto::SetPosicion(punto value) {
+void objeto::SetPosicion(punto2D value) {
     ubicacion.Setposicion(value);
 }
 
-punto objeto::GetPosicion() {
+punto2D objeto::GetPosicion() {
     return ubicacion.Getposicion();
 }
 
-void objeto::SetEscala(punto value) {
+void objeto::SetEscala(punto2D value) {
     ubicacion.SetEscala(value);
 }
 
-punto objeto::GetEscala() {
+punto2D objeto::GetEscala() {
     return ubicacion.GetEscala();
 }

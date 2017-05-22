@@ -2,17 +2,18 @@
 #define TRANSFORMACION_H
 
 #include "punto.h"
-
+namespace rapsody
+{
 class transformacion
 {
     public:
         transformacion();
         virtual ~transformacion();
 
-        punto Getposicion();
-        void Setposicion(punto val);
-        punto GetEscala();
-        void SetEscala(punto val);
+        punto2D Getposicion();
+        void Setposicion(punto2D val);
+        punto2D GetEscala();
+        void SetEscala(punto2D val);
 
         transformacion & operator=(const transformacion &otro);
 
@@ -24,13 +25,17 @@ class transformacion
         void AcumEscalaY(int y);
 
     protected:
-        punto escala;
-        punto posicion;
+        punto2D escala;
+        punto2D posicion;
 
 
     private:
 };
 
-transformacion crear_transformacion(punto posicion, punto escala);
+}
+
+typedef rapsody::transformacion C_Transform;
+
+C_Transform crear_transformacion(C_Vector2D posicion, C_Vector2D escala);
 
 #endif // TRANSFORMACION_H

@@ -13,65 +13,125 @@
 
 #include "actor_component.h"
 #include "actor.h"
-actor_component::actor_component() {
-    ubicacion_interna=crear_transformacion(crear_punto(0,0),crear_punto(1,1));
+using namespace rapsody;
+
+actor_componente::actor_componente() {
+    ubicacion_interna = crear_transformacion(crear_punto(0, 0), crear_punto(1, 1));
 }
 
-actor_component::actor_component(const actor_component& orig) {
+actor_componente::actor_componente(const actor_componente& orig) {
 }
 
-void actor_component::constructor_() {
-    
+void actor_componente::constructor_() {
+
 }
 
+void actor_componente::Tocando(D_AComponent un_componete) {
 
-
-actor_component::~actor_component() {
 }
 
-void actor_component::empezar() {
-    SetUbicacion(
-    crear_transformacion(
-            padre->GetPosicion()+ubicacion_interna.Getposicion(),
-            ubicacion.GetEscala()*ubicacion_interna.GetEscala()
-        )
-    );
-    for(int i=0;i<(int)components.size();i++)
-    {
+void actor_componente::Sobre(D_AComponent un_componente) {
+
+}
+
+actor_componente::~actor_componente() {
+}
+
+void actor_componente::empezar() {
+    MoviemientosInternos();
+    for (int i = 0; i < (int) components.size(); i++) {
         components[i]->empezar();
     }
 }
 
-void actor_component::mientras(int mils) {
-    SetUbicacion(
-    crear_transformacion(
-            padre->GetPosicion()+ubicacion_interna.Getposicion(),
-            ubicacion.GetEscala()*ubicacion_interna.GetEscala()
-        )
-    );
-    for(int i=0;i<(int)components.size();i++)
-    {
+void actor_componente::mientras(int mils) {
+    MoviemientosInternos();
+    for (int i = 0; i < (int) components.size(); i++) {
         components[i]->mientras(mils);
     }
 }
 
-void actor_component::fin() {
-    
-    for(int i=0;i<(int)components.size();i++)
-    {
+void actor_componente::fin() {
+
+    for (int i = 0; i < (int) components.size(); i++) {
         components[i]->fin();
     }
 }
 
 template<class actor_component_type>
-actor_component_type* actor_component::AddComponent() {
-    AComponent m=(AComponent)new(actor_component_type);
-    if(m)
-    {
+actor_component_type* actor_componente::AddComponent() {
+    D_AComponent m = (D_AComponent)new(actor_component_type);
+    if (m) {
         m->pertenece(padre);
-        m->constructor_();            
+        m->constructor_();
         components.push_back(m);
 
     }
-    return (actor_component_type *)m;
+    return (actor_component_type *) m;
 }
+
+bool actor_componente::EstaSobre(actor_componente* otro) {
+    return false;
+}
+
+bool actor_componente::EstaTocando(actor_componente* otro) {
+    return false;
+}
+
+void actor_componente::SystemaDeColision(actor_componente* otro) {
+    for (int i = 0; i < (int) components.size(); i++) {
+        for (int j = 0; j < (int) otro->components.size(); j++) {
+            D_Actor  p1 = (D_Actor) padre, p2 = (D_Actor) padre;
+            D_AComponent c1 = components[i], c2 = otro->components[j];
+            if (c1->EstaTocando(c2)) {
+                c1->Tocando(c2);
+                p1->Tocando(p2, c2);
+            }
+
+            if (c2->EstaTocando(c1)) {
+                c2->Tocando(c1);
+                p2->Tocando(p1, c1);
+            }
+
+            if (c1->EstaSobre(c2)) {
+                c1->Sobre(c2);
+                p1->Sobre(p2, c2);
+            }
+
+            if (c2->EstaSobre(c1)) {
+                c2->Sobre(c1);
+                p2->Sobre(p1, c1);
+
+            }
+            c1->SystemaDeColision(c2);
+        }
+
+
+    }
+}
+
+void actor_componente::render() {
+    for (int i = 0; i < (int) components.size(); i++) {
+        components[i]->print();
+        components[i]->render();
+    }
+}
+
+void actor_componente::print() {
+
+}
+
+void actor_componente::MoviemientosInternos() {
+
+    D_Actor p = (D_Actor) padre;
+    if (p) {
+        SetUbicacion(
+                crear_transformacion(
+                padre->GetPosicion() + ubicacion_interna.Getposicion(),
+                ubicacion.GetEscala() * ubicacion_interna.GetEscala()
+                )
+                );
+    }
+}
+
+

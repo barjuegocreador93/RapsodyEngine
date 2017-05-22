@@ -4,17 +4,20 @@
 
 #include "objeto.h"
 
+namespace rapsody {
 
-class controlador : public objeto
-{
-public:
-    controlador();
-    virtual void empezar();
-    virtual void mientras(int mils);
-    virtual void terminar();
-protected:
+    class controlador : public objeto {
+    public:
+        controlador();
+        virtual void empezar();
+        virtual void mientras(int mils);
+        virtual void terminar();
+    protected:
 
-private:
-};
+    private:
+    };
+}
 
+typedef rapsody::controlador* D_Controller;
+typedef rapsody::controlador C_Controller;
 #endif // CONTROLADOR_H

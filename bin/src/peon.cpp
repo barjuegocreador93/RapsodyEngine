@@ -1,5 +1,5 @@
 #include "peon.h"
-
+using namespace rapsody;
 peon::peon()
 {
     //ctor
