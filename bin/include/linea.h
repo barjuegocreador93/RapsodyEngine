@@ -33,4 +33,7 @@ struct linea {
 
 typedef rapsody::linea* D_Line;
 typedef rapsody::linea C_Line;
+
+C_Line crear_linea(C_Vector2D A, C_Vector2D B);
+
 #endif // LINEA_H

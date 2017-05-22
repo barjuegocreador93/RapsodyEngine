@@ -7,6 +7,7 @@
       <logicalFolder name="include" displayName="include" projectFiles="true">
         <itemPath>include/actor.h</itemPath>
         <itemPath>include/actor_component.h</itemPath>
+        <itemPath>include/caja.h</itemPath>
         <itemPath>include/colision_linea.h</itemPath>
         <itemPath>include/controlador.h</itemPath>
         <itemPath>include/fisica.h</itemPath>
@@ -43,6 +44,7 @@
         <itemPath>src/transformacion.cpp</itemPath>
       </logicalFolder>
       <itemPath>src/actor_component.cpp</itemPath>
+      <itemPath>src/caja.cpp</itemPath>
       <itemPath>inicia.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -96,6 +98,8 @@
       </item>
       <item path="include/actor_component.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/caja.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/colision_linea.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/controlador.h" ex="false" tool="3" flavor2="0">
@@ -125,6 +129,8 @@
       <item path="src/actor.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/actor_component.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/caja.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/colision_linea.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -173,6 +179,8 @@
       </item>
       <item path="include/actor_component.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/caja.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/colision_linea.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/controlador.h" ex="false" tool="3" flavor2="0">
@@ -202,6 +210,8 @@
       <item path="src/actor.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/actor_component.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/caja.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/colision_linea.cpp" ex="false" tool="1" flavor2="0">
       </item>

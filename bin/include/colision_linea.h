@@ -18,7 +18,7 @@
 #include "actor_component.h"
 namespace rapsody {
 
-    class colision_linea : public C_AComponent {
+    class colision_linea : public actor_componente {
     public:
         colision_linea();
         colision_linea(const colision_linea& orig);
@@ -26,16 +26,24 @@ namespace rapsody {
 
         virtual void Tocando(D_AComponent m);
         virtual bool EstaTocando(D_AComponent m);
+        
+        virtual void print();
+        virtual void MoviemientosInternos();
 
+        void SetInternal_linea(C_Line internal_linea) {
+            this->internal_linea = internal_linea;
+        }
+        
+        
 
 
 
     protected:
-        linea linea_1;
-
+        C_Line internal_linea;
+        
 
     private:
-
+        C_Line global_linea;
     };
 }
 typedef rapsody::colision_linea* D_CoLine;

@@ -27,7 +27,7 @@ bool colision_linea::EstaTocando(D_AComponent m) {
     D_CoLine aux=(D_CoLine)m;
     if(aux)
     {
-        
+        return internal_linea.tocando(aux->internal_linea);
     }
     return false;
 }
@@ -35,4 +35,14 @@ bool colision_linea::EstaTocando(D_AComponent m) {
 
 void colision_linea::Tocando(D_AComponent m) {
     
+}
+
+void colision_linea::print() {
+    global_linea.print();
+}
+
+void colision_linea::MoviemientosInternos() {
+    C_AComponent::MoviemientosInternos();
+    global_linea.A=ubicacion.Getposicion() + internal_linea.A;
+    global_linea.B=ubicacion.Getposicion() + internal_linea.B;
 }

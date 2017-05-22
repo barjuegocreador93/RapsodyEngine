@@ -58,17 +58,7 @@ void actor_componente::fin() {
     }
 }
 
-template<class actor_component_type>
-actor_component_type* actor_componente::AddComponent() {
-    D_AComponent m = (D_AComponent)new(actor_component_type);
-    if (m) {
-        m->pertenece(padre);
-        m->constructor_();
-        components.push_back(m);
 
-    }
-    return (actor_component_type *) m;
-}
 
 bool actor_componente::EstaSobre(actor_componente* otro) {
     return false;

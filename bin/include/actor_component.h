@@ -42,13 +42,27 @@ namespace rapsody {
         virtual void print();
 
         template<class actor_component_type>
-        actor_component_type * AddComponent();
+        actor_component_type * AddComponent() {
+            actor_componente* m = (actor_componente*)new(actor_component_type);
+            if (m) {
+                m->pertenece(padre);
+                m->constructor_();
+                components.push_back(m);
+
+            }
+            return (actor_component_type *) m;
+        }
 
         void SystemaDeColision(actor_componente * otro);
-        void MoviemientosInternos();
+        virtual void MoviemientosInternos();
+
+        void setUbicacion_interna(C_Transform ubicacion_interna) {
+            this->ubicacion_interna = ubicacion_interna;
+        }
+
 
     protected:
-        transformacion ubicacion, ubicacion_interna;
+        C_Transform ubicacion, ubicacion_interna;
         vector<actor_componente *> components;
         objeto * padre;
 

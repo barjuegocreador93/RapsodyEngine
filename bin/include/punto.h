@@ -41,9 +41,11 @@ protected:
 private:
 };
 }
-rapsody::punto2D crear_punto(int,int);
+
 
 typedef rapsody::punto2D* D_Vector2D;
 typedef rapsody::punto2D C_Vector2D;
+
+C_Vector2D crear_punto(int,int);
 
 #endif // PUNTO_H

@@ -10,6 +10,13 @@ linea::~linea()
     //dtor
 }
 
+C_Line crear_linea(C_Vector2D A, C_Vector2D B)
+{
+    C_Line m;
+    m.A=A;
+    m.B=B;
+    return m;
+}
 
 bool linea::tocando(linea &m)
 {
