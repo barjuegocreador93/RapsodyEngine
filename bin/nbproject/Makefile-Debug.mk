@@ -38,6 +38,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/inicia.o \
 	${OBJECTDIR}/src/actor.o \
 	${OBJECTDIR}/src/actor_component.o \
+	${OBJECTDIR}/src/aplicativo.o \
+	${OBJECTDIR}/src/aplicativo_componente.o \
 	${OBJECTDIR}/src/caja.o \
 	${OBJECTDIR}/src/colision_linea.o \
 	${OBJECTDIR}/src/controlador.o \
@@ -80,82 +82,92 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bin.exe: ${OBJECTFILES}
 ${OBJECTDIR}/inicia.o: inicia.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/inicia.o inicia.cpp
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/inicia.o inicia.cpp
 
 ${OBJECTDIR}/src/actor.o: src/actor.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/actor.o src/actor.cpp
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/actor.o src/actor.cpp
 
 ${OBJECTDIR}/src/actor_component.o: src/actor_component.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/actor_component.o src/actor_component.cpp
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/actor_component.o src/actor_component.cpp
+
+${OBJECTDIR}/src/aplicativo.o: src/aplicativo.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/aplicativo.o src/aplicativo.cpp
+
+${OBJECTDIR}/src/aplicativo_componente.o: src/aplicativo_componente.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/aplicativo_componente.o src/aplicativo_componente.cpp
 
 ${OBJECTDIR}/src/caja.o: src/caja.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/caja.o src/caja.cpp
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/caja.o src/caja.cpp
 
 ${OBJECTDIR}/src/colision_linea.o: src/colision_linea.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/colision_linea.o src/colision_linea.cpp
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/colision_linea.o src/colision_linea.cpp
 
 ${OBJECTDIR}/src/controlador.o: src/controlador.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/controlador.o src/controlador.cpp
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/controlador.o src/controlador.cpp
 
 ${OBJECTDIR}/src/fisica.o: src/fisica.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/fisica.o src/fisica.cpp
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/fisica.o src/fisica.cpp
 
 ${OBJECTDIR}/src/linea.o: src/linea.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/linea.o src/linea.cpp
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/linea.o src/linea.cpp
 
 ${OBJECTDIR}/src/mapa.o: src/mapa.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mapa.o src/mapa.cpp
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mapa.o src/mapa.cpp
 
 ${OBJECTDIR}/src/objeto.o: src/objeto.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/objeto.o src/objeto.cpp
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/objeto.o src/objeto.cpp
 
 ${OBJECTDIR}/src/peon.o: src/peon.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/peon.o src/peon.cpp
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/peon.o src/peon.cpp
 
 ${OBJECTDIR}/src/punto.o: src/punto.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/punto.o src/punto.cpp
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/punto.o src/punto.cpp
 
 ${OBJECTDIR}/src/rapsody.o: src/rapsody.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/rapsody.o src/rapsody.cpp
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/rapsody.o src/rapsody.cpp
 
 ${OBJECTDIR}/src/s_image.o: src/s_image.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/s_image.o src/s_image.cpp
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/s_image.o src/s_image.cpp
 
 ${OBJECTDIR}/src/tiempo.o: src/tiempo.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/tiempo.o src/tiempo.cpp
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/tiempo.o src/tiempo.cpp
 
 ${OBJECTDIR}/src/transformacion.o: src/transformacion.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/transformacion.o src/transformacion.cpp
+	$(COMPILE.cc) -g -Iinclude -Iinclude/actores -Iinclude/actores/componentes -Iinclude/controladores -Iinclude/mapas -Iinclude/mapas/aplicativos -Iinclude/mapas/aplicativos/componentes -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/transformacion.o src/transformacion.cpp
 
 # Subprojects
 .build-subprojects:

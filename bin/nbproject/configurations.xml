@@ -11,8 +11,10 @@
             <itemPath>include/actores/componentes/caja.h</itemPath>
             <itemPath>include/actores/componentes/colision_linea.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="peones" displayName="peones" projectFiles="true">
+            <itemPath>include/actores/peones/peon.h</itemPath>
+          </logicalFolder>
           <itemPath>include/actores/actor.h</itemPath>
-          <itemPath>include/actores/peon.h</itemPath>
         </logicalFolder>
         <logicalFolder name="controladores"
                        displayName="controladores"
@@ -22,7 +24,9 @@
         <logicalFolder name="mapas" displayName="mapas" projectFiles="true">
           <logicalFolder name="aplicativos" displayName="aplicativos" projectFiles="true">
             <logicalFolder name="componentes" displayName="componentes" projectFiles="true">
+              <itemPath>include/mapas/aplicativos/componentes/aplicativo_componente.h</itemPath>
             </logicalFolder>
+            <itemPath>include/mapas/aplicativos/aplicativo.h</itemPath>
           </logicalFolder>
           <itemPath>include/mapas/mapa.h</itemPath>
         </logicalFolder>
@@ -47,6 +51,8 @@
       <logicalFolder name="src" displayName="src" projectFiles="true">
         <itemPath>src/actor.cpp</itemPath>
         <itemPath>src/actor_component.cpp</itemPath>
+        <itemPath>src/aplicativo.cpp</itemPath>
+        <itemPath>src/aplicativo_componente.cpp</itemPath>
         <itemPath>src/caja.cpp</itemPath>
         <itemPath>src/colision_linea.cpp</itemPath>
         <itemPath>src/controlador.cpp</itemPath>
@@ -107,6 +113,7 @@
             <pElem>include/controladores</pElem>
             <pElem>include/mapas</pElem>
             <pElem>include/mapas/aplicativos</pElem>
+            <pElem>include/mapas/aplicativos/componentes</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
@@ -129,7 +136,7 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="include/actores/peon.h" ex="false" tool="3" flavor2="0">
+      <item path="include/actores/peones/peon.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/controladores/controlador.h"
             ex="false"
@@ -139,6 +146,16 @@
       <item path="include/fisica.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/linea.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/mapas/aplicativos/aplicativo.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/mapas/aplicativos/componentes/aplicativo_componente.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="include/mapas/mapa.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -161,6 +178,10 @@
       <item path="src/actor.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/actor_component.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/aplicativo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/aplicativo_componente.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/caja.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -223,7 +244,7 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="include/actores/peon.h" ex="false" tool="3" flavor2="0">
+      <item path="include/actores/peones/peon.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/controladores/controlador.h"
             ex="false"
@@ -233,6 +254,16 @@
       <item path="include/fisica.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/linea.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/mapas/aplicativos/aplicativo.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/mapas/aplicativos/componentes/aplicativo_componente.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="include/mapas/mapa.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -255,6 +286,10 @@
       <item path="src/actor.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/actor_component.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/aplicativo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/aplicativo_componente.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/caja.cpp" ex="false" tool="1" flavor2="0">
       </item>
