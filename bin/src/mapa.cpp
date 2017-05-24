@@ -31,9 +31,7 @@ mapa::~mapa() {
 
 
 void mapa::empezar() {
-    SetUbicacion(((game*)padre)->GetUbicacion());
-    cout<<"mapa "<<GetNombre()<<"\n";
-    cout<<GetEscala();
+    SetUbicacion(((game*)padre)->GetUbicacion());        
     for(int i=0;i<(int)elements.size();i++)
     {
         elements[i]->empezar();

@@ -53,9 +53,7 @@ namespace rapsody {
                 return (mapa_type *)(m);
                 
             }
-            delete m;
-            m=NULL;
-            return m;
+            return NULL;
         }
 
         

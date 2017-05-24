@@ -44,5 +44,8 @@ namespace rapsody {
 
     };
 }
+
+typedef rapsody::aplicativo_fondo C_App_Backgorund;
+typedef C_App_Backgorund* D_App_Background;
 #endif /* APLICATIVO_FONDO_H */
 

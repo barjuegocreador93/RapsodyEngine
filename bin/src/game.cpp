@@ -14,6 +14,8 @@
 #include "game.h"
 #include "colision_linea.h"
 #include "colision_caja.h"
+#include "mapa_fondo.h"
+
 using namespace rapsody;
 game::game() {
     puase=false;
@@ -24,45 +26,15 @@ game::game() {
     SetEscala(crear_punto(500,500));
     SetNombre("el juego");
     
-    D_World myw=AddMapa<C_World>();
+    D_World_Image myw=AddMapa<C_World_Image>();
+    
     D_Actor mya=myw->AddActor<C_Actor>();
     
     mya->SetNombre("mi actor");
     
     D_AComponent myac=mya->AddComponents<C_AComponent>();
     
-    D_AComponent myac1a = myac->AddComponent<C_AComponent>();
-    
        
-}
-
-
-
-game::game(const game& orig) {
-}
-
-game::~game() {
-}
-
-void game::SetGameover(bool gameover) {
-    this->gameover = gameover;
-}
-
-void game::SetPuase(bool puase) {
-    this->puase = puase;
-}
-
-bool game::IsGameover() const {
-    return gameover;
-}
-
-bool game::IsPuase() const {
-    return puase;
-}
-
-void game::SetMapaReady(int mapaReady) { 
-    if(mapaReady>=0 && mapaReady < elements.size())
-        this->mapaReady = mapaReady;
 }
 
 void game::empezar() {
@@ -103,4 +75,32 @@ template<class game_t>
 void ingame()
 {
     Game_Main<game>();
+}
+
+void game::SetGameover(bool gameover) {
+    this->gameover = gameover;
+}
+
+void game::SetPuase(bool puase) {
+    this->puase = puase;
+}
+
+bool game::IsGameover() const {
+    return gameover;
+}
+
+bool game::IsPuase() const {
+    return puase;
+}
+
+void game::SetMapaReady(int mapaReady) { 
+    if(mapaReady>=0 && mapaReady < elements.size())
+        this->mapaReady = mapaReady;
+}
+
+
+game::game(const game& orig) {
+}
+
+game::~game() {
 }

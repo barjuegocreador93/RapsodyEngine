@@ -27,9 +27,9 @@ namespace rapsody {
 
 
         
-        virtual void empezar();
-        virtual void mientras(int mils);
-        virtual void fin();
+        virtual void empezar() override;
+        virtual void mientras(int mils) override;
+        virtual void fin() override;
 
         void destructor_();
         
@@ -50,6 +50,12 @@ namespace rapsody {
             
             return NULL; 
             
+        }
+        
+        template<class aplication_type>
+        aplication_type* AddAplication()
+        {
+         return AddActor<aplication_type>();
         }
         
         void EraseActor(vector<actor*>::iterator item);
@@ -73,7 +79,7 @@ namespace rapsody {
 
     protected:        
         bool movimientos;
-        aplicativo_fondo* fondo;
+        D_App_Background fondo;
         
         
     private:

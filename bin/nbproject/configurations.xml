@@ -34,6 +34,8 @@
             <itemPath>include/rapsody/mapas/aplicativos/aplicativo_fondo.h</itemPath>
           </logicalFolder>
           <itemPath>include/rapsody/mapas/mapa.h</itemPath>
+          <itemPath>src/mapa_fondo.cpp</itemPath>
+          <itemPath>include/rapsody/mapas/mapa_fondo.h</itemPath>
         </logicalFolder>
         <itemPath>include/rapsody/fisica.h</itemPath>
         <itemPath>include/rapsody/linea.h</itemPath>
@@ -43,9 +45,9 @@
         <itemPath>include/rapsody/s_image.h</itemPath>
         <itemPath>include/rapsody/tiempo.h</itemPath>
         <itemPath>include/rapsody/transformacion.h</itemPath>
+        <itemPath>include/rapsody/xmltree.h</itemPath>
       </logicalFolder>
       <itemPath>inicia.h</itemPath>
-      <itemPath>include/rapsody/xmltree.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -116,6 +118,8 @@
       </toolsSet>
       <compileType>
         <ccTool>
+          <standard>8</standard>
+          <commandlineTool>mingw32-g++</commandlineTool>
           <incDir>
             <pElem>include</pElem>
             <pElem>include/rapsody</pElem>
@@ -190,6 +194,8 @@
       </item>
       <item path="include/rapsody/mapas/mapa.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/rapsody/mapas/mapa_fondo.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/rapsody/objeto.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/rapsody/punto.h" ex="false" tool="3" flavor2="0">
@@ -236,6 +242,8 @@
       <item path="src/linea.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/mapa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/mapa_fondo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/objeto.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -329,6 +337,8 @@
       </item>
       <item path="include/rapsody/mapas/mapa.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/rapsody/mapas/mapa_fondo.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/rapsody/objeto.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/rapsody/punto.h" ex="false" tool="3" flavor2="0">
@@ -375,6 +385,8 @@
       <item path="src/linea.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/mapa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/mapa_fondo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/objeto.cpp" ex="false" tool="1" flavor2="0">
       </item>

@@ -53,7 +53,7 @@ actor_componente::~actor_componente() {
 
 
 void actor_componente::empezar() {
-    if(padre)cout<<"encontre al padre perdido xD wow";
+    
     MoviemientosInternos();
     for (int i = 0; i < (int) elements.size(); i++) {
         elements[i]->empezar();
