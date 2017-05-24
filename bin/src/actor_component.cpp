@@ -23,6 +23,14 @@ actor_componente::actor_componente() {
     
 }
 
+void actor_componente::setContenedor(actor_componente* contenedor) {
+    this->contenedor = contenedor;
+}
+
+actor_componente* actor_componente::getContenedor() const {
+    return contenedor;
+}
+
 
 
 actor_componente::actor_componente(const actor_componente& orig) {
@@ -47,7 +55,7 @@ actor_componente::~actor_componente() {
 
 
 void actor_componente::empezar() {
-    if(!padre)cout<<"mama mia";
+    if(padre)cout<<"encontre al padre perdido xD wow";
     MoviemientosInternos();
     for (int i = 0; i < (int) elements.size(); i++) {
         elements[i]->empezar();
@@ -113,16 +121,7 @@ void actor_componente::print() {
 
 void actor_componente::MoviemientosInternos() {
 
-    D_Actor p = (D_Actor) padre;
-    if (p) {
-        SetUbicacion(
-                crear_transformacion(
-                padre->GetPosicion() + ubicacion_interna.GetPosicion(),
-                ubicacion.GetEscala() * ubicacion_interna.GetEscala() 
-                * contenedor->ubicacion_interna.GetEscala()
-                )
-                );
-    }
+    
 }
 
 void actor_componente::destructor_() {

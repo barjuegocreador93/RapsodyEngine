@@ -27,6 +27,12 @@ game::game() {
     D_World myw=AddMapa<C_World>();
     D_Actor mya=myw->AddActor<C_Actor>();
     
+    mya->SetNombre("mi actor");
+    
+    D_AComponent myac=mya->AddComponents<C_AComponent>();
+    
+    
+    
        
 }
 

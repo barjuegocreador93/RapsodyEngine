@@ -55,9 +55,10 @@ namespace rapsody {
                 
                 AddElement(m);
                 m->constructor_();
-
+                m->contenedor=this;
+                return (actor_component_type*)(m);
             }
-            return (actor_component_type *) m;
+            return NULL;
         }
 
         void SystemaDeColision(actor_componente * otro);
@@ -66,6 +67,8 @@ namespace rapsody {
         void setUbicacion_interna(C_Transform ubicacion_interna) {
             this->ubicacion_interna = ubicacion_interna;
         }
+        void setContenedor(actor_componente* contenedor);
+        actor_componente* getContenedor() const;
         
         
         

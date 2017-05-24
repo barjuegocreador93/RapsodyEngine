@@ -38,13 +38,13 @@ public:
     }
 
     void AddElement(T* element) {
-        cout << "aqui 1" << endl;
+        
         ((XMLelement<T>*)(element))->padre=(this);
-        cout << "aqui 2" << endl;
+        
         elements.push_back(element);
-        cout << "aqui 3" << endl;
+        
         ((XMLelement<T>*)element)->item = elements.end();
-        cout << "aqui 4" << endl;
+        
     }
 
     T* operator[](const int i) {
@@ -57,18 +57,12 @@ public:
         return NULL;
     }
 
-    void SetNombre(std::string nombre) {
-        this->nombre = nombre;
-    }
-
-    std::string GetNombre() const {
-        return nombre;
-    }
+    
 
     
 
 protected:
-    std::string nombre;
+    
     std::vector<T*> elements;
     
 

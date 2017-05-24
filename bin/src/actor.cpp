@@ -16,7 +16,7 @@ actor::~actor() {
 
 void actor::empezar() {
     
-    cout<<"actor "<<padre->GetPadre()<<"->"<<GetNombre()<<"\n";
+    cout<<"actor "<<padre->GetNombre()<<"->"<<GetNombre()<<"\n";
     cout<<GetEscala();
     fisica::empezar();
     for (int i = 0; i < (int) elements.size(); i++) {

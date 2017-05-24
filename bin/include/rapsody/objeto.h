@@ -30,7 +30,14 @@ namespace rapsody {
         bool isDebug_mode() const;
         void setPriority_debuger(bool priority_debuger);
         bool isPriority_debuger() const;
+        
+        void SetNombre(std::string nombre) {
+        this->nombre = nombre;
+        }
 
+        std::string GetNombre() const {
+        return nombre;
+        }
         
 
     protected:
@@ -38,6 +45,7 @@ namespace rapsody {
         transformacion ubicacion;
         bool debug_mode;
         bool priority_debuger;
+        string nombre;
         
 
 
