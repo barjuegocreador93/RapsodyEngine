@@ -50,12 +50,14 @@ namespace rapsody {
         actor_component_type * AddComponent() {
             actor_componente* m = (actor_componente*)new(actor_component_type);
             if (m) {
+                //se epsera a que lo lea pero no:
                 m->pertenece(padre);
+                
                 m->contenedor=this;
                 
                 m->constructor_();                
                 components.push_back(m);
-                m->item = components.begin() + ((int)components.size()-1);
+                m->item = components.end();
 
             }
             return (actor_component_type *) m;
