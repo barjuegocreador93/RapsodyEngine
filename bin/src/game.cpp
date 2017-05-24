@@ -12,13 +12,29 @@
  */
 
 #include "game.h"
+#include "colision_linea.h"
+#include "colision_caja.h"
 using namespace rapsody;
 game::game() {
     puase=false;
     gameover=false;
     mapaReady=0;
-    mapas.clear();
+    mapas.clear(); 
+    
+    SetEscala(crear_punto(500,500));
+    setNombre("el juego");
+    D_World myworld=AddMapa<C_World>();
+    myworld->setNombre("el mapa");
+    D_Actor mya=myworld->AddActor<C_Actor>();
+    mya->setNombre("mi actor");
+    mya->SetEscala(crear_punto(6,6));
+    
+    D_AComponent myac=mya->AddComponents<C_AComponent>();
+    
+       
 }
+
+
 
 game::game(const game& orig) {
 }
@@ -48,6 +64,9 @@ void game::SetMapaReady(int mapaReady) {
 }
 
 void game::empezar() {
+    
+    inicia_allegro(GetEscala().x,GetEscala().y);
+    cout<<"game "<<getNombre()<<"\n";
     if(mapaReady>=0 && mapaReady < mapas.size())
         mapas[mapaReady]->empezar();
 }
@@ -55,8 +74,10 @@ void game::empezar() {
 void game::mientras(int mils) {
     while (!gameover)
     {
+        
         if(mapaReady>=0 && mapaReady < mapas.size())
-        mapas[mapaReady]->mientras(timer.mils);
+            mapas[mapaReady]->mientras(timer.mils);
+        
         timer.correTiempo();
         
     }
@@ -68,6 +89,18 @@ void game::fin() {
         mapas[mapaReady]->fin();
 }
 
-void game::EraseMapaItem(D_Worlds::iterator item) {
+void game::EraseMapaItem(vector<C_World*>::iterator item) {
     mapas.erase(item);
+}
+template<class game_t>
+    void Game_Main() {
+        game myj;
+        myj.empezar();
+        myj.mientras(0);
+        myj.fin();
+    }
+
+void ingame()
+{
+    Game_Main<game>();
 }

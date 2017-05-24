@@ -37,18 +37,23 @@ namespace rapsody {
         
         template<class actor_type>
         actor_type* AddActor() {
-            actor* m = (actor*)new(actor_type);
-            if (m) {
+            actor  *m = (actor*)new(actor_type);
+            if (m) {               
+                
                 m->pertenece(this);
-                m->constructor_();
+                m->setMundo(this);
+                m->constructor_();                
                 actores.push_back(m);
-                m->setItem(actores.begin()+((int)actores.size()-1));
+                actores[actores.size()-1]->setItem(actores.end());
+                return (actor_type *)(actores[actores.size()-1]);
 
             }
-            return (actor_type *) m;
+            
+            return NULL; 
+            
         }
         
-        void EraseActor(D_ActorsItem item);
+        void EraseActor(vector<actor*>::iterator item);
         
 
         void setMovimientos(bool movimientos) {
@@ -76,7 +81,7 @@ namespace rapsody {
         
         
     private:
-        vector<mapa* >::iterator item;
+        vector<mapa*>::iterator item;
     };
 }
 

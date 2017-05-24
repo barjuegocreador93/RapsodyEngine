@@ -17,7 +17,7 @@
 using namespace rapsody;
 
 mapa::mapa() {
-    fondo = AddActor<aplicativo_fondo>();
+    
 }
 
 mapa::mapa(const mapa& orig) {
@@ -25,16 +25,19 @@ mapa::mapa(const mapa& orig) {
 
 mapa::~mapa() {
     actores.clear();
+    delete this;
 }
 
 void mapa::constructor_() {
     SetUbicacion(padre->GetUbicacion());
+    
+    
+    
 }
 
 void mapa::empezar() {
-    
-    
-    
+    cout<<"mapa "<<getNombre()<<"\n";
+    cout<<GetEscala();
     for(int i=0;i<(int)actores.size();i++)
     {
         actores[i]->empezar();
@@ -76,7 +79,7 @@ void mapa::BitmappFondo(int color) {
     fondo->DefaultBitmap(color);
 }
 
-void mapa::EraseActor(D_ActorsItem item) {
+void mapa::EraseActor(vector<actor*>::iterator item) {
     actores.erase(item);
 }
 

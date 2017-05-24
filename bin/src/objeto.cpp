@@ -6,6 +6,7 @@ objeto::objeto(bool priority_debuger) {
     debug_mode=this->priority_debuger=priority_debuger;    
     padre=NULL;
     ubicacion=crear_transformacion(crear_punto(0,0),crear_punto(0,0));
+    nombre="objeto";
 }
 
 void objeto::setDebug_mode(bool debug_mode) {
@@ -67,11 +68,11 @@ transformacion objeto::GetUbicacion() {
 }
 
 void objeto::SetPosicion(punto2D value) {
-    ubicacion.Setposicion(value);
+    ubicacion.SetPosicion(value);
 }
 
 punto2D objeto::GetPosicion() {
-    return ubicacion.Getposicion();
+    return ubicacion.GetPosicion();
 }
 
 void objeto::SetEscala(punto2D value) {
@@ -82,3 +83,10 @@ punto2D objeto::GetEscala() {
     return ubicacion.GetEscala();
 }
 
+string objeto::getNombre() const {
+    return nombre;
+}
+
+void objeto::setNombre(string nombre) {
+    this->nombre = nombre;
+}

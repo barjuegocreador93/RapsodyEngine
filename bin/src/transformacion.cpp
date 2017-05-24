@@ -13,7 +13,7 @@ transformacion::~transformacion()
 transformacion crear_transformacion(punto2D posicion, punto2D escala)
 {
     transformacion u;
-    u.Setposicion(posicion);
+    u.SetPosicion(posicion);
     u.SetEscala(escala);
     return u;
 }
@@ -46,12 +46,12 @@ void transformacion::AcumEscalaY(int y)
 }
 
 
-punto2D transformacion::Getposicion()
+punto2D transformacion::GetPosicion()
 {
     return posicion;
 }
 
-void transformacion::Setposicion(punto2D val)
+void transformacion::SetPosicion(punto2D val)
 {
     posicion = val;
 }

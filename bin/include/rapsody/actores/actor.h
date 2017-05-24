@@ -26,12 +26,18 @@ namespace rapsody {
         actor_component_type* AddComponents() {
             actor_componente* m = (actor_componente*)new(actor_component_type);
             if (m) {
-                m->pertenece(this);
-                m->constructor_();
+                
                 components.push_back(m);
+                m->pertenece(this);                
+                m->constructor_();
+                if(components[components.size()-1]->getPadre())cout<<"xD";
+                m->setItem(components.end());
+                
+                return (actor_component_type*)(m);
+                
 
             }
-            return (actor_component_type *) m;
+            return NULL;
         }
 
 
@@ -50,7 +56,7 @@ namespace rapsody {
         bool visible;
 
     private:
-        vector<actor *>::iterator item;
+        vector<actor*>::iterator item;
 
     };
 }

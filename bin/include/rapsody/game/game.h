@@ -17,7 +17,7 @@
 #include "objeto.h"
 #include "mapa.h"
 
-namespace rapsody{
+namespace rapsody {
 
     class game : public objeto {
     public:
@@ -31,34 +31,37 @@ namespace rapsody{
         bool IsPuase() const;
 
         void SetPuase(bool puase);
-        
+
 
         virtual void empezar();
 
         virtual void mientras(int mils);
-        
+
 
         virtual void fin();
-        
-        void SetMapaReady(int mapaReady);
-        
-        template <class mapa_type>
-        mapa_type* AddMapa()
-        {
-            mapa* nuevo = (mapa*)new(mapa_type);
-            if(nuevo)
-            {
-                nuevo->pertenece(this);
-                nuevo->constructor_();
-                mapas.push_back(nuevo);
-                nuevo->setItem(mapas.begin() + ((int)mapas.size()-1));
-            }
-            return (mapa_type*)nuevo;
-        }
-        
-        void EraseMapaItem(D_Worlds::iterator item);
 
-        
+        void SetMapaReady(int mapaReady);
+
+        template <class mapa_type>
+        mapa_type* AddMapa() {
+            mapa* m = (mapa*)new(mapa_type);
+            if (m) {
+                
+                m->pertenece(this);  
+                m->constructor_();                
+                mapas.push_back(m);                
+                mapas[mapas.size()-1]->setItem(mapas.end());                             
+                return (mapa_type *)(mapas[mapas.size()-1]);
+                
+            }
+            delete m;
+            m=NULL;
+            return m;
+        }
+
+        void EraseMapaItem(vector<C_World*>::iterator  item);
+
+
     protected:
         bool puase;
         bool gameover;
@@ -68,7 +71,14 @@ namespace rapsody{
     private:
 
     };
+
+    
 }
+
+
+
+
+
 
 
 #endif /* GAME_H */

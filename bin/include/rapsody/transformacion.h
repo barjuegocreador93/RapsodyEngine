@@ -10,8 +10,8 @@ class transformacion
         transformacion();
         virtual ~transformacion();
 
-        punto2D Getposicion();
-        void Setposicion(punto2D val);
+        punto2D GetPosicion();
+        void SetPosicion(punto2D val);
         punto2D GetEscala();
         void SetEscala(punto2D val);
 

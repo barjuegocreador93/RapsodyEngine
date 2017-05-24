@@ -29,7 +29,11 @@ namespace rapsody {
         void setPriority_debuger(bool priority_debuger);
         bool isPriority_debuger() const;
         objeto* getPadre() const;
-        ;
+
+        string getNombre() const;
+        void setNombre(string nombre);
+
+        
 
 
     protected:
@@ -41,6 +45,7 @@ namespace rapsody {
 
 
     private:
+        string nombre;
     };
 }
 

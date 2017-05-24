@@ -29,7 +29,7 @@ actor_componente::actor_componente(const actor_componente& orig) {
 }
 
 void actor_componente::constructor_() {
-
+    if(padre)cout<<"si";
 }
 
 void actor_componente::Tocando(D_AComponent un_componete) {
@@ -42,10 +42,12 @@ void actor_componente::Sobre(D_AComponent un_componente) {
 
 actor_componente::~actor_componente() {
     components.clear();
+    delete this;
 }
 
 
 void actor_componente::empezar() {
+    if(!padre)cout<<"mama mia";
     MoviemientosInternos();
     for (int i = 0; i < (int) components.size(); i++) {
         components[i]->empezar();
@@ -115,7 +117,7 @@ void actor_componente::MoviemientosInternos() {
     if (p) {
         SetUbicacion(
                 crear_transformacion(
-                padre->GetPosicion() + ubicacion_interna.Getposicion(),
+                padre->GetPosicion() + ubicacion_interna.GetPosicion(),
                 ubicacion.GetEscala() * ubicacion_interna.GetEscala() 
                 * contenedor->ubicacion_interna.GetEscala()
                 )

@@ -3,10 +3,7 @@
 
 #include "rapsody.h"
 
-void ingame()
-{
- 
-}
+
 
 
 

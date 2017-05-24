@@ -4,15 +4,19 @@ using namespace rapsody;
 actor::actor() {
     //ctor
     visible = true;
+    setNombre("default actor");
 }
 
 actor::~actor() {
     //dtor
     components.clear();
+    delete this;
 
 }
 
 void actor::empezar() {
+    cout<<"actor "<<padre->getNombre()<<"->"<<getNombre()<<"\n";
+    cout<<GetEscala();
     fisica::empezar();
     for (int i = 0; i < (int) components.size(); i++) {
         components[i]->empezar();

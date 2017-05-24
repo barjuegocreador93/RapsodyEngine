@@ -1,4 +1,9 @@
 #include "tiempo.h"
+#include "rapsody.h"
+
+
+
+
 using namespace rapsody;
 tiempo::tiempo()
 {
@@ -16,20 +21,21 @@ tiempo::~tiempo()
 
 void tiempo::correTiempo()
 {
-    if(60==mins)
+    if(60<=mins)
     {
         hrs++;
         mins=0;
     }
-    if(60==seg)
+    if(60<=seg)
     {
         mins++;
         seg=0;
     }
-    if(1000==mils)
+    if(1000<=mils)
     {
         seg++;
         mils=0;
     }
+    
     mils++;
 }
