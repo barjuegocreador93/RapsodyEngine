@@ -19,7 +19,7 @@
 
 namespace rapsody {
 
-    class game : public objeto {
+    class game : public XMLelement<mapa> {
     public:
         game();
         game(const game& orig);
@@ -45,13 +45,12 @@ namespace rapsody {
         template <class mapa_type>
         mapa_type* AddMapa() {
             mapa* m = (mapa*)new(mapa_type);
-            if (m) {
+            if (m) {                 
                 
-                m->pertenece(this);  
-                m->constructor_();                
-                mapas.push_back(m);                
-                mapas[mapas.size()-1]->setItem(mapas.end());                             
-                return (mapa_type *)(mapas[mapas.size()-1]);
+                cout<<"aqui"<<endl;
+                AddElement(m);        
+                m->constructor_();                    
+                return (mapa_type *)(m);
                 
             }
             delete m;
@@ -59,13 +58,13 @@ namespace rapsody {
             return m;
         }
 
-        void EraseMapaItem(vector<C_World*>::iterator  item);
+        
 
 
     protected:
         bool puase;
         bool gameover;
-        vector<mapa *> mapas;
+        
         int mapaReady;
         tiempo timer;
     private:

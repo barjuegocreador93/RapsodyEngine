@@ -55,7 +55,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/rapsody.o \
 	${OBJECTDIR}/src/s_image.o \
 	${OBJECTDIR}/src/tiempo.o \
-	${OBJECTDIR}/src/transformacion.o
+	${OBJECTDIR}/src/transformacion.o \
+	${OBJECTDIR}/src/xmltree.o
 
 
 # C Compiler Flags
@@ -186,6 +187,11 @@ ${OBJECTDIR}/src/transformacion.o: src/transformacion.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Iinclude -Iinclude/rapsody -Iinclude/rapsody/actores -Iinclude/rapsody/actores/componentes -Iinclude/rapsody/actores/peones -Iinclude/rapsody/controladores -Iinclude/rapsody/mapas -Iinclude/rapsody/mapas/aplicativos/componentes -Iinclude/rapsody/mapas/aplicativos -Iinclude/rapsody/game -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/transformacion.o src/transformacion.cpp
+
+${OBJECTDIR}/src/xmltree.o: src/xmltree.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Iinclude -Iinclude/rapsody -Iinclude/rapsody/actores -Iinclude/rapsody/actores/componentes -Iinclude/rapsody/actores/peones -Iinclude/rapsody/controladores -Iinclude/rapsody/mapas -Iinclude/rapsody/mapas/aplicativos/componentes -Iinclude/rapsody/mapas/aplicativos -Iinclude/rapsody/game -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/xmltree.o src/xmltree.cpp
 
 # Subprojects
 .build-subprojects:

@@ -55,7 +55,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/rapsody.o \
 	${OBJECTDIR}/src/s_image.o \
 	${OBJECTDIR}/src/tiempo.o \
-	${OBJECTDIR}/src/transformacion.o
+	${OBJECTDIR}/src/transformacion.o \
+	${OBJECTDIR}/src/xmltree.o
 
 
 # C Compiler Flags
@@ -186,6 +187,11 @@ ${OBJECTDIR}/src/transformacion.o: src/transformacion.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/transformacion.o src/transformacion.cpp
+
+${OBJECTDIR}/src/xmltree.o: src/xmltree.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/xmltree.o src/xmltree.cpp
 
 # Subprojects
 .build-subprojects:

@@ -19,17 +19,13 @@ game::game() {
     puase=false;
     gameover=false;
     mapaReady=0;
-    mapas.clear(); 
+    elements.clear(); 
     
     SetEscala(crear_punto(500,500));
-    setNombre("el juego");
-    D_World myworld=AddMapa<C_World>();
-    myworld->setNombre("el mapa");
-    D_Actor mya=myworld->AddActor<C_Actor>();
-    mya->setNombre("mi actor");
-    mya->SetEscala(crear_punto(6,6));
-    //aqui se crea el componente
-    D_AComponent myac=mya->AddComponents<C_AComponent>();
+    SetNombre("el juego");
+    
+    D_World myw=AddMapa<C_World>();
+    D_Actor mya=myw->AddActor<C_Actor>();
     
        
 }
@@ -59,24 +55,24 @@ bool game::IsPuase() const {
 }
 
 void game::SetMapaReady(int mapaReady) { 
-    if(mapaReady>=0 && mapaReady < mapas.size())
+    if(mapaReady>=0 && mapaReady < elements.size())
         this->mapaReady = mapaReady;
 }
 
 void game::empezar() {
     
     inicia_allegro(GetEscala().x,GetEscala().y);
-    cout<<"game "<<getNombre()<<"\n";
-    if(mapaReady>=0 && mapaReady < mapas.size())
-        mapas[mapaReady]->empezar();
+    cout<<"game "<<GetNombre()<<"\n";
+    if(mapaReady>=0 && mapaReady < elements.size())
+        elements[mapaReady]->empezar();
 }
 
 void game::mientras(int mils) {
     while (!gameover)
     {
         
-        if(mapaReady>=0 && mapaReady < mapas.size())
-            mapas[mapaReady]->mientras(timer.mils);
+        if(mapaReady>=0 && mapaReady < elements.size())
+            elements[mapaReady]->mientras(timer.mils);
         
         timer.correTiempo();
         
@@ -85,13 +81,11 @@ void game::mientras(int mils) {
 }
 
 void game::fin() {
-    if(mapaReady>=0 && mapaReady < mapas.size())
-        mapas[mapaReady]->fin();
+    if(mapaReady>=0 && mapaReady < elements.size())
+        elements[mapaReady]->fin();
 }
 
-void game::EraseMapaItem(vector<C_World*>::iterator item) {
-    mapas.erase(item);
-}
+
 template<class game_t>
     void Game_Main() {
         game myj;

@@ -45,6 +45,7 @@
         <itemPath>include/rapsody/transformacion.h</itemPath>
       </logicalFolder>
       <itemPath>inicia.h</itemPath>
+      <itemPath>include/rapsody/xmltree.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -76,6 +77,7 @@
         <itemPath>src/transformacion.cpp</itemPath>
       </logicalFolder>
       <itemPath>inicia.cpp</itemPath>
+      <itemPath>src/xmltree.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -200,6 +202,8 @@
       </item>
       <item path="include/rapsody/transformacion.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/rapsody/xmltree.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="inicia.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="inicia.h" ex="false" tool="3" flavor2="0">
@@ -246,6 +250,8 @@
       <item path="src/tiempo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/transformacion.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/xmltree.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -335,6 +341,8 @@
       </item>
       <item path="include/rapsody/transformacion.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/rapsody/xmltree.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="inicia.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="inicia.h" ex="false" tool="3" flavor2="0">
@@ -381,6 +389,8 @@
       <item path="src/tiempo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/transformacion.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/xmltree.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

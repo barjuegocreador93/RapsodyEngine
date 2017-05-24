@@ -5,10 +5,12 @@
 
 #include "objeto.h"
 #include "tiempo.h"
+#include "xmltree.h"
+#include "actores/componentes/actor_component.h"
 
 namespace rapsody {
 
-    class fisica : public objeto {
+    class fisica : public XMLelement<actor_componente> {
     public:
         fisica();
         virtual ~fisica();

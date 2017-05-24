@@ -19,7 +19,7 @@
 #include "aplicativos/aplicativo_fondo.h"
 namespace rapsody {
 
-    class mapa : public objeto {
+    class mapa : public  XMLelement<actor> {
     public:
         mapa();
         mapa(const mapa& orig);
@@ -38,14 +38,13 @@ namespace rapsody {
         template<class actor_type>
         actor_type* AddActor() {
             actor  *m = (actor*)new(actor_type);
-            if (m) {               
+            if (m) {         
                 
-                m->pertenece(this);
+                               
+                AddElement(m);
                 m->setMundo(this);
-                m->constructor_();                
-                actores.push_back(m);
-                actores[actores.size()-1]->setItem(actores.end());
-                return (actor_type *)(actores[actores.size()-1]);
+                m->constructor_(); 
+                return (actor_type *)(m);
 
             }
             
@@ -69,13 +68,10 @@ namespace rapsody {
         
         
         
-        void setItem(vector<mapa*>::iterator item) {
-            this->item = item;
-        }
+        
 
 
-    protected:
-        D_Actors actores;
+    protected:        
         bool movimientos;
         aplicativo_fondo* fondo;
         
