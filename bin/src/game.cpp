@@ -28,7 +28,7 @@ game::game() {
     D_Actor mya=myworld->AddActor<C_Actor>();
     mya->setNombre("mi actor");
     mya->SetEscala(crear_punto(6,6));
-    
+    //aqui se crea el componente
     D_AComponent myac=mya->AddComponents<C_AComponent>();
     
        

@@ -28,6 +28,7 @@ namespace rapsody {
             if (m) {
                 
                 components.push_back(m);
+                //se entrega por aqui a actor como padre a actor_componente, pero no lo hace
                 m->pertenece(this);                
                 m->constructor_();
                 if(components[components.size()-1]->getPadre())cout<<"xD";
