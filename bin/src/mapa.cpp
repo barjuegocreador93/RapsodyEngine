@@ -24,49 +24,49 @@ mapa::mapa(const mapa& orig) {
 }
 
 mapa::~mapa() {
-    actores.clear();
+    elements.clear();
     delete this;
 }
 
 void mapa::constructor_() {
-    SetUbicacion(padre->GetUbicacion());
+    SetUbicacion(((game*)padre)->GetUbicacion());
     
     
     
 }
 
 void mapa::empezar() {
-    cout<<"mapa "<<getNombre()<<"\n";
+    cout<<"mapa "<<GetNombre()<<"\n";
     cout<<GetEscala();
-    for(int i=0;i<(int)actores.size();i++)
+    for(int i=0;i<(int)elements.size();i++)
     {
-        actores[i]->empezar();
+        elements[i]->empezar();
     }
 }
 
 void mapa::mientras(int mils) {
     
-    for(int i=0;i<(int)actores.size();i++)
+    for(int i=0;i<(int)elements.size();i++)
     {
-        actores[i]->mientras(mils);
-        if(movimientos)actores[i]->render();
+        elements[i]->mientras(mils);
+        if(movimientos)elements[i]->render();
     }
     SystemaDeColision();
 }
 
 void mapa::fin() {
-    for(int i=0;i<(int)actores.size();i++)
+    for(int i=0;i<(int)elements.size();i++)
     {
-        actores[i]->fin();
+        elements[i]->fin();
     }    
 }
 
 void mapa::SystemaDeColision() {
-    for(int i=0;i<(int)actores.size();i++)
+    for(int i=0;i<(int)elements.size();i++)
     {
-        for(int j=i+1;j<(int)actores.size();j++)
+        for(int j=i+1;j<(int)elements.size();j++)
         {
-            actores[i]->SystemaDeColision(actores[j]);
+            elements[i]->SystemaDeColision(elements[j]);
         }
     }
 }
@@ -80,13 +80,9 @@ void mapa::BitmappFondo(int color) {
 }
 
 void mapa::EraseActor(vector<actor*>::iterator item) {
-    actores.erase(item);
+    elements.erase(item);
 }
 
 void mapa::destructor_() {
-    if(padre)
-    {
-        ((game*)padre)->EraseMapaItem(item);
-        delete this;
-    }
+    destruir();
 }

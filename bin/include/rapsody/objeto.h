@@ -1,6 +1,8 @@
 #ifndef OBJETO_H
 #define OBJETO_H
 
+
+
 #include "transformacion.h"
 namespace rapsody {
 
@@ -28,24 +30,54 @@ namespace rapsody {
         bool isDebug_mode() const;
         void setPriority_debuger(bool priority_debuger);
         bool isPriority_debuger() const;
-        objeto* getPadre() const;
-
-        string getNombre() const;
-        void setNombre(string nombre);
-
         
+        void SetNombre(std::string nombre) {
+        this->nombre = nombre;
+        }
 
+        std::string GetNombre() const {
+        return nombre;
+        }
+        
 
     protected:
 
         transformacion ubicacion;
-        objeto * padre;
         bool debug_mode;
         bool priority_debuger;
+        string nombre;
+        
 
 
     private:
-        string nombre;
+
+
+
+    };
+    
+    class basic_objeto : public objeto
+    {
+    public:
+        
+        basic_objeto()
+        {
+           padre=NULL; 
+        }
+        
+        virtual ~basic_objeto()
+        {
+            
+        }
+        void SetPadre(basic_objeto* padre) {
+            this->padre = padre;
+        }
+
+        basic_objeto* GetPadre() const {
+            return padre;
+        }
+        
+    protected:        
+        basic_objeto* padre;
     };
 }
 

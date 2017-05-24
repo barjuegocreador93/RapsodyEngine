@@ -4,6 +4,7 @@
 
 #include "fisica.h"
 #include "actor_component.h"
+#include "xmltree.h"
 
 namespace rapsody {
 
@@ -27,12 +28,8 @@ namespace rapsody {
             actor_componente* m = (actor_componente*)new(actor_component_type);
             if (m) {
                 
-                components.push_back(m);
-                //se entrega por aqui a actor como padre a actor_componente, pero no lo hace
-                m->pertenece(this);                
+                AddElement(m);                             
                 m->constructor_();
-                if(components[components.size()-1]->getPadre())cout<<"xD";
-                m->setItem(components.end());
                 
                 return (actor_component_type*)(m);
                 
@@ -48,16 +45,14 @@ namespace rapsody {
 
         void SystemaDeColision(actor * ext);
         
-        void EraseComponent(D_AComponents::iterator item);
-        void setItem(vector<actor*>::iterator item);
+        
+        
 
-    protected:
-
-        D_AComponents components;        
+    protected:               
         bool visible;
 
     private:
-        vector<actor*>::iterator item;
+        
 
     };
 }

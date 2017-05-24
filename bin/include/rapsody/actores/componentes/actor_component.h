@@ -18,11 +18,12 @@
 #include <typeinfo>
 
 #include "objeto.h"
+#include "xmltree.h"
 
 namespace rapsody {
 
     
-    class actor_componente : public objeto {
+    class actor_componente : public XMLelement<actor_componente> {
     public:
         actor_componente();
         actor_componente(const actor_componente& orig);
@@ -51,16 +52,13 @@ namespace rapsody {
             actor_componente* m = (actor_componente*)new(actor_component_type);
             if (m) {
                 //se epsera a que lo lea pero no:
-                m->pertenece(padre);
                 
+                AddElement(m);
+                m->constructor_();
                 m->contenedor=this;
-                
-                m->constructor_();                
-                components.push_back(m);
-                m->item = components.end();
-
+                return (actor_component_type*)(m);
             }
-            return (actor_component_type *) m;
+            return NULL;
         }
 
         void SystemaDeColision(actor_componente * otro);
@@ -69,20 +67,21 @@ namespace rapsody {
         void setUbicacion_interna(C_Transform ubicacion_interna) {
             this->ubicacion_interna = ubicacion_interna;
         }
-        void setItem(vector<actor_componente*>::iterator item);
+        void setContenedor(actor_componente* contenedor);
+        actor_componente* getContenedor() const;
+        
         
         
 
 
     protected:
-        C_Transform ubicacion, ubicacion_interna;
-        vector<actor_componente*> components;        
-        objeto * padre;
+        C_Transform ubicacion, ubicacion_interna;             
+        
         actor_componente * contenedor;
         
        
     private:
-        vector<actor_componente*>::iterator item;
+        
         
 
 

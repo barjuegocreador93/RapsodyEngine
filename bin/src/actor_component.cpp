@@ -11,6 +11,8 @@
  * Created on 21 de mayo de 2017, 05:48 AM
  */
 
+
+
 #include "actor_component.h"
 #include "actor.h"
 using namespace rapsody;
@@ -21,9 +23,15 @@ actor_componente::actor_componente() {
     
 }
 
-void actor_componente::setItem(vector<actor_componente*>::iterator item) {
-    this->item = item;
+void actor_componente::setContenedor(actor_componente* contenedor) {
+    this->contenedor = contenedor;
 }
+
+actor_componente* actor_componente::getContenedor() const {
+    return contenedor;
+}
+
+
 
 actor_componente::actor_componente(const actor_componente& orig) {
 }
@@ -41,30 +49,30 @@ void actor_componente::Sobre(D_AComponent un_componente) {
 }
 
 actor_componente::~actor_componente() {
-    components.clear();
+    elements.clear();
     delete this;
 }
 
 
 void actor_componente::empezar() {
-    if(!padre)cout<<"mama mia";
+    if(padre)cout<<"encontre al padre perdido xD wow";
     MoviemientosInternos();
-    for (int i = 0; i < (int) components.size(); i++) {
-        components[i]->empezar();
+    for (int i = 0; i < (int) elements.size(); i++) {
+        elements[i]->empezar();
     }
 }
 
 void actor_componente::mientras(int mils) {
     MoviemientosInternos();
-    for (int i = 0; i < (int) components.size(); i++) {
-        components[i]->mientras(mils);
+    for (int i = 0; i < (int) elements.size(); i++) {
+        elements[i]->mientras(mils);
     }
 }
 
 void actor_componente::fin() {
 
-    for (int i = 0; i < (int) components.size(); i++) {
-        components[i]->fin();
+    for (int i = 0; i < (int) elements.size(); i++) {
+        elements[i]->fin();
     }
 }
 
@@ -79,10 +87,10 @@ bool actor_componente::EstaTocando(actor_componente* otro) {
 }
 
 void actor_componente::SystemaDeColision(actor_componente* otro) {
-    for (int i = 0; i < (int) components.size(); i++) {
-        for (int j = 0; j < (int) otro->components.size(); j++) {
+    for (int i = 0; i < (int) elements.size(); i++) {
+        for (int j = 0; j < (int) otro->elements.size(); j++) {
             D_Actor  p1 = (D_Actor) padre, p2 = (D_Actor) padre;
-            D_AComponent c1 = components[i], c2 = otro->components[j];
+            D_AComponent c1 = elements[i], c2 = otro->elements[j];
             if (c1->EstaTocando(c2)) {
                 c1->Tocando(c2);
                 p1->Tocando(p2, c2);
@@ -101,9 +109,9 @@ void actor_componente::SystemaDeColision(actor_componente* otro) {
 }
 
 void actor_componente::render() {
-    for (int i = 0; i < (int) components.size(); i++) {
-        components[i]->print();
-        components[i]->render();
+    for (int i = 0; i < (int) elements.size(); i++) {
+        elements[i]->print();
+        elements[i]->render();
     }
 }
 
@@ -113,27 +121,9 @@ void actor_componente::print() {
 
 void actor_componente::MoviemientosInternos() {
 
-    D_Actor p = (D_Actor) padre;
-    if (p) {
-        SetUbicacion(
-                crear_transformacion(
-                padre->GetPosicion() + ubicacion_interna.GetPosicion(),
-                ubicacion.GetEscala() * ubicacion_interna.GetEscala() 
-                * contenedor->ubicacion_interna.GetEscala()
-                )
-                );
-    }
+    
 }
 
 void actor_componente::destructor_() {
-    if(contenedor)
-    {
-        contenedor->components.erase(item);
-        
-        
-    } else
-    {
-        if(padre)((actor *)padre)->EraseComponent(item);
-    }
-    delete this;    
+    this->EraseElement(item);  
 }

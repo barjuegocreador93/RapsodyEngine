@@ -8,8 +8,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/actores/componentes/colision_caja.h</file>
-            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/actores/componentes/actor_component.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/s_image.h</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/actores/componentes/actor_component.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/linea.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/mapas/aplicativos/componentes/aplicativo_componente.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/tiempo.cpp</file>
@@ -27,23 +27,27 @@
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/s_image.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/actores/componentes/colision_linea.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/punto.h</file>
-            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/rapsody.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/transformacion.h</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/rapsody.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/mapas/mapa.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/actor.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/actor_component.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/inicia.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/fisica.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/game.cpp</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/mapas/aplicativos/aplicativo_fondo.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/punto.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/linea.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/colision_linea.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/fisica.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/objeto.h</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/aplicativo_fondo_componente.cpp</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/mapas/aplicativos/componentes/aplicativo_fondo_componente.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/peon.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/include/rapsody/mapas/aplicativos/aplicativo.h</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/colision_caja.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/mapa.cpp</file>
+            <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/aplicativo_fondo.cpp</file>
             <file>file:/C:/Users/Calimpio/Documents/GitHub/RapsodyEngine/bin/src/aplicativo.cpp</file>
         </group>
     </open-files>
