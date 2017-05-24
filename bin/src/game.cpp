@@ -31,7 +31,7 @@ game::game() {
     
     D_AComponent myac=mya->AddComponents<C_AComponent>();
     
-    
+    D_AComponent myac1a = myac->AddComponent<C_AComponent>();
     
        
 }
