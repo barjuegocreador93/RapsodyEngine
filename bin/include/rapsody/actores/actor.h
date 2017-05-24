@@ -29,7 +29,7 @@ namespace rapsody {
             if (m) {
                 
                 AddElement(m);                             
-                m->constructor_();
+                
                 
                 return (actor_component_type*)(m);
                 

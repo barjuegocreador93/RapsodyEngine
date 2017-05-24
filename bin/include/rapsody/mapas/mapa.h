@@ -26,7 +26,7 @@ namespace rapsody {
         virtual ~mapa();
 
 
-        virtual void constructor_();
+        
         virtual void empezar();
         virtual void mientras(int mils);
         virtual void fin();
@@ -43,7 +43,7 @@ namespace rapsody {
                                
                 AddElement(m);
                 m->setMundo(this);
-                m->constructor_(); 
+                
                 return (actor_type *)(m);
 
             }

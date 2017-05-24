@@ -36,9 +36,7 @@ actor_componente* actor_componente::getContenedor() const {
 actor_componente::actor_componente(const actor_componente& orig) {
 }
 
-void actor_componente::constructor_() {
-    if(padre)cout<<"si";
-}
+
 
 void actor_componente::Tocando(D_AComponent un_componete) {
 

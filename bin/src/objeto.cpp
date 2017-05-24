@@ -31,9 +31,7 @@ objeto::~objeto() {
     //dtor
 }
 
-void objeto::constructor_() {
 
-}
 
 void objeto::destructor_() {
 

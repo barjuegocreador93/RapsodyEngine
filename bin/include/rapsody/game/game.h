@@ -49,7 +49,7 @@ namespace rapsody {
                 
                 cout<<"aqui"<<endl;
                 AddElement(m);        
-                m->constructor_();                    
+                                  
                 return (mapa_type *)(m);
                 
             }

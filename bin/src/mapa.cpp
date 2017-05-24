@@ -28,14 +28,10 @@ mapa::~mapa() {
     delete this;
 }
 
-void mapa::constructor_() {
-    SetUbicacion(((game*)padre)->GetUbicacion());
-    
-    
-    
-}
+
 
 void mapa::empezar() {
+    SetUbicacion(((game*)padre)->GetUbicacion());
     cout<<"mapa "<<GetNombre()<<"\n";
     cout<<GetEscala();
     for(int i=0;i<(int)elements.size();i++)

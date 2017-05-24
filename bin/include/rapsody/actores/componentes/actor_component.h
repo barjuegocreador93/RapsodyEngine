@@ -29,7 +29,7 @@ namespace rapsody {
         actor_componente(const actor_componente& orig);
         virtual ~actor_componente();
 
-        virtual void constructor_();
+        
         
         void destructor_();
 
@@ -54,7 +54,7 @@ namespace rapsody {
                 //se epsera a que lo lea pero no:
                 
                 AddElement(m);
-                m->constructor_();
+                
                 m->contenedor=this;
                 return (actor_component_type*)(m);
             }
