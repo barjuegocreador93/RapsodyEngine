@@ -1,5 +1,5 @@
 #include "transformacion.h"
-
+using namespace rapsody;
 transformacion::transformacion()
 {
     //ctor
@@ -10,10 +10,10 @@ transformacion::~transformacion()
     //dtor
 }
 
-transformacion crear_transformacion(punto posicion, punto escala)
+transformacion crear_transformacion(punto2D posicion, punto2D escala)
 {
     transformacion u;
-    u.Setposicion(posicion);
+    u.SetPosicion(posicion);
     u.SetEscala(escala);
     return u;
 }
@@ -46,22 +46,22 @@ void transformacion::AcumEscalaY(int y)
 }
 
 
-punto transformacion::Getposicion()
+punto2D transformacion::GetPosicion()
 {
     return posicion;
 }
 
-void transformacion::Setposicion(punto val)
+void transformacion::SetPosicion(punto2D val)
 {
     posicion = val;
 }
 
-punto transformacion::GetEscala()
+punto2D transformacion::GetEscala()
 {
     return escala;
 }
 
-void transformacion::SetEscala(punto val)
+void transformacion::SetEscala(punto2D val)
 {
     escala = val;
 }

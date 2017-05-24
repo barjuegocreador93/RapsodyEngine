@@ -35,18 +35,20 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/include/nave.o \
 	${OBJECTDIR}/inicia.o \
 	${OBJECTDIR}/src/actor.o \
-	${OBJECTDIR}/src/caja.o \
-	${OBJECTDIR}/src/colision.o \
+	${OBJECTDIR}/src/actor_component.o \
+	${OBJECTDIR}/src/aplicativo.o \
+	${OBJECTDIR}/src/aplicativo_componente.o \
+	${OBJECTDIR}/src/aplicativo_fondo.o \
+	${OBJECTDIR}/src/aplicativo_fondo_componente.o \
+	${OBJECTDIR}/src/colision_caja.o \
+	${OBJECTDIR}/src/colision_linea.o \
 	${OBJECTDIR}/src/controlador.o \
 	${OBJECTDIR}/src/fisica.o \
 	${OBJECTDIR}/src/game.o \
-	${OBJECTDIR}/src/juego.o \
 	${OBJECTDIR}/src/linea.o \
 	${OBJECTDIR}/src/mapa.o \
-	${OBJECTDIR}/src/mi_mapa.o \
 	${OBJECTDIR}/src/objeto.o \
 	${OBJECTDIR}/src/peon.o \
 	${OBJECTDIR}/src/punto.o \
@@ -80,11 +82,6 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bin.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bin ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/include/nave.o: include/nave.cpp
-	${MKDIR} -p ${OBJECTDIR}/include
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/include/nave.o include/nave.cpp
-
 ${OBJECTDIR}/inicia.o: inicia.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -95,15 +92,40 @@ ${OBJECTDIR}/src/actor.o: src/actor.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/actor.o src/actor.cpp
 
-${OBJECTDIR}/src/caja.o: src/caja.cpp
+${OBJECTDIR}/src/actor_component.o: src/actor_component.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/caja.o src/caja.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/actor_component.o src/actor_component.cpp
 
-${OBJECTDIR}/src/colision.o: src/colision.cpp
+${OBJECTDIR}/src/aplicativo.o: src/aplicativo.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/colision.o src/colision.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/aplicativo.o src/aplicativo.cpp
+
+${OBJECTDIR}/src/aplicativo_componente.o: src/aplicativo_componente.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/aplicativo_componente.o src/aplicativo_componente.cpp
+
+${OBJECTDIR}/src/aplicativo_fondo.o: src/aplicativo_fondo.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/aplicativo_fondo.o src/aplicativo_fondo.cpp
+
+${OBJECTDIR}/src/aplicativo_fondo_componente.o: src/aplicativo_fondo_componente.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/aplicativo_fondo_componente.o src/aplicativo_fondo_componente.cpp
+
+${OBJECTDIR}/src/colision_caja.o: src/colision_caja.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/colision_caja.o src/colision_caja.cpp
+
+${OBJECTDIR}/src/colision_linea.o: src/colision_linea.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/colision_linea.o src/colision_linea.cpp
 
 ${OBJECTDIR}/src/controlador.o: src/controlador.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
@@ -118,12 +140,7 @@ ${OBJECTDIR}/src/fisica.o: src/fisica.cpp
 ${OBJECTDIR}/src/game.o: src/game.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/game.o src/game.cpp
-
-${OBJECTDIR}/src/juego.o: src/juego.cpp
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/juego.o src/juego.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/game.o src/game.cpp
 
 ${OBJECTDIR}/src/linea.o: src/linea.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
@@ -134,11 +151,6 @@ ${OBJECTDIR}/src/mapa.o: src/mapa.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mapa.o src/mapa.cpp
-
-${OBJECTDIR}/src/mi_mapa.o: src/mi_mapa.cpp
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Iinclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mi_mapa.o src/mi_mapa.cpp
 
 ${OBJECTDIR}/src/objeto.o: src/objeto.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

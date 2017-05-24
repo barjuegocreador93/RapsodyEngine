@@ -4,30 +4,45 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <logicalFolder name="includes" displayName="game" projectFiles="true">
-        <itemPath>src/game.cpp</itemPath>
-        <itemPath>include/game.h</itemPath>
-        <itemPath>src/mi_mapa.cpp</itemPath>
-        <itemPath>include/mi_mapa.h</itemPath>
-        <itemPath>include/nave.cpp</itemPath>
-        <itemPath>include/nave.h</itemPath>
-      </logicalFolder>
-      <logicalFolder name="include" displayName="include" projectFiles="true">
-        <itemPath>include/actor.h</itemPath>
-        <itemPath>include/caja.h</itemPath>
-        <itemPath>include/colision.h</itemPath>
-        <itemPath>include/controlador.h</itemPath>
-        <itemPath>include/fisica.h</itemPath>
-        <itemPath>include/juego.h</itemPath>
-        <itemPath>include/linea.h</itemPath>
-        <itemPath>include/mapa.h</itemPath>
-        <itemPath>include/objeto.h</itemPath>
-        <itemPath>include/peon.h</itemPath>
-        <itemPath>include/punto.h</itemPath>
-        <itemPath>include/rapsody.h</itemPath>
-        <itemPath>include/s_image.h</itemPath>
-        <itemPath>include/tiempo.h</itemPath>
-        <itemPath>include/transformacion.h</itemPath>
+      <logicalFolder name="rapsody" displayName="rapsody" projectFiles="true">
+        <logicalFolder name="actores" displayName="actores" projectFiles="true">
+          <logicalFolder name="componentes" displayName="componentes" projectFiles="true">
+            <itemPath>include/rapsody/actores/componentes/actor_component.h</itemPath>
+            <itemPath>include/rapsody/actores/componentes/colision_caja.h</itemPath>
+            <itemPath>include/rapsody/actores/componentes/colision_linea.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="peones" displayName="peones" projectFiles="true">
+            <itemPath>include/rapsody/actores/peones/peon.h</itemPath>
+          </logicalFolder>
+          <itemPath>include/rapsody/actores/actor.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="controladores"
+                       displayName="controladores"
+                       projectFiles="true">
+          <itemPath>include/rapsody/controladores/controlador.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="game" displayName="game" projectFiles="true">
+          <itemPath>include/rapsody/game/game.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="mapas" displayName="mapas" projectFiles="true">
+          <logicalFolder name="aplicativos" displayName="aplicativos" projectFiles="true">
+            <logicalFolder name="componentes" displayName="componentes" projectFiles="true">
+              <itemPath>include/rapsody/mapas/aplicativos/componentes/aplicativo_componente.h</itemPath>
+              <itemPath>include/rapsody/mapas/aplicativos/componentes/aplicativo_fondo_componente.h</itemPath>
+            </logicalFolder>
+            <itemPath>include/rapsody/mapas/aplicativos/aplicativo.h</itemPath>
+            <itemPath>include/rapsody/mapas/aplicativos/aplicativo_fondo.h</itemPath>
+          </logicalFolder>
+          <itemPath>include/rapsody/mapas/mapa.h</itemPath>
+        </logicalFolder>
+        <itemPath>include/rapsody/fisica.h</itemPath>
+        <itemPath>include/rapsody/linea.h</itemPath>
+        <itemPath>include/rapsody/objeto.h</itemPath>
+        <itemPath>include/rapsody/punto.h</itemPath>
+        <itemPath>include/rapsody/rapsody.h</itemPath>
+        <itemPath>include/rapsody/s_image.h</itemPath>
+        <itemPath>include/rapsody/tiempo.h</itemPath>
+        <itemPath>include/rapsody/transformacion.h</itemPath>
       </logicalFolder>
       <itemPath>inicia.h</itemPath>
     </logicalFolder>
@@ -38,15 +53,18 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="sources" displayName="game" projectFiles="true">
-      </logicalFolder>
       <logicalFolder name="src" displayName="src" projectFiles="true">
         <itemPath>src/actor.cpp</itemPath>
-        <itemPath>src/caja.cpp</itemPath>
-        <itemPath>src/colision.cpp</itemPath>
+        <itemPath>src/actor_component.cpp</itemPath>
+        <itemPath>src/aplicativo.cpp</itemPath>
+        <itemPath>src/aplicativo_componente.cpp</itemPath>
+        <itemPath>src/aplicativo_fondo.cpp</itemPath>
+        <itemPath>src/aplicativo_fondo_componente.cpp</itemPath>
+        <itemPath>src/colision_caja.cpp</itemPath>
+        <itemPath>src/colision_linea.cpp</itemPath>
         <itemPath>src/controlador.cpp</itemPath>
         <itemPath>src/fisica.cpp</itemPath>
-        <itemPath>src/juego.cpp</itemPath>
+        <itemPath>src/game.cpp</itemPath>
         <itemPath>src/linea.cpp</itemPath>
         <itemPath>src/mapa.cpp</itemPath>
         <itemPath>src/objeto.cpp</itemPath>
@@ -98,6 +116,15 @@
         <ccTool>
           <incDir>
             <pElem>include</pElem>
+            <pElem>include/rapsody</pElem>
+            <pElem>include/rapsody/actores</pElem>
+            <pElem>include/rapsody/actores/componentes</pElem>
+            <pElem>include/rapsody/actores/peones</pElem>
+            <pElem>include/rapsody/controladores</pElem>
+            <pElem>include/rapsody/mapas</pElem>
+            <pElem>include/rapsody/mapas/aplicativos/componentes</pElem>
+            <pElem>include/rapsody/mapas/aplicativos</pElem>
+            <pElem>include/rapsody/game</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
@@ -106,50 +133,72 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <folder path="HeaderFiles/includes">
-        <ccTool>
-          <incDir>
-            <pElem>include</pElem>
-          </incDir>
-        </ccTool>
-      </folder>
-      <item path="include/actor.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/actores/actor.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/caja.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/actores/componentes/actor_component.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/colision.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/actores/componentes/colision_caja.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/controlador.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/actores/componentes/colision_linea.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/fisica.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/actores/peones/peon.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/game.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/controladores/controlador.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/juego.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/fisica.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/linea.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/game/game.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/mapa.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/linea.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/mi_mapa.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/mapas/aplicativos/aplicativo.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/nave.cpp" ex="false" tool="1" flavor2="0">
+      <item path="include/rapsody/mapas/aplicativos/aplicativo_fondo.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/nave.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/mapas/aplicativos/componentes/aplicativo_componente.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/objeto.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/mapas/aplicativos/componentes/aplicativo_fondo_componente.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/peon.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/mapas/mapa.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/punto.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/objeto.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/rapsody.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/punto.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/s_image.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/rapsody.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/tiempo.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/s_image.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/transformacion.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/tiempo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/rapsody/transformacion.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="inicia.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -157,9 +206,22 @@
       </item>
       <item path="src/actor.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/caja.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/actor_component.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/colision.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/aplicativo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/aplicativo_componente.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/aplicativo_fondo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/aplicativo_fondo_componente.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/colision_caja.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/colision_linea.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/controlador.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -167,13 +229,9 @@
       </item>
       <item path="src/game.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/juego.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="src/linea.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/mapa.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/mi_mapa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/objeto.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -210,50 +268,72 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <folder path="HeaderFiles/includes">
-        <ccTool>
-          <incDir>
-            <pElem>include</pElem>
-          </incDir>
-        </ccTool>
-      </folder>
-      <item path="include/actor.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/actores/actor.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/caja.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/actores/componentes/actor_component.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/colision.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/actores/componentes/colision_caja.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/controlador.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/actores/componentes/colision_linea.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/fisica.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/actores/peones/peon.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/game.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/controladores/controlador.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/juego.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/fisica.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/linea.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/game/game.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/mapa.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/linea.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/mi_mapa.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/mapas/aplicativos/aplicativo.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/nave.cpp" ex="false" tool="1" flavor2="0">
+      <item path="include/rapsody/mapas/aplicativos/aplicativo_fondo.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/nave.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/mapas/aplicativos/componentes/aplicativo_componente.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/objeto.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/mapas/aplicativos/componentes/aplicativo_fondo_componente.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="include/peon.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/mapas/mapa.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/punto.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/objeto.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/rapsody.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/punto.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/s_image.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/rapsody.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/tiempo.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/s_image.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/transformacion.h" ex="false" tool="3" flavor2="0">
+      <item path="include/rapsody/tiempo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/rapsody/transformacion.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="inicia.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -261,9 +341,22 @@
       </item>
       <item path="src/actor.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/caja.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/actor_component.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/colision.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/aplicativo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/aplicativo_componente.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/aplicativo_fondo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/aplicativo_fondo_componente.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/colision_caja.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/colision_linea.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/controlador.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -271,13 +364,9 @@
       </item>
       <item path="src/game.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/juego.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="src/linea.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/mapa.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/mi_mapa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/objeto.cpp" ex="false" tool="1" flavor2="0">
       </item>

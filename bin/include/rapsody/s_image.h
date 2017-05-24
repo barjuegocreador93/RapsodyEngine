@@ -3,7 +3,8 @@
 
 
 #include "objeto.h"
-
+namespace rapsody
+{
 
 class s_image : public objeto
 {
@@ -13,7 +14,7 @@ public:
 
 
 
-    void initi(punto pos,punto escala);
+    void initi(punto2D pos,punto2D escala);
 
     void mount_imagen(string dir);
 
@@ -28,5 +29,8 @@ protected:
 
 private:
 };
+}
+typedef vector<rapsody::s_image *> D_Sprites;
+typedef rapsody::s_image * D_Image;
 
 #endif // RENDER_H

@@ -155,14 +155,13 @@
 
 1495189253 source:c:\users\calimpio\documents\github\rapsodyengine\bin\main.cpp
 
-1495180050 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\caja.cpp
+1495265797 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\caja.cpp
 	"caja.h"
 
-1495219234 c:\users\calimpio\documents\github\rapsodyengine\bin\include\caja.h
-	"rapsody.h"
+1495310229 c:\users\calimpio\documents\github\rapsodyengine\bin\include\caja.h
 	"colision.h"
 
-1495193648 c:\users\calimpio\documents\github\rapsodyengine\bin\include\rapsody.h
+1495332245 c:\users\calimpio\documents\github\rapsodyengine\bin\include\rapsody.h
 	<allegro.h>
 	"../inicia.h"
 	<iostream>
@@ -184,7 +183,7 @@
 	"mapa.h"
 	"juego.h"
 
-1495221093 c:\users\calimpio\documents\github\rapsodyengine\bin\include\punto.h
+1495299860 c:\users\calimpio\documents\github\rapsodyengine\bin\include\punto.h
 	"rapsody.h"
 
 1495221375 c:\users\calimpio\documents\github\rapsodyengine\bin\include\tiempo.h
@@ -192,84 +191,76 @@
 1495265707 c:\users\calimpio\documents\github\rapsodyengine\bin\include\transformacion.h
 	"punto.h"
 
-1495265707 c:\users\calimpio\documents\github\rapsodyengine\bin\include\objeto.h
+1495348800 c:\users\calimpio\documents\github\rapsodyengine\bin\include\objeto.h
 	"transformacion.h"
 
 1495259441 c:\users\calimpio\documents\github\rapsodyengine\bin\include\render.h
 
-1495198931 c:\users\calimpio\documents\github\rapsodyengine\bin\include\linea.h
-	"rapsody.h"
-	"punto.h"
+1495310674 c:\users\calimpio\documents\github\rapsodyengine\bin\include\linea.h
 	"s_image.h"
 
-1495261922 c:\users\calimpio\documents\github\rapsodyengine\bin\include\colision.h
-	"rapsody.h"
+1495311688 c:\users\calimpio\documents\github\rapsodyengine\bin\include\colision.h
 	"linea.h"
-	"objeto.h"
 
-1495266168 c:\users\calimpio\documents\github\rapsodyengine\bin\include\fisica.h
-	"rapsody.h"
+1495346044 c:\users\calimpio\documents\github\rapsodyengine\bin\include\fisica.h
+	"objeto.h"
 	"tiempo.h"
-	"objeto.h"
 
-1495266840 c:\users\calimpio\documents\github\rapsodyengine\bin\include\actor.h
-	"rapsody.h"
+1495346126 c:\users\calimpio\documents\github\rapsodyengine\bin\include\actor.h
+	"fisica.h"
 	"s_image.h"
 	"colision.h"
-	"fisica.h"
 
-1495185181 c:\users\calimpio\documents\github\rapsodyengine\bin\include\controlador.h
-	"rapsody.h"
+1495310409 c:\users\calimpio\documents\github\rapsodyengine\bin\include\controlador.h
 	"objeto.h"
 
-1495199254 c:\users\calimpio\documents\github\rapsodyengine\bin\include\peon.h
-	"rapsody.h"
+1495315801 c:\users\calimpio\documents\github\rapsodyengine\bin\include\peon.h
 	"actor.h"
 	"controlador.h"
 
-1495268469 c:\users\calimpio\documents\github\rapsodyengine\bin\include\mapa.h
-	"rapsody.h"
+1495346155 c:\users\calimpio\documents\github\rapsodyengine\bin\include\mapa.h
 	"actor.h"
 
-1495268264 c:\users\calimpio\documents\github\rapsodyengine\bin\include\juego.h
-	"rapsody.h"
+1495348894 c:\users\calimpio\documents\github\rapsodyengine\bin\include\juego.h
 	"mapa.h"
 
-1495219521 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\colision.cpp
+1495266514 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\colision.cpp
 	"colision.h"
 	<fisica.h>
 
 1495219583 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\controlador.cpp
 	"controlador.h"
 
-1495180050 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\fisica.cpp
+1495350553 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\fisica.cpp
 	"fisica.h"
 	"mapa.h"
+	"juego.h"
 
-1495197903 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\game.cpp
+1495349117 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\game.cpp
 	"game.h"
-	"MiMapa.h"
+	"mi_mapa.h"
 
 1495217298 c:\users\calimpio\documents\github\rapsodyengine\bin\include\game.h
 	"rapsody.h"
 	"juego.h"
 
-1495178291 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\juego.cpp
+1495350166 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\juego.cpp
 	"juego.h"
 
 1495220800 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\linea.cpp
 	"linea.h"
 
-1495223677 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\mapa.cpp
+1495350577 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\mapa.cpp
 	"mapa.h"
+	"juego.h"
 
-1495220942 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\objeto.cpp
+1495348800 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\objeto.cpp
 	"objeto.h"
 
-1495184548 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\peon.cpp
+1495334760 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\peon.cpp
 	"peon.h"
 
-1495221125 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\punto.cpp
+1495334380 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\punto.cpp
 	"punto.h"
 
 1495193648 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\rapsody.cpp
@@ -278,13 +269,13 @@
 1495198785 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\render.cpp
 	"render.h"
 
-1495221342 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\tiempo.cpp
+1495349996 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\tiempo.cpp
 	"tiempo.h"
 
-1495222853 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\transformacion.cpp
+1495265707 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\transformacion.cpp
 	"transformacion.h"
 
-1495259374 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\actor.cpp
+1495349574 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\actor.cpp
 	"actor.h"
 
 1495196941 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\mimapa.cpp
@@ -294,10 +285,18 @@
 1495196687 c:\users\calimpio\documents\github\rapsodyengine\bin\include\mimapa.h
 	"mapa.h"
 
-1495263412 c:\users\calimpio\documents\github\rapsodyengine\bin\include\s_image.h
-	"rapsody.h"
+1495342750 c:\users\calimpio\documents\github\rapsodyengine\bin\include\s_image.h
 	"objeto.h"
 
-1495198931 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\s_image.cpp
+1495343453 source:c:\users\calimpio\documents\github\rapsodyengine\bin\src\s_image.cpp
 	"s_image.h"
+
+1495308998 c:\users\calimpio\documents\github\rapsodyengine\bin\include\mi_mapa.h
+	"game.h"
+	"nave.h"
+
+1495345790 c:\users\calimpio\documents\github\rapsodyengine\bin\include\nave.h
+	"game.h"
+	"peon.h"
+	"caja.h"
 

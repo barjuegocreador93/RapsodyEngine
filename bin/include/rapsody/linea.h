@@ -3,7 +3,8 @@
 
 
 #include "s_image.h"
-
+namespace rapsody
+{
 struct linea {
 
     friend ostream &operator<<(ostream &ou, const linea &m) {
@@ -22,11 +23,17 @@ struct linea {
 
 
     void print();
-    punto A, B;
+    C_Vector2D A, B;
     string axi;
     s_image data;
 
 
 };
+}
+
+typedef rapsody::linea* D_Line;
+typedef rapsody::linea C_Line;
+
+C_Line crear_linea(C_Vector2D A, C_Vector2D B);
 
 #endif // LINEA_H

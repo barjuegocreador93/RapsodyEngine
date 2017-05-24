@@ -5,29 +5,22 @@
  */
 
 /* 
- * File:   nave.cpp
+ * File:   aplicativo.cpp
  * Author: Calimpio
  * 
- * Created on 20 de mayo de 2017, 02:30 PM
+ * Created on 22 de mayo de 2017, 06:21 AM
  */
 
-#include "nave.h"
+#include "aplicativo.h"
+using namespace rapsody;
 
-nave::nave() {
-    
+
+aplicativo::aplicativo() {
 }
 
-nave::nave(const nave& orig) {
+aplicativo::aplicativo(const aplicativo& orig) {
 }
 
-nave::~nave() {
+aplicativo::~aplicativo() {
 }
-
- void nave::empezar()
-{
-    AddColision(c1);
-    peon::empezar();
-}
-
-
 

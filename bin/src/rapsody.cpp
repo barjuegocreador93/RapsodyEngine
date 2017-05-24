@@ -21,7 +21,8 @@ int main()
     /**Crear imagenes*/
 
     ingame();
-
+    
+    
     return 0;
 }
 END_OF_MAIN();

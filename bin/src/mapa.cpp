@@ -1,89 +1,92 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/* 
+ * File:   mapa.cpp
+ * Author: Calimpio
+ * 
+ * Created on 22 de mayo de 2017, 04:36 AM
+ */
+
 #include "mapa.h"
-#include "juego.h"
-mapa::mapa()
-{
-    //ctor
+#include "game.h"
+
+using namespace rapsody;
+
+mapa::mapa() {
     
 }
 
-mapa::~mapa()
-{
-    //dtor
-   
+mapa::mapa(const mapa& orig) {
 }
 
-void mapa::empezar()
-{
-    estatico=true;
-    pausa=false;
-    actor_movements=true;
-    if(debug_mode)cout<<"mapa empezar corriendo actores"<<endl;
-    for(Actores::iterator i=actores.begin() ; i!= actores.end(); ++i)
+mapa::~mapa() {
+    actores.clear();
+    delete this;
+}
+
+void mapa::constructor_() {
+    SetUbicacion(padre->GetUbicacion());
+    
+    
+    
+}
+
+void mapa::empezar() {
+    cout<<"mapa "<<getNombre()<<"\n";
+    cout<<GetEscala();
+    for(int i=0;i<(int)actores.size();i++)
     {
-        i->second->empezar();
+        actores[i]->empezar();
     }
 }
 
-
-void mapa::Colisiones()
-{
-    if(debug_mode)cout<<"mapa colisiones corriendo actores\n";
-    for(Actores::iterator i=actores.begin() ; i!= actores.end(); ++i)
+void mapa::mientras(int mils) {
+    
+    for(int i=0;i<(int)actores.size();i++)
     {
-        for(Actores::iterator j= i ; j!= actores.end(); ++j)
+        actores[i]->mientras(mils);
+        if(movimientos)actores[i]->render();
+    }
+    SystemaDeColision();
+}
+
+void mapa::fin() {
+    for(int i=0;i<(int)actores.size();i++)
+    {
+        actores[i]->fin();
+    }    
+}
+
+void mapa::SystemaDeColision() {
+    for(int i=0;i<(int)actores.size();i++)
+    {
+        for(int j=i+1;j<(int)actores.size();j++)
         {
-            if(i!=j)
-            {
-                i->second->ColisionaConOtro(j->second);
-            }
+            actores[i]->SystemaDeColision(actores[j]);
         }
     }
-    if(debug_mode)cout<<"fin mapa colisiones\n";
 }
 
-void mapa::render()
-{
-    if(debug_mode)cout<<"mapa render corriendo actor mapa\n";
-    if(debug_mode)cout<<"mapa posicion en: "<<ubicacion.Getposicion()<<"con escala: "<<ubicacion.GetEscala();
-    actor::render();
-    if(debug_mode)cout<<" fin mapa render corriendo actor mapa\n";
-    int j=1;
-    for(Actores::iterator i=actores.begin() ; i!= actores.end(); ++i)
+void mapa::Imagen_de_fondo(string dir) {
+    fondo->Imagen_de_fondo(dir);
+}
+
+void mapa::BitmappFondo(int color) {
+    fondo->DefaultBitmap(color);
+}
+
+void mapa::EraseActor(vector<actor*>::iterator item) {
+    actores.erase(item);
+}
+
+void mapa::destructor_() {
+    if(padre)
     {
-        if(debug_mode)cout<<" render :"<<j;
-        i->second->render();
-        j++;
+        ((game*)padre)->EraseMapaItem(item);
+        delete this;
     }
 }
-
- void mapa::fin()
-{
-    for(Actores::iterator i=actores.begin() ; i!= actores.end(); ++i)
-    {
-        i->second->fin();
-    }
-}
-
-void mapa::mientras(int mils)
-{
-    if(!pausa)
-    {
-        for(Actores::iterator i=actores.begin() ; i!= actores.end(); ++i)
-        {
-            i->second->mientras(mils);
-        }
-        Colisiones();
-        /**siempre al final:*/
-        if(actor_movements)
-         {
-             render();
-             actor_movements=false;
-         }
-
-    }
-}
-
- 
-
-
-
