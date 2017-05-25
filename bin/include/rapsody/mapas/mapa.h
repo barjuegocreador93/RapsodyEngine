@@ -42,7 +42,7 @@ namespace rapsody {
                 
                                
                 AddElement(m);
-                m->setMundo(this);
+                m->setMundo(this);        
                 
                 return (actor_type *)(m);
 
@@ -71,6 +71,8 @@ namespace rapsody {
         void Imagen_de_fondo(string dir);        
         
         void BitmappFondo(int color);
+        
+        
         
         
         

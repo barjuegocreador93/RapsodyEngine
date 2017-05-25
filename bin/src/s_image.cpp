@@ -22,21 +22,15 @@ void s_image::mount_imagen(string dir) {
 }
 
 void s_image::crear(int color) {
-    if(debug_mode)cout<<" s_image crear correindo "<<"\n";
-    data = create_bitmap(ubicacion.GetEscala().x, ubicacion.GetEscala().y);
-    if(!data)cout<<" error s_image crear data."<<"\n";
+    
+    data = create_bitmap(ubicacion.GetEscala().x, ubicacion.GetEscala().y);    
     data_render_mode = 2;
     color = color;
 }
 
-void s_image::print() {
-    if(debug_mode)cout<<" s_image print correindo "<<"\n";
-    if(debug_mode)cout<<" s_image print en ubicacion \n "<<ubicacion.GetPosicion()<<" "<<ubicacion.GetEscala();
-    if(debug_mode && !data)cout<<" error s_image en data.\n";
-    
+void s_image::print() {    
     if (data_render_mode==1)blit(data, screen, 0, 0, ubicacion.GetPosicion().x, ubicacion.GetPosicion().y, ubicacion.GetEscala().x, ubicacion.GetEscala().y);
-    else if (data_render_mode==2){
-        if(debug_mode)cout<<"   s_image en data color anñadido.\n";
+    else if (data_render_mode==2){        
         clear_to_color(data, color);
         blit(data, screen, 0, 0, ubicacion.GetPosicion().x, ubicacion.GetPosicion().y, ubicacion.GetEscala().x, ubicacion.GetEscala().y);
     }

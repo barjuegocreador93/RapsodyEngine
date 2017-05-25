@@ -15,7 +15,7 @@ namespace rapsody {
         fisica();
         virtual ~fisica();
 
-        virtual void mientras(int mils);
+        virtual void mientras(int mils) override;
 
         void active_movenets_on_map();
 

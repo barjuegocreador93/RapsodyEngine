@@ -6,6 +6,10 @@
                    projectFiles="true">
       <logicalFolder name="rapsody" displayName="rapsody" projectFiles="true">
         <logicalFolder name="actores" displayName="actores" projectFiles="true">
+          <logicalFolder name="aplicativos" displayName="aplicativos" projectFiles="true">
+            <logicalFolder name="componentes" displayName="componentes" projectFiles="true">
+            </logicalFolder>
+          </logicalFolder>
           <logicalFolder name="componentes" displayName="componentes" projectFiles="true">
             <itemPath>include/rapsody/actores/componentes/actor_component.h</itemPath>
           </logicalFolder>
@@ -23,10 +27,6 @@
           <itemPath>include/rapsody/game/game.h</itemPath>
         </logicalFolder>
         <logicalFolder name="mapas" displayName="mapas" projectFiles="true">
-          <logicalFolder name="aplicativos" displayName="aplicativos" projectFiles="true">
-            <logicalFolder name="componentes" displayName="componentes" projectFiles="true">
-            </logicalFolder>
-          </logicalFolder>
           <itemPath>include/rapsody/mapas/mapa.h</itemPath>
         </logicalFolder>
         <itemPath>include/rapsody/fisica.h</itemPath>

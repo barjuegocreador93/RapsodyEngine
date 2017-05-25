@@ -17,7 +17,7 @@
 using namespace rapsody;
 
 mapa::mapa() {
-    
+
 }
 
 mapa::mapa(const mapa& orig) {
@@ -28,44 +28,35 @@ mapa::~mapa() {
     delete this;
 }
 
-
-
 void mapa::empezar() {
-    SetUbicacion(((game*)padre)->GetUbicacion());        
-    for(int i=0;i<(int)elements.size();i++)
-    {
+    SetUbicacion(((game*) padre)->GetUbicacion());
+    for (int i = 0; i < (int) elements.size(); i++) {
         elements[i]->empezar();
     }
 }
 
 void mapa::mientras(int mils) {
-    
-    for(int i=0;i<(int)elements.size();i++)
-    {
+
+    for (int i = 0; i < (int) elements.size(); i++) {
         elements[i]->mientras(mils);
-        if(movimientos)elements[i]->render();
+        if (movimientos)elements[i]->render();
     }
     SystemaDeColision();
 }
 
 void mapa::fin() {
-    for(int i=0;i<(int)elements.size();i++)
-    {
+    for (int i = 0; i < (int) elements.size(); i++) {
         elements[i]->fin();
-    }    
+    }
 }
 
 void mapa::SystemaDeColision() {
-    for(int i=0;i<(int)elements.size();i++)
-    {
-        for(int j=i+1;j<(int)elements.size();j++)
-        {
+    for (int i = 0; i < (int) elements.size(); i++) {
+        for (int j = i + 1; j < (int) elements.size(); j++) {
             elements[i]->SystemaDeColision(elements[j]);
         }
     }
 }
-
-
 
 void mapa::EraseActor(vector<actor*>::iterator item) {
     elements.erase(item);

@@ -3,16 +3,20 @@
 
 
 #include "objeto.h"
+#include "xmltree.h"
 namespace rapsody
 {
 
-class s_image : public objeto
+class s_image : public XMLelement<s_image>
 {
 public:
     s_image();
     virtual ~s_image();
-
-
+    
+    void AddS_Image(s_image* image)
+    {
+        AddElement(image);
+    }
 
     void initi(punto2D pos,punto2D escala);
 

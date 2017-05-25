@@ -46,6 +46,7 @@ namespace rapsody {
         virtual void Sobre(actor_componente* un_componente, D_Object un_actor);
 
         void render();
+        
         virtual void print();
 
         template<class actor_component_type>

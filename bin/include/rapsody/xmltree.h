@@ -58,7 +58,9 @@ public:
     }
 
     
-
+    void destruir() {
+        ((XMLelement<T>*)(padre))->EraseElement(item);
+    }
     
 
 protected:
@@ -72,9 +74,7 @@ protected:
         elements.erase(oitem);
     }
 
-    void destruir() {
-        ((XMLelement<T>*)(padre))->EraseElement(item);
-    }
+    
 
 
 
