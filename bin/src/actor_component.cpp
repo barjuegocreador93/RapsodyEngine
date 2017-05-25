@@ -19,17 +19,10 @@ using namespace rapsody;
 
 actor_componente::actor_componente() {
     ubicacion_interna = crear_transformacion(crear_punto(0, 0), crear_punto(1, 1));
-    contenedor = NULL;
+    actor = NULL;
     
 }
 
-void actor_componente::setContenedor(actor_componente* contenedor) {
-    this->contenedor = contenedor;
-}
-
-actor_componente* actor_componente::getContenedor() const {
-    return contenedor;
-}
 
 
 
@@ -38,11 +31,11 @@ actor_componente::actor_componente(const actor_componente& orig) {
 
 
 
-void actor_componente::Tocando(D_AComponent un_componete) {
+void actor_componente::Tocando(D_AComponent un_componete, D_Object un_actor) {
 
 }
 
-void actor_componente::Sobre(D_AComponent un_componente) {
+void actor_componente::Sobre(D_AComponent un_componente, D_Object un_actor) {
 
 }
 
@@ -76,30 +69,30 @@ void actor_componente::fin() {
 
 
 
-bool actor_componente::EstaSobre(actor_componente* otro) {
+bool actor_componente::EstaSobre(actor_componente* otro, D_Object actor_izquierdo, D_Object actor_derecho) {
     return false;
 }
 
-bool actor_componente::EstaTocando(actor_componente* otro) {
+bool actor_componente::EstaTocando(actor_componente* otro, D_Object actor_izquierdo, D_Object actor_derecho) {
     return false;
 }
 
-void actor_componente::SystemaDeColision(actor_componente* otro) {
+void actor_componente::SystemaDeColision(actor_componente* otro, D_Object actor_izquierdo, D_Object actor_derecho) {
     for (int i = 0; i < (int) elements.size(); i++) {
         for (int j = 0; j < (int) otro->elements.size(); j++) {
-            D_Actor  p1 = (D_Actor) padre, p2 = (D_Actor) padre;
+            D_Actor  p1 = (D_Actor) actor_izquierdo, p2 = (D_Actor) actor_derecho;
             D_AComponent c1 = elements[i], c2 = otro->elements[j];
-            if (c1->EstaTocando(c2)) {
-                c1->Tocando(c2);
+            if (c1->EstaTocando(c2, actor_izquierdo, actor_derecho)) {
+                c1->Tocando(c2, actor_derecho);
                 p1->Tocando(p2, c2);
             }            
 
-            if (c1->EstaSobre(c2)) {
-                c1->Sobre(c2);
+            if (c1->EstaSobre(c2, actor_izquierdo, actor_derecho)) {
+                c1->Sobre(c2, actor_derecho);
                 p1->Sobre(p2, c2);
             }
             
-            c1->SystemaDeColision(c2);
+            c1->SystemaDeColision(c2, actor_izquierdo, actor_derecho);
         }
 
 

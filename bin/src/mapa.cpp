@@ -65,13 +65,7 @@ void mapa::SystemaDeColision() {
     }
 }
 
-void mapa::Imagen_de_fondo(string dir) {
-    fondo->Imagen_de_fondo(dir);
-}
 
-void mapa::BitmappFondo(int color) {
-    fondo->DefaultBitmap(color);
-}
 
 void mapa::EraseActor(vector<actor*>::iterator item) {
     elements.erase(item);

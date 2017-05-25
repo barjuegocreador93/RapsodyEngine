@@ -20,6 +20,7 @@
 #include "objeto.h"
 #include "xmltree.h"
 
+
 namespace rapsody {
 
     
@@ -38,11 +39,11 @@ namespace rapsody {
         virtual void mientras(int mils);
         virtual void fin();
 
-        virtual bool EstaTocando(actor_componente *otro);
-        virtual bool EstaSobre(actor_componente * otro);
+        virtual bool EstaTocando(actor_componente *otro, D_Object actor_izquierdo, D_Object actor_derecho);
+        virtual bool EstaSobre(actor_componente * otro, D_Object actor_izquierdo, D_Object actor_derecho);
 
-        virtual void Tocando(actor_componente* un_componente);
-        virtual void Sobre(actor_componente* un_componente);
+        virtual void Tocando(actor_componente* un_componente, D_Object un_actor);
+        virtual void Sobre(actor_componente* un_componente, D_Object un_actor);
 
         void render();
         virtual void print();
@@ -55,13 +56,13 @@ namespace rapsody {
                 
                 AddElement(m);
                 
-                m->contenedor=this;
+               
                 return (actor_component_type*)(m);
             }
             return NULL;
         }
 
-        void SystemaDeColision(actor_componente * otro);
+        void SystemaDeColision(actor_componente * otro, D_Object actor_izquierdo, D_Object actor_derecho);
         virtual void MoviemientosInternos();
 
         void setUbicacion_interna(C_Transform ubicacion_interna) {
@@ -75,9 +76,9 @@ namespace rapsody {
 
 
     protected:
-        C_Transform ubicacion, ubicacion_interna;             
+        C_Transform ubicacion_interna;  
+        D_Object actor;
         
-        actor_componente * contenedor;
         
        
     private:

@@ -65,8 +65,8 @@ void actor::SystemaDeColision(actor* ext) {
         {
             for (int j = 0; j < (int) ext->elements.size(); j++)
             {
-                elements[i]->SystemaDeColision(ext->elements[j]);
-                ext->elements[j]->SystemaDeColision(elements[i]);
+                elements[i]->SystemaDeColision(ext->elements[j], this, ext);
+                ext->elements[j]->SystemaDeColision(elements[i], ext, this);
             }
         }
     }

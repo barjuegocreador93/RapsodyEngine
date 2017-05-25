@@ -16,7 +16,7 @@
 
 #include "objeto.h"
 #include "actor.h"
-#include "aplicativos/aplicativo_fondo.h"
+
 namespace rapsody {
 
     class mapa : public  XMLelement<actor> {
@@ -79,7 +79,7 @@ namespace rapsody {
 
     protected:        
         bool movimientos;
-        D_App_Background fondo;
+        
         
         
     private:

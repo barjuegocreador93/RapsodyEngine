@@ -20,7 +20,7 @@
 namespace rapsody
 {
 template<class T>
-class XMLelement : public basic_objeto {
+class XMLelement : public objeto {
 public:
 
     XMLelement() {

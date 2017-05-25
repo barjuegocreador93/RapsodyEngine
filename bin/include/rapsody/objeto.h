@@ -37,6 +37,15 @@ namespace rapsody {
 
         std::string GetNombre() const {
         return nombre;
+        }       
+        
+        
+        void SetPadre(objeto* padre) {
+            this->padre = padre;
+        }
+
+        objeto* GetPadre() const {
+            return padre;
         }
         
 
@@ -46,7 +55,7 @@ namespace rapsody {
         bool debug_mode;
         bool priority_debuger;
         string nombre;
-        
+        objeto * padre;
 
 
     private:
@@ -55,30 +64,7 @@ namespace rapsody {
 
     };
     
-    class basic_objeto : public objeto
-    {
-    public:
-        
-        basic_objeto()
-        {
-           padre=NULL; 
-        }
-        
-        virtual ~basic_objeto()
-        {
-            
-        }
-        void SetPadre(basic_objeto* padre) {
-            this->padre = padre;
-        }
-
-        basic_objeto* GetPadre() const {
-            return padre;
-        }
-        
-    protected:        
-        basic_objeto* padre;
-    };
+    
 }
 
 typedef rapsody::objeto* D_Object;

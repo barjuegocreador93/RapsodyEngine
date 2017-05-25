@@ -12,9 +12,7 @@
  */
 
 #include "game.h"
-#include "colision_linea.h"
-#include "colision_caja.h"
-#include "mapa_fondo.h"
+
 
 using namespace rapsody;
 game::game() {
@@ -23,16 +21,7 @@ game::game() {
     mapaReady=0;
     elements.clear(); 
     
-    SetEscala(crear_punto(500,500));
-    SetNombre("el juego");
     
-    D_World_Image myw=AddMapa<C_World_Image>();
-    
-    D_Actor mya=myw->AddActor<C_Actor>();
-    
-    mya->SetNombre("mi actor");
-    
-    D_AComponent myac=mya->AddComponents<C_AComponent>();
     
        
 }

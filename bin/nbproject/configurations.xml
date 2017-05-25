@@ -8,8 +8,6 @@
         <logicalFolder name="actores" displayName="actores" projectFiles="true">
           <logicalFolder name="componentes" displayName="componentes" projectFiles="true">
             <itemPath>include/rapsody/actores/componentes/actor_component.h</itemPath>
-            <itemPath>include/rapsody/actores/componentes/colision_caja.h</itemPath>
-            <itemPath>include/rapsody/actores/componentes/colision_linea.h</itemPath>
           </logicalFolder>
           <logicalFolder name="peones" displayName="peones" projectFiles="true">
             <itemPath>include/rapsody/actores/peones/peon.h</itemPath>
@@ -27,15 +25,9 @@
         <logicalFolder name="mapas" displayName="mapas" projectFiles="true">
           <logicalFolder name="aplicativos" displayName="aplicativos" projectFiles="true">
             <logicalFolder name="componentes" displayName="componentes" projectFiles="true">
-              <itemPath>include/rapsody/mapas/aplicativos/componentes/aplicativo_componente.h</itemPath>
-              <itemPath>include/rapsody/mapas/aplicativos/componentes/aplicativo_fondo_componente.h</itemPath>
             </logicalFolder>
-            <itemPath>include/rapsody/mapas/aplicativos/aplicativo.h</itemPath>
-            <itemPath>include/rapsody/mapas/aplicativos/aplicativo_fondo.h</itemPath>
           </logicalFolder>
           <itemPath>include/rapsody/mapas/mapa.h</itemPath>
-          <itemPath>src/mapa_fondo.cpp</itemPath>
-          <itemPath>include/rapsody/mapas/mapa_fondo.h</itemPath>
         </logicalFolder>
         <itemPath>include/rapsody/fisica.h</itemPath>
         <itemPath>include/rapsody/linea.h</itemPath>
@@ -59,12 +51,6 @@
       <logicalFolder name="src" displayName="src" projectFiles="true">
         <itemPath>src/actor.cpp</itemPath>
         <itemPath>src/actor_component.cpp</itemPath>
-        <itemPath>src/aplicativo.cpp</itemPath>
-        <itemPath>src/aplicativo_componente.cpp</itemPath>
-        <itemPath>src/aplicativo_fondo.cpp</itemPath>
-        <itemPath>src/aplicativo_fondo_componente.cpp</itemPath>
-        <itemPath>src/colision_caja.cpp</itemPath>
-        <itemPath>src/colision_linea.cpp</itemPath>
         <itemPath>src/controlador.cpp</itemPath>
         <itemPath>src/fisica.cpp</itemPath>
         <itemPath>src/game.cpp</itemPath>
@@ -146,16 +132,6 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="include/rapsody/actores/componentes/colision_caja.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="include/rapsody/actores/componentes/colision_linea.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
       <item path="include/rapsody/actores/peones/peon.h"
             ex="false"
             tool="3"
@@ -172,29 +148,7 @@
       </item>
       <item path="include/rapsody/linea.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/rapsody/mapas/aplicativos/aplicativo.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="include/rapsody/mapas/aplicativos/aplicativo_fondo.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="include/rapsody/mapas/aplicativos/componentes/aplicativo_componente.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="include/rapsody/mapas/aplicativos/componentes/aplicativo_fondo_componente.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
       <item path="include/rapsody/mapas/mapa.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/rapsody/mapas/mapa_fondo.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/rapsody/objeto.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -218,21 +172,6 @@
       </item>
       <item path="src/actor_component.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/aplicativo.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/aplicativo_componente.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/aplicativo_fondo.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/aplicativo_fondo_componente.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="src/colision_caja.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/colision_linea.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="src/controlador.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/fisica.cpp" ex="false" tool="1" flavor2="0">
@@ -242,8 +181,6 @@
       <item path="src/linea.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/mapa.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/mapa_fondo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/objeto.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -289,16 +226,6 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="include/rapsody/actores/componentes/colision_caja.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="include/rapsody/actores/componentes/colision_linea.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
       <item path="include/rapsody/actores/peones/peon.h"
             ex="false"
             tool="3"
@@ -315,29 +242,7 @@
       </item>
       <item path="include/rapsody/linea.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/rapsody/mapas/aplicativos/aplicativo.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="include/rapsody/mapas/aplicativos/aplicativo_fondo.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="include/rapsody/mapas/aplicativos/componentes/aplicativo_componente.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="include/rapsody/mapas/aplicativos/componentes/aplicativo_fondo_componente.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
       <item path="include/rapsody/mapas/mapa.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/rapsody/mapas/mapa_fondo.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/rapsody/objeto.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -361,21 +266,6 @@
       </item>
       <item path="src/actor_component.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/aplicativo.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/aplicativo_componente.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/aplicativo_fondo.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/aplicativo_fondo_componente.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="src/colision_caja.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/colision_linea.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="src/controlador.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/fisica.cpp" ex="false" tool="1" flavor2="0">
@@ -385,8 +275,6 @@
       <item path="src/linea.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/mapa.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/mapa_fondo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/objeto.cpp" ex="false" tool="1" flavor2="0">
       </item>

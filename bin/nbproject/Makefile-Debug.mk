@@ -38,18 +38,11 @@ OBJECTFILES= \
 	${OBJECTDIR}/inicia.o \
 	${OBJECTDIR}/src/actor.o \
 	${OBJECTDIR}/src/actor_component.o \
-	${OBJECTDIR}/src/aplicativo.o \
-	${OBJECTDIR}/src/aplicativo_componente.o \
-	${OBJECTDIR}/src/aplicativo_fondo.o \
-	${OBJECTDIR}/src/aplicativo_fondo_componente.o \
-	${OBJECTDIR}/src/colision_caja.o \
-	${OBJECTDIR}/src/colision_linea.o \
 	${OBJECTDIR}/src/controlador.o \
 	${OBJECTDIR}/src/fisica.o \
 	${OBJECTDIR}/src/game.o \
 	${OBJECTDIR}/src/linea.o \
 	${OBJECTDIR}/src/mapa.o \
-	${OBJECTDIR}/src/mapa_fondo.o \
 	${OBJECTDIR}/src/objeto.o \
 	${OBJECTDIR}/src/peon.o \
 	${OBJECTDIR}/src/punto.o \
@@ -99,36 +92,6 @@ ${OBJECTDIR}/src/actor_component.o: src/actor_component.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Iinclude -Iinclude/rapsody -Iinclude/rapsody/actores -Iinclude/rapsody/actores/componentes -Iinclude/rapsody/actores/peones -Iinclude/rapsody/controladores -Iinclude/rapsody/mapas -Iinclude/rapsody/mapas/aplicativos/componentes -Iinclude/rapsody/mapas/aplicativos -Iinclude/rapsody/game -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/actor_component.o src/actor_component.cpp
 
-${OBJECTDIR}/src/aplicativo.o: src/aplicativo.cpp
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/rapsody -Iinclude/rapsody/actores -Iinclude/rapsody/actores/componentes -Iinclude/rapsody/actores/peones -Iinclude/rapsody/controladores -Iinclude/rapsody/mapas -Iinclude/rapsody/mapas/aplicativos/componentes -Iinclude/rapsody/mapas/aplicativos -Iinclude/rapsody/game -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/aplicativo.o src/aplicativo.cpp
-
-${OBJECTDIR}/src/aplicativo_componente.o: src/aplicativo_componente.cpp
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/rapsody -Iinclude/rapsody/actores -Iinclude/rapsody/actores/componentes -Iinclude/rapsody/actores/peones -Iinclude/rapsody/controladores -Iinclude/rapsody/mapas -Iinclude/rapsody/mapas/aplicativos/componentes -Iinclude/rapsody/mapas/aplicativos -Iinclude/rapsody/game -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/aplicativo_componente.o src/aplicativo_componente.cpp
-
-${OBJECTDIR}/src/aplicativo_fondo.o: src/aplicativo_fondo.cpp
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/rapsody -Iinclude/rapsody/actores -Iinclude/rapsody/actores/componentes -Iinclude/rapsody/actores/peones -Iinclude/rapsody/controladores -Iinclude/rapsody/mapas -Iinclude/rapsody/mapas/aplicativos/componentes -Iinclude/rapsody/mapas/aplicativos -Iinclude/rapsody/game -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/aplicativo_fondo.o src/aplicativo_fondo.cpp
-
-${OBJECTDIR}/src/aplicativo_fondo_componente.o: src/aplicativo_fondo_componente.cpp
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/rapsody -Iinclude/rapsody/actores -Iinclude/rapsody/actores/componentes -Iinclude/rapsody/actores/peones -Iinclude/rapsody/controladores -Iinclude/rapsody/mapas -Iinclude/rapsody/mapas/aplicativos/componentes -Iinclude/rapsody/mapas/aplicativos -Iinclude/rapsody/game -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/aplicativo_fondo_componente.o src/aplicativo_fondo_componente.cpp
-
-${OBJECTDIR}/src/colision_caja.o: src/colision_caja.cpp
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/rapsody -Iinclude/rapsody/actores -Iinclude/rapsody/actores/componentes -Iinclude/rapsody/actores/peones -Iinclude/rapsody/controladores -Iinclude/rapsody/mapas -Iinclude/rapsody/mapas/aplicativos/componentes -Iinclude/rapsody/mapas/aplicativos -Iinclude/rapsody/game -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/colision_caja.o src/colision_caja.cpp
-
-${OBJECTDIR}/src/colision_linea.o: src/colision_linea.cpp
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/rapsody -Iinclude/rapsody/actores -Iinclude/rapsody/actores/componentes -Iinclude/rapsody/actores/peones -Iinclude/rapsody/controladores -Iinclude/rapsody/mapas -Iinclude/rapsody/mapas/aplicativos/componentes -Iinclude/rapsody/mapas/aplicativos -Iinclude/rapsody/game -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/colision_linea.o src/colision_linea.cpp
-
 ${OBJECTDIR}/src/controlador.o: src/controlador.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
@@ -153,11 +116,6 @@ ${OBJECTDIR}/src/mapa.o: src/mapa.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Iinclude -Iinclude/rapsody -Iinclude/rapsody/actores -Iinclude/rapsody/actores/componentes -Iinclude/rapsody/actores/peones -Iinclude/rapsody/controladores -Iinclude/rapsody/mapas -Iinclude/rapsody/mapas/aplicativos/componentes -Iinclude/rapsody/mapas/aplicativos -Iinclude/rapsody/game -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mapa.o src/mapa.cpp
-
-${OBJECTDIR}/src/mapa_fondo.o: src/mapa_fondo.cpp
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iinclude -Iinclude/rapsody -Iinclude/rapsody/actores -Iinclude/rapsody/actores/componentes -Iinclude/rapsody/actores/peones -Iinclude/rapsody/controladores -Iinclude/rapsody/mapas -Iinclude/rapsody/mapas/aplicativos/componentes -Iinclude/rapsody/mapas/aplicativos -Iinclude/rapsody/game -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mapa_fondo.o src/mapa_fondo.cpp
 
 ${OBJECTDIR}/src/objeto.o: src/objeto.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
